@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('main');
+})->name('Home');
+
+Route::get('/Countries', function () {
+    return view('regions-countries');
+})->name('Regions');

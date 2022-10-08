@@ -5,7 +5,7 @@ GEMS: Glohaven Emergency Management Solutions, is an online platform which facil
 ## Project Roles and Responsibilities:
 |Name|Role|Responsibility|
 |-----|------|-----------|
-|Harkeerat Lit|Project Manager||
-|Akshaj Srinivasan|Client Liason||
-|Mack Schmaltz|QA Lead||
-|Sunvat Singh Brar|Technical Lead||
+|Harkeerat Lit|Project Manager|Making and assigning tasks to the team members. Planning out milestones,setting up weekly team meetings and submitting weekly team report.|
+|Akshaj Srinivasan|Client Liason|Managing communication with client,setting up weekly meetings with clients,taking minutes,submit weekly report meeting with client.|
+|Mack Schmaltz|QA Lead|Defining quality standards for the project, refining documentation. Ensuring validation techniques, required documentation is complete.|
+|Sunvat Singh Brar|Technical Lead|Making sure that technical requirements of the projects are being met. Setting up git repository, unit testing for the project.|

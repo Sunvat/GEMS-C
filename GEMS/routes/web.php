@@ -21,6 +21,6 @@ Route::get('/Countries', function () {
     return view('regions-countries');
 })->name('Regions');
 
-Route::get('/Countries', function () {
-    return view('regions-countries');
-})->name('Regions');
+Route::get('/Log-In', function () {
+    return view('Log-In');
+})->name('Log-In');

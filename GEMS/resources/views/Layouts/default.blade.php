@@ -17,6 +17,7 @@
             <nav class="-mx-1">
                 <a href="{{route('Home')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Home</a>
                 <a href="{{route('Regions')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Regions</a>
+                <a href="{{route('Log-In')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Log in</a>
             </nav>
 
     </div>

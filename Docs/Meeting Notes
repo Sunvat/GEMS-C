@@ -1,3 +1,5 @@
+MEETING NOTES:
+
 Notes for meeting 1: (09/19/2022)
 
 Michael is a charismatic person
@@ -18,21 +20,14 @@ Duration: 1 hr 12 minutes
 
 Notes for meeting 2: (09/26/2022)
 
-Doubts and updates: Inform Goerge about the list of requirements that we’ve made, and that we are working on a paper prototype to present with. 
-Also ask about how to update capacities and such on accommodations. Do emergency services do it or do the glohaven agents do it?
+Doubts and updates: Inform Goerge about the list of requirements that we’ve made, and that we are working on a paper prototype to present with. Also ask about how to update capacities and such on accommodations. Do emergency services do it or do the glohaven agents do it?
 
-Meeting was good. RA should have access to everything and is the one that updates and adds accommodations to the page.
-These accommodations will reach out to the RA and tell them they have x rooms available with all the info. 
-RA will then add in the accommodation on the site. 
-If someone wants to book a room they will call or register on the website.
-The RA will see this and confirm the accommodation. When this happens availability should automatically reduce by how many ever rooms were booked.
-Goerge said we can ask any doubts on the discord chat before 4 pm on weekdays. 
-With regards to the new message by Michael on the Glohaven discord, he said no need to add anything new just yet, to just stick the functionality of supporting evacuees for now.
+Meeting was good. RA should have access to everything and is the one that updates and adds accommodations to the page.These accommodations will reach out to the RA and tell them they have x rooms available with all the infoRA will then add in the accommodation on the siteIf someone wants to book a room they will call or register on the websiteThe RA will see this and confirm the accommodation. When this happens availability should automatically reduce by how many ever rooms were bookedGoerge said we can ask any doubts on the discord chat before 4 pm on weekdaysAnd with regards to the new message by Michael on the Glohaven discord, he said no need to add anything new just yet, to just stick the functionality of supporting evacuees for now
 
 Duration: 35 minutes
 
 
-Notes for meeting 3: (10/03/2022)
+Notes for Meeting 3: (10/03/22)
 
 Displayed first paper prototypes - main admin page, accommodation update page. Paper prototypes on the right track.
 next week meeting on Tuesday 4pm
@@ -40,9 +35,17 @@ next week meeting on Tuesday 4pm
 Duration: 22 minutes
 
 
-Notes for meeting 4: (10/11/2022)
+Notes for meeting 4: (10/11/22) 
 
 Doubts and updates:
 How do admins login? User name/ employee id?
 How are we hosting the website? Personal servers? Docker?
 How large are the regions supposed to be? Riding districts? 
+
+No changes in any requirements
+Admins log in with username and password
+No need to host the website, hosting locally and screen sharing is fine
+He will get back to us with regards to how big regions should be
+We can show him our presentation slides to review before presentation
+
+Duration: 22 minutes

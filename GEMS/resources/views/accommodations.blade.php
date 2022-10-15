@@ -1,8 +1,14 @@
 @extends('Layouts.default')
-
-@section('default')
- <h1>
- </h1>
-@endsection
+@section('main')
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
 </br></br></br>
+<b>
 This is a test. Accommodations will not be accessed from the homepage directly.
+</b>
+</body>
+@endsection

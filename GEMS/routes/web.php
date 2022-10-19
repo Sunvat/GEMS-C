@@ -28,3 +28,7 @@ Route::get('/Accommodations', function () {
 Route::get('/Log-In', function () {
     return view('Log-In');
 })->name('Log-In');
+
+Route::get('/New', function () {
+    return view('create-accommodation');
+})->name('New-Accommodations');

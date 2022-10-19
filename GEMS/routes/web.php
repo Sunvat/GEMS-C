@@ -32,3 +32,11 @@ Route::get('/Log-In', function () {
 Route::get('/New', function () {
     return view('create-accommodation');
 })->name('New-Accommodations');
+
+Route::get('/View-Accommodation', function () {
+    return view('view-accommodation');
+})->name('View-Accommodation');
+
+Route::get('/Update', function () {
+    return view('update-accommodations');
+})->name('Update-Accommodation');

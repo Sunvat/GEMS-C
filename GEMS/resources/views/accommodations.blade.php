@@ -20,6 +20,15 @@ This is a test. Accommodations will not be accessed from the homepage directly.
         </a>
     </div>
 <?php endif; ?>
+</br>
+#Below button represents an accommodation in the database.</br>
+<div class="container">
+        <a href="/View-Accommodation">
+            <span id="view-accommodation-button"
+            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
+            This is a placeholder accommodation!</span>
+        </a>
+    </div>
 
 </body>
 @endsection

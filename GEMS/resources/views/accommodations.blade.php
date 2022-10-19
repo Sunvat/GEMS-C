@@ -6,10 +6,19 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
-</br></br></br>
-TODO: Make this page put content out of the way of the header automatically
 <b>
 This is a test. Accommodations will not be accessed from the homepage directly.
-</b>
+</b></br>
+
+<?php if (true) : ?>
+  <div class="container">
+        <a href="/New">
+            <span id="create-accommodation-button"
+            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
+            New Accommodation</span>
+        </a>
+    </div>
+<?php endif; ?>
+
 </body>
 @endsection

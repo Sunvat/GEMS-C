@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    padding-top: 3.5rem; /*Will set the body of pages to start after header*/
+ }

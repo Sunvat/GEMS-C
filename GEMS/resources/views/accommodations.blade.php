@@ -10,6 +10,7 @@
 This is a test. Accommodations will not be accessed from the homepage directly.
 </b></br>
 
+#Below if statement will check if user is RA
 <?php if (true) : ?>
   <div class="container">
         <a href="/New">

@@ -21,14 +21,31 @@ This is a test. Accommodations will not be accessed from the homepage directly.
     </div>
 <?php endif; ?>
 </br>
-#Below button represents an accommodation in the database.</br>
-<div class="container">
-        <a href="/View-Accommodation">
+TODO: This should be auto populated once we have a database set up
+<table>
+  <tr>
+    <th id="locColumn">Location</th>
+    <th id="capColumn">Capacity</th>
+    <th>TODO: Buttons should be added automatically</th>
+  </tr>
+  <tr>
+    <td id="locColumn">UNC</td>
+    <td id="capColumn">10 people</td>
+    <td id="buttonColumn"><a href="/View-Accommodation">
             <span id="view-accommodation-button"
             style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            This is a placeholder accommodation!</span>
-        </a>
-    </div>
-
+            View</span>
+        </a></td>
+  </tr>
+  <tr>
+    <td id="locColumn">City Hall</td>
+    <td id="capColumn">20 people</td>
+    <td id="buttonColumn"><a href="/View-Accommodation">
+            <span id="view-accommodation-button"
+            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
+            View</span>
+        </a></td>
+  </tr>
+</table>
 </body>
 @endsection

@@ -1,5 +1,5 @@
 @extends('Layouts.default')
 
-@section('defualt')
+@section('default')
 homepage
 @endsection

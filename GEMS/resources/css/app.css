@@ -5,3 +5,22 @@
 body {
     padding-top: 3.5rem; /*Will set the body of pages to start after header*/
  }
+
+table, tr {
+    border: 1px solid;
+}
+
+#buttonColumn {
+    padding: 3px;
+    text-align: right;
+}
+
+#capColumn {
+    padding-left: 3px;
+    text-align: left;
+}
+
+#locColumn {
+    border: 1px solid;
+    text-align: center;
+}

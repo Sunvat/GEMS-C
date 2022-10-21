@@ -53,3 +53,10 @@ Route::get('/Latest-Emergency-Updates', function () {
     return view('Latest-Emergency-Updates');
 })->name('Latest-Emergency-Updates');
 
+Route::get('/Contact', function () {
+    return view('Contact');
+})->name('Contact');
+
+Route::get('/Create-Account', function () {
+    return view('Create-Account');
+})->name('Create-Account');

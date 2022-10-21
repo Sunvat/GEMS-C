@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 
 </head>
-<body class = "flex flex-col min-h-screen bg-gray-400" >
+<body class = "bg-gray-400" >
      <header class = "fixed bg-gray-400 top-0 left-5 right-0 z-50">
         <div class="container mx-auto">
             <h1 class="text-xl font-black">
@@ -18,18 +18,16 @@
                 <a href="{{route('Home')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Home</a>
                 <a href="{{route('Regions')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Regions</a>
                 <a href="{{route('Log-In')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Log in</a>
-                <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Accommodations</a>        
-                <a href="{{route('Contact')}}" class = "text-lg mx-2 text-white hover:text-orange-400 transition">Contact</a>
-                <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-white hover:text-orange-400 transition">Create Account</a>
+                <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Accommodations</a>
             </nav>
 
-        </div>
+    </div>
      </header>
-     <main class = "flex-grow">
+     <main>
         @yield('main')
      </main>
      <footer>
         
-    </footer>
+     </footer>
 </body>
 </html>

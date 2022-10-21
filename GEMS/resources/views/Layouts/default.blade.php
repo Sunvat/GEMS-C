@@ -28,7 +28,7 @@
      </main>
      <footer>
         <div>
-            <a href="{{route('Contact')}}" class = "text-base mx-2 text-black hover:text-slate-200 transition">Contact</a>
+            <a href="{{route('Contact')}}" class = "text-lg font-bold mx-2 text-black hover:text-slate-200 transition">Contact</a>
         </div> 
     </footer>
 </body>

@@ -21,6 +21,7 @@
                 <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-white hover:text-orange-400 transition">Accommodations</a>        
                 <a href="{{route('Contact')}}" class = "text-lg mx-2 text-white hover:text-orange-400 transition">Contact</a>
                 <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-white hover:text-orange-400 transition">Create Account</a>
+                <a href="{{route('Booking')}}" class = "text-lg mx-2 text-white hover:text-orange-400 transition">Booking</a>
             </nav>
 
         </div>

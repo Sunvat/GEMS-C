@@ -4,6 +4,19 @@
 <html>
 <head>
   <link rel="stylesheet" href="app.css">
+  <script>
+    function deletePopup() {
+        var x;
+        var r = confirm("Are you sure you want to delete this accommodation?");
+        if (r == true) {
+         x = "You pressed OK!";
+     }
+        else {
+         x = "You pressed Cancel!";
+     }
+     document.getElementById("demo").innerHTML = x;
+}
+</script>
 </head>
 <body>
 <b>
@@ -14,19 +27,17 @@ This is a test. Accommodations will not be accessed from the homepage directly.
 <?php if (true) : ?>
   <div class="container">
         <a href="/Update">
-            <span id="create-accommodation-button"
+            <span id="update-accommodation-button"
             style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
             Update</span>
         </a>
 
-        <span style="padding-left:10px"></span>
+        <?php?>
+          <button style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;" onclick="deletePopup()">Delete</button>
+          <p id="demo"></p>
+        </div>
 
-        <a href="/Accommodations">
-            <span id="update-accommodation-button"
-            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            Delete</span>
-        </a>
-    </div>
+
 <?php endif; ?>
 
 </body>

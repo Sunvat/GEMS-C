@@ -61,6 +61,3 @@ Route::get('/Create-Account', function () {
     return view('Create-Account');
 })->name('Create-Account');
 
-Route::get('/Booking', function () {
-    return view('Booking');
-})->name('Booking');

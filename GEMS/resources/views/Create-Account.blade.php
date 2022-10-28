@@ -1,4 +1,5 @@
 @extends('Layouts.default')
+
 @section('main')
 <div>
     <h1>

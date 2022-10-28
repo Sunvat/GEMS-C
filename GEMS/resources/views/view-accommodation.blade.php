@@ -6,15 +6,12 @@
   <link rel="stylesheet" href="app.css">
   <script>
     function deletePopup() {
-        var x;
         var r = confirm("Are you sure you want to delete this accommodation?");
         if (r == true) {
-         x = "You pressed OK!";
+          window.location.href = "/Accommodations";
      }
         else {
-         x = "You pressed Cancel!";
      }
-     document.getElementById("demo").innerHTML = x;
 }
 </script>
 </head>
@@ -27,13 +24,11 @@ This is a test. Accommodations will not be accessed from the homepage directly.
 <?php if (true) : ?>
   <div class="container">
         <a href="/Update">
-            <span id="update-accommodation-button"
-            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            Update</span>
+        <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">Update</button>
         </a>
 
         <?php?>
-          <button style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;" onclick="deletePopup()">Delete</button>
+        <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered" onclick="deletePopup()">Delete</button>
           <p id="demo"></p>
         </div>
 

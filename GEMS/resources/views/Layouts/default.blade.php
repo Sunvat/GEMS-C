@@ -24,7 +24,7 @@
                     <a href="{{route('Regions')}}" class="text-lg mx-2 text-slate-800 hover:text-orange-700 transition">Regions</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 hover:text-orange-5700 transition">Log in</a>
+                    <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 hover:text-orange-700 transition">Log in</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
                     <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-slate-800 hover:text-orange-700 transition">Accommodations</a>

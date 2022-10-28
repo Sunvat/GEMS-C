@@ -3,6 +3,14 @@
 @section('main')
 <body>
   <br>
+  <div class = "flex flex-row justify-center items-center">
+    <div>
+      <button class = "group bg-zinc-500 rounded-full hover:bg-slate-600">
+        <a href="{{route('Latest-Emergency-Updates')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-orange-700 transition"> Latest Emergancy Updates</a>
+      </button>
+    </div>
+  </div>
+
   <br>
   <div class = "flex flex-col justify-center items-center">
     <h1 class="text-xl font-black font-size:25px">Who We Are</h1>

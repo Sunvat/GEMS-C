@@ -14,9 +14,7 @@ This is a test. Accommodations will not be accessed from the homepage directly.
 <?php if (true) : ?>
   <div class="container">
         <a href="/New">
-            <span id="create-accommodation-button"
-            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            New Accommodation</span>
+        <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">New Accommodation</button>
         </a>
     </div>
 <?php endif; ?>
@@ -24,28 +22,36 @@ This is a test. Accommodations will not be accessed from the homepage directly.
 TODO: This should be auto populated once we have a database set up
 <table>
   <tr>
-    <th id="locColumn">Location</th>
+    <th id="imgColumn">Location</th>
+    <th id="locColumn"></th>
     <th id="capColumn">Capacity</th>
     <th>TODO: Buttons should be added automatically</th>
   </tr>
   <tr>
+    <td id="imgColumn" height=100 width=100><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td id="locColumn">UNC</td>
     <td id="capColumn">10 people</td>
-    <td id="buttonColumn"><a href="/View-Accommodation">
-            <span id="view-accommodation-button"
-            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            View</span>
-        </a></td>
+    <?php if (true) : ?>
+    <td id="buttonColumn">
+      <div class="inline-flex rounded-md shadow-sm" role="group">
+      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">View</button>
+      <button type="button" onclick="location.href='/Booking';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">Book Now</button>
+    </div></td>
+      <?php endif;?>
   </tr>
   <tr>
+    <td id="imgColumn" height=100 width=100><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td id="locColumn">City Hall</td>
     <td id="capColumn">20 people</td>
-    <td id="buttonColumn"><a href="/View-Accommodation">
-            <span id="view-accommodation-button"
-            style="background-color:#EC925D;color:#FFFFFF;padding-left:5px;padding-right:5px;">
-            View</span>
-        </a></td>
+    <?php if (true) : ?>
+    <td id="buttonColumn">
+    <div class="inline-flex rounded-md shadow-sm" role="group">
+      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">View</button>
+      <button type="button" onclick="location.href='/Booking';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">Book Now</button>
+    </div></td>
+      <?php endif;?>
   </tr>
 </table>
+
 </body>
 @endsection

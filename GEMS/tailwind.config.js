@@ -6,7 +6,12 @@ module.exports = {
   "./resources/**/*.vue",
 ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'Glohaven-Orange': '#EC925D',
+        'Glohaven-Hovered': '#c97b4f'
+      }
+    },
   },
   plugins: [],
 }

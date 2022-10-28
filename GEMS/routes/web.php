@@ -70,5 +70,5 @@ Route::get('/Registered', function () {
     return view('Registered');
 })->name('Registered');
 
-Route::post("/Create-Account",[Controller::class,'getAccInfo']);
+Route::post("/Create-Account",[Controller::class,'getAccInfo']);//route for create account page to submit form and get ID
 Route::view("Registered","/Create-Account");

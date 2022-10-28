@@ -8,21 +8,10 @@
     <br>
     <body class="mx-auto pt-4">
     <p><b>Create an Account:</b></p>
-    <div class="mx-auto w-96">
-    <?php 
-        if(array_key_exists('submit',$_POST)){
-            submit();
-        }
-        function submit(){
-         echo "You have been registered";
-        }
-        ?>
-        <form >
-           @csrf  
-
-            @method('PUT')
-
-                <label for="first_name" class="mx-2">First Name:</label>
+    <div class="mx-auto w-96" id = "container">
+        <form action="Create-Account" method="POST">
+                @csrf
+                <label name ="fr_name" for="first_name" class="mx-2">First Name:</label>
                 <br>
                 <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2">
                 <br>
@@ -41,7 +30,8 @@
                 <label for="confirm_pass"class="mx-2">Confirm Password:</label>
                 <br>
                 <input type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2">
-                <input name="submit" type="Submit" value="Register" class="border-2 cursor-pointer my-4 mx-4">
+                <br>
+                <input  type="Submit" value="Register" class="border-2 cursor-pointer my-4 mx-16">
         </form>
     </div>
 </body>

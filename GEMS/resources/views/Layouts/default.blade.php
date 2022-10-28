@@ -36,11 +36,12 @@
                     <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-slate-800 hover:text-orange-700 transition">Create Account</a>
                 </button>
             </nav>
-
         </div>
      </header>
+
      <main class = "flex-grow">
         @yield('main')
      </main>
+     
 </body>
 </html>

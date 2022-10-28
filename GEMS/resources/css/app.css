@@ -24,6 +24,14 @@ table, tr {
 
 #locColumn {
     border: 1px solid;
+    border-left: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#imgColumn {
+    border: 1px solid;
+    border-right: 0px;
     text-align: center;
     vertical-align: middle;
 }

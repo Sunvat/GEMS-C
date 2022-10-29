@@ -3,3 +3,8 @@ GEMS/.Rhistory
 GEMS/package-lock.json
 GEMS/package.json
 GEMS/package-lock.json
+.DS_Store
+GEMS/.DS_Store
+GEMS/bootstrap/.DS_Store
+GEMS/resources/.DS_Store
+GEMS/storage/.DS_Store

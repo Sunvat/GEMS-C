@@ -33,6 +33,22 @@
                 <br>
                 <input type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2">
                 <br>
+                <label for="EMS Division"class="mx-2">EMS Division:</label>
+                <br>
+                <input type="text" placeholder="EMS Division" class=" mx-2 mb-4 py-2 px-2">
+                <br>
+                <label for="I.D Number"class="mx-2">I.D Number:</label>
+                <br>
+                <input type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2">
+                <br>
+                <label for="Local Region"class="mx-2">Local Region Presiding Over:</label>
+                <br>
+                <input type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2">
+                <br>
+                <label for="Provice"class="mx-2">Province:</label>
+                <br>
+                <input type="text" placeholder="Province" class=" mx-2 mb-4 py-2 px-2">
+                <br>
                 <input  type="Submit" value="Register" class="border-2 cursor-pointer my-4 mx-16">
         </form>
     </div>

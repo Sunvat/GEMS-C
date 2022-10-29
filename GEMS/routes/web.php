@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,10 @@ Route::get('/Create-Account', function () {
 Route::get('/Booking', function () {
     return view('Booking');
 })->name('Booking');
+
+Route::get('/Registered', function () {
+    return view('Registered');
+})->name('Registered');
+
+Route::post("/Create-Account",[Controller::class,'getAccInfo']);//route for create account page to submit form and get ID
+Route::view("Registered","/Create-Account");

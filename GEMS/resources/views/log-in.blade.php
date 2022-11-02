@@ -21,12 +21,16 @@
                 <input type="submit" value = "Login" class = "font-bold text-slate-700 bg-Glohaven-Orange rounded-full hover:bg-slate-600 p-1 hover:text-Glohaven-Hovered"><br><!-- Login Button -->
             </div>
         </form>
-    </div class = "flex">
-    <h1 class = "text-lg font-semibold text-slate-800">Don't have an account yet. No worries, create an account here:</h1>
-    <div>
-        <button>
-            <a href="{{route('Create-Account')}}" class =" font-bold text-slate-700 bg-Glohaven-Orange rounded-full hover:bg-slate-600 p-1">Create Account</a>
-        </button>
+    </div>
+    <div class = "flex gap-1">
+        <div>
+            <h1 class = "text-lg font-semibold text-slate-800">Don't have an account yet. No worries, create an account here:</h1>
+        </div>
+        <div>
+            <button>
+                <a href="{{route('Create-Account')}}" class =" font-bold text-slate-700 bg-Glohaven-Orange rounded-full hover:bg-slate-600 p-1">Create Account</a>
+            </button>
+        </div>
     </div>
 </div>
 

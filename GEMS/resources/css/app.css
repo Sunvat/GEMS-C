@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    padding-top: 3.5rem; /*Will set the body of pages to start after header*/
+    padding-top: 3.6rem; /*Will set the body of pages to start after header*/
  }
 
 table, tr {

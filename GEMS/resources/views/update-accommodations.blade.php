@@ -8,7 +8,7 @@
 <body>
 <b>
 This is a test. Accommodations will not be accessed from the homepage directly.</br>
-TODO: Create function to change page after submitting
+TODO: Create function to change page after submitting. /action_page.php should be replaced with an actual function
 </b></br></br>
 <div class="container py-10 px-10 mx-0 min-w-full grid place-items-center" id = "container">
 <form action="/action_page.php" method="get" id="updateForm">

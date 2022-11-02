@@ -15,8 +15,6 @@ This page should only be available to RAs
   <input type="text" id="locName" name="locName" value="Placeholder"><br>
   <label for="maxCap">Maximum Capacity:</label><br>
   <input type="text" id="maxCap" name="maxCap" value="100"><br>
-  <label for="popChange">Net Change in Occupancy:</label><br>
-  <input type="text" id="popChange" name="popChange" value="0"><br>
   <label for="desc">Description:</label><br>
   <input type="text" id="desc" name="desc" value="Placeholder"><br><br>
 </form>

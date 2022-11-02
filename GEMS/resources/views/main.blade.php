@@ -26,11 +26,6 @@
     <h1 class = "text-lg font-black font-size:15">Booking Contact</h1>
     <p>To book accomodations, or to get any help</p>
     <p>Call (xxx) xxx xxxx to speak with one of our Reservation agents</p>
-  </div>
-
-       
-
-     
-    
+  </div>  
 </body>
 @endsection

@@ -2,15 +2,9 @@
 @extends('Layouts.default')
 
 @section('main')
-<!DOCTYPE html>
-<html class = "ml-5">
-    <head>
-    <link rel="stylesheet" href="app.css">
-    </head>
-    <br>
-    <body class="mx-auto pt-4">
-    <p><b>Create an Account:</b></p>
-    <div class="mx-auto w-96" id = "container">
+<body class="mx-auto pt-4">
+<p><b>Create an Account:</b></p>
+    <div class="mx-auto w-96 p-8" id = "container">
         <form action="Create-Account" method="POST">
                 @csrf
                 <label name ="fr_name" for="first_name" class="mx-2">First Name:</label>
@@ -53,4 +47,4 @@
         </form>
     </div>
 </body>
-</html>
+@endsection

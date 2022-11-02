@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'Glohaven-Orange': '#EC925D',
-        'Glohaven-Hovered': '#c97b4f'
+        'Glohaven-Hovered': '#c97b4f',
+        'Glovhaven-bg': '#fdf4ef'
       }
     },
   },

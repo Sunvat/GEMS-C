@@ -31,25 +31,19 @@ TODO: This should be auto populated once we have a database set up
     <td id="imgColumn" height=100 width=100><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td id="locColumn">UNC</td>
     <td id="capColumn">10 people</td>
-    <?php if (true) : ?>
     <td id="buttonColumn">
       <div class="inline-flex rounded-md shadow-sm" role="group">
-      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">View</button>
-      <button type="button" onclick="location.href='/Booking';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">Book Now</button>
-    </div></td>
-      <?php endif;?>
+      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">View</button>
+      </div></td>
   </tr>
   <tr>
     <td id="imgColumn" height=100 width=100><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td id="locColumn">City Hall</td>
     <td id="capColumn">20 people</td>
-    <?php if (true) : ?>
     <td id="buttonColumn">
     <div class="inline-flex rounded-md shadow-sm" role="group">
-      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">View</button>
-      <button type="button" onclick="location.href='/Booking';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">Book Now</button>
+      <button type="button" onclick="location.href='/View-Accommodation';" class="py-2 px-4 text-sm font-medium text-white bg-white rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">View</button>
     </div></td>
-      <?php endif;?>
   </tr>
 </table>
 

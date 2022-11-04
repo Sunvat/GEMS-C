@@ -26,6 +26,10 @@ Route::get('/Accommodations', function () {
     return view('accommodations');
 })->name('Accommodations');
 
+Route::get('/RA-Accommodations', function () {
+    return view('accommodationsRA');
+})->name('RA-Accommodations');
+
 Route::get('/Log-In', function () {
     return view('Log-In');
 })->name('Log-In');
@@ -37,6 +41,10 @@ Route::get('/New', function () {
 Route::get('/View-Accommodation', function () {
     return view('view-accommodation');
 })->name('View-Accommodation');
+
+Route::get('/View-Accommodation-RA', function () {
+    return view('view-accommodationRA');
+})->name('View-Accommodation-RA');
 
 Route::get('/Update', function () {
     return view('update-accommodations');

@@ -24,16 +24,13 @@
                     <a href="{{route('Regions')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Regions</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Log in</a>
-                </button>
-                <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
                     <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Accommodations</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">        
                     <a href="{{route('Contact')}}" class = "text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Contact</a>
                 </button>
-                <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Create Account</a>
+                <button>
+                    <a href="{{route('Booking')}}" class ="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Booking</a>
                 </button>
             </nav>
         </div>

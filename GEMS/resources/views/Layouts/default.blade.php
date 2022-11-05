@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 
 </head>
-<body class = "flex flex-col min-h-screen bg-gray-400" >
+<body class = "flex flex-col min-h-screen bg-slate-400" >
      <header class = "fixed bg-Glohaven-Orange border broder-y-2 h-16 border-slate-500 top-0 left-0 right-0 z-12">
         <div class="flex justify-center items-center">
             <h1 class="text-xl font-bold text-slate-800">
@@ -21,19 +21,19 @@
                     <a href="{{route('Home')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Home</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Regions')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Regions</a>
+                    <a href="{{route('Regions')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Regions</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Log in</a>
+                    <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Log in</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Accommodations</a>
+                    <a href="{{route('Accommodations')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Accommodations</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">        
-                    <a href="{{route('Contact')}}" class = "text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Contact</a>
+                    <a href="{{route('Contact')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Contact</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition">Create Account</a>
+                    <a href="{{route('Create-Account')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Create Account</a>
                 </button>
             </nav>
         </div>

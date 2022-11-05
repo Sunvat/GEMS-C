@@ -16,6 +16,7 @@ class Controller extends BaseController
         $str = "You Have been registered. Your ID is: ";
        printf("%s",$str);
        printf("%d",$num);
+       
         return $req->input();
     }
 }

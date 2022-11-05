@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 
 </head>
-<body class = "flex flex-col min-h-screen bg-gray-400" >
+<body class = "flex flex-col min-h-screen bg-slate-400" >
      <header class = "fixed bg-Glohaven-Orange border broder-y-2 h-16 border-slate-500 top-0 left-0 right-0 z-12">
         <div class="flex justify-center items-center">
             <h1 class="text-xl font-bold text-slate-800">

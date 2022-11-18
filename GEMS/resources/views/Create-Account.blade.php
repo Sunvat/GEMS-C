@@ -6,41 +6,50 @@
 <div>
     <div class=" w-fit mx-auto py-4 px-52 " id = "container">
         <form action="Create-Account"  method="POST">
-                <label name ="fr_name" for="first_name" class="mx-2">First Name:</label>
+                <label name ="fr_name" for="first_name" class="mx-2 font-bold text-slate-700">First Name:</label>
                 <br>
-                <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2">
+                <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="last_name"class="mx-2">Last Name:</label>
+                <label for="last_name"class="mx-2 font-bold text-slate-700">Last Name:</label>
                 <br>
-                <input type="text" placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2">
+                <input type="text" placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="email"class="mx-2">E-mail:</label>
+                <label for="email"class="mx-2 font-bold text-slate-700">E-mail:</label>
                 <br>
-                <input type="email" placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="email" placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="password"class="mx-2">Password:</label>
+                <label for="password"class="mx-2 font-bold text-slate-700">Password:</label>
                 <br>
-                <input type="password" placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="password" placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <p class = "mx-2 text-xs text-slate-700 ">New password must contain:<br>
+                <ul class = " mx-6 text-xs list-disc text-slate-700">
+                    <li>At least 8 characters</li>
+                    <li>At least 1 lowercase character</li>
+                    <li>At least 1 upper character</li>
+                    <li>At least 1 number</li>
+                    <li>At least 1 special character</li>
+                </ul>
+                </p>
                 <br>
-                <label for="confirm_pass"class="mx-2">Confirm Password:</label>
+                <label for="confirm_pass"class="mx-2 font-bold text-slate-700">Confirm Password:</label>
                 <br>
-                <input type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="EMS Division"class="mx-2">EMS Division:</label>
+                <label for="EMS Division"class="mx-2 font-bold text-slate-700">EMS Division:</label>
                 <br>
-                <input type="text" placeholder="EMS Division" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="text" placeholder="EMS Division" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="I.D Number"class="mx-2">I.D Number:</label>
+                <label for="I.D Number"class="mx-2 font-bold text-slate-700">I.D Number:</label>
                 <br>
-                <input type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="Local Region"class="mx-2">Local Region Presiding Over:</label>
+                <label for="Local Region"class="mx-2 font-bold text-slate-700">Local Region Presiding Over:</label>
                 <br>
-                <input type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2 border-2">
+                <input type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="Provice"class="mx-2">Province:</label>
+                <label for="Provice"class="mx-2 font-bold text-slate-700">Province:</label>
                 <br>
-                <select class= "mx-2 mb-4 py-2 px-0.5 border-2">
+                <select class= "mx-2 mb-4 py-2 border-2 rounded">
                     <option value="select">Select</option>
                     <option value="ab">Alberta</option>
                     <option value="bc">British Columbia</option>
@@ -57,7 +66,7 @@
                     <option value="yk">Yukon</option>
                 </select>
                 <br>
-                <input  type="Submit" value="Register" class="border-2 cursor-pointer my-4 mx-16">
+                <input  type="Submit" value="Register" class="p-1.5 border-2 cursor-pointer my-4 mx-16 bg-Glohaven-Orange font-bold text-slate-700 rounded">
         </form>
          </div>
  </div>

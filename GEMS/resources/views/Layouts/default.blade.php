@@ -46,7 +46,7 @@
      <br>
      <br>
 
-     <footer class="p-8 bg-white shadow md:px-6 md:py-8 dark:bg-orange-300 flex flex-col h-min">
+     <footer class="p-8 bg-white shadow md:px-6 md:py-3 dark:bg-orange-300 flex flex-col h-min">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-3 h-8" alt="Glohaven Logo" />

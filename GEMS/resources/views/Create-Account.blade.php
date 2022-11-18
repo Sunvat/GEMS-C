@@ -3,10 +3,9 @@
 
 @section('main')
 <body class="mx-auto pt-4">
-<div class="grid grid-cols-2 divide-x">
-<div class="bg-white" ></div>
-    <div class=" w-fit mx-auto py-4 px-52 bg-Glovhaven-bg" id = "container">
-        <form action="Create-Account" class="border-4" method="POST">
+<div>
+    <div class=" w-fit mx-auto py-4 px-52 " id = "container">
+        <form action="Create-Account"  method="POST">
                 <label name ="fr_name" for="first_name" class="mx-2">First Name:</label>
                 <br>
                 <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2">

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glohaven Emergency Management System</title>
+    <link rel="icon" src="GEMS-C\GEMS\resources\images\gemlogo.jpg">
     @vite('resources/css/app.css')
 
 </head>

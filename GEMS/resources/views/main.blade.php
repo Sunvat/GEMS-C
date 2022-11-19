@@ -1,6 +1,7 @@
 @extends('Layouts.default')
 
 @section('main')
+
 <body>
   <div class = "grid grid-cols-2 grid-row-2 gap-2">
 

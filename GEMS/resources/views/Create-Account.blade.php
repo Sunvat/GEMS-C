@@ -66,6 +66,10 @@
                     <option value="yk">Yukon</option>
                 </select>
                 <br>
+                <label for="Confirmation Code"class="mx-2 font-bold text-slate-700">Confirmation Code: (Emailed to new assignee when new RA is assigned)</label>
+                <br>
+                <input type="text" placeholder="Confirmation Code" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <br>
                 <input  type="Submit" value="Register" class="p-1.5 border-2 cursor-pointer my-4 mx-16 bg-Glohaven-Orange font-bold text-slate-700 rounded">
         </form>
          </div>

@@ -8,7 +8,7 @@
 <body>
 <div class = "flex flex-col justify-center items-center">
   <b>
-  This is a test. Accommodations will not be accessed from the homepage directly.
+  This is a test. Accommodations will not be accessed from the menu bar directly.
   </b>
   </br>
 </div>

@@ -55,7 +55,7 @@ class databaseTest extends TestCase
 
         $sql = "SELECT name FROM accommodations WHERE name='UBCO LIB 305';";
         $result = mysqli_query($conn,$sql);
-        $rows = $result->fetch_all(MYSQLI_ASSOC);
+        $rows = $result->fetch_row();
 
         if (strcmp($rows[0], "UBCO LIB 305") == 0) {
             $conn->close();

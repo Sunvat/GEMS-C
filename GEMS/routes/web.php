@@ -80,3 +80,7 @@ Route::view("Registered","/Create-Account");
 Route::get('/RA_region', function () {
     return view('RA_region');
 })->name('RA_region');
+
+Route::get('/RA_region_create', function () {
+    return view('RA_region_create');
+})->name('RA_region_create');

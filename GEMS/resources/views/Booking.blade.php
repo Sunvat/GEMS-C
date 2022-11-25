@@ -1,7 +1,6 @@
 @extends('Layouts.default')
 
 @section('main')
-<!DOCTYPE html>
 <html class = "ml-5">
     <head>
     <link rel="stylesheet" href="app.css">

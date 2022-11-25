@@ -1,7 +1,9 @@
 @extends('Layouts.default')
 
 @section('main')
- <h1>
-    used to show any updates
- </h1>
+<div class = "flex flex-col justify-center items-center">
+   <h1 class = "font-bold text-3xl text-Chared">
+      Latest Emergancy Information
+   </h1>
+</div>
 @endsection

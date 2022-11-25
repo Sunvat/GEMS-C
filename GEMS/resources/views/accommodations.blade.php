@@ -8,6 +8,7 @@
 <body>
 
 <?php
+/*
 require dirname(__DIR__, 3).'/database/getConnection.php';
 $con = getConn();
 // Check connection
@@ -35,7 +36,7 @@ echo "</tr>";
 }
 echo "</table>";
 
-mysqli_close($con);
+mysqli_close($con);*/
 ?>
 </br></br></br></br></br></br>
 

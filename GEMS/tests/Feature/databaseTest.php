@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use vendor;
+require('database/getConnection.php');
 
 class databaseTest extends TestCase
 {
@@ -12,21 +13,11 @@ class databaseTest extends TestCase
      */
     public function test_Insert()
     {
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "gems";
-
         // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            $this->assertTrue(false);
-            die("Connection failed: " . $conn->connect_error);
-        }
+        $conn = getConn();
 
-        $sql = "INSERT INTO accommodations (name, address, maxCap)
-        VALUES ('UBCO LIB 305', 'Test Street', '50')";
+        $sql = "INSERT INTO accommodations (aname, address, rname, country, maxCap)
+        VALUES ('UBCO LIB 305', 'Test Street', 'Okanagan', 'Canada', '50')";
 
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
@@ -40,20 +31,10 @@ class databaseTest extends TestCase
     }
     public function test_Select()
     {
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "gems";
-
         // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            $this->assertTrue(false);
-            die("Connection failed: " . $conn->connect_error);
-        }
+        $conn = getConn();
 
-        $sql = "SELECT name FROM accommodations WHERE name='UBCO LIB 305';";
+        $sql = "SELECT aname FROM accommodations WHERE aname='UBCO LIB 305';";
         $result = mysqli_query($conn,$sql);
         $rows = $result->fetch_row();
 

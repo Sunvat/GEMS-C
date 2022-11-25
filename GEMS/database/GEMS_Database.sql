@@ -22,7 +22,19 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `email` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
-  `pword` varchar(50) NOT NULL
+  `pword` varchar(50) NOT NULL,
+  `ems` varchar(50) NOT NULL,
+  `id` int NOT NULL,
+  `reg` varchar(50) NOT NULL,
+  `provState` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+CREATE TABLE IF NOT EXISTS `accommodations` (
+  `name` varchar(50) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `maxCap` int NOT NULL,
+  `curOc` int DEFAULT 0,
+  `desc` varchar(200)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Data exporting was unselected.

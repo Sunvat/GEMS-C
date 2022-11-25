@@ -16,7 +16,7 @@
                  <fieldset class="border 5px px-5 py-5">
                     <legend class="mb-5 text-xl font-bold">Request Booking.</legend>
                     <label for="contactname">Name:</label>
-                     <input type="text" class = "border solid 5px ; mb-2; display block ">
+                     <input type="text" class = "border solid 5px  mb-2 display block ">
                      <br>
                       <label for="ems_division">EMS Division:</label>
                       <input type="text" class = "border solid 5px; mb-2; display block ">

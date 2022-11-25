@@ -1,11 +1,7 @@
 @extends('Layouts.default')
 @section('main')
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="app.css">
-</head>
 <body>
+
 <div class = "flex flex-col justify-center items-center">
   <b>
   This is a test. Accommodations will not be accessed from the menu bar directly.
@@ -22,7 +18,6 @@
       </a>
     </div>
   <?php endif; ?>
-
 
 </br>
 

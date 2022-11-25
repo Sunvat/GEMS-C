@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `accommodations` (
+  `accID` int AUTO_INCREMENT,
   `aname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `rname` varchar(50) NOT NULL,
@@ -37,7 +38,8 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `maxCap` int NOT NULL,
   `curOc` int DEFAULT 0,
   `desc` varchar(200),
-  `image` varchar(50)
+  `image` varchar(50),
+  PRIMARY KEY (accID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `regions` (

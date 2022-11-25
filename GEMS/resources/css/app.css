@@ -5,33 +5,3 @@
 body {
     padding-top: 3.6rem; /*Will set the body of pages to start after header*/
  }
-
-table, tr {
-    border: 1px solid;
-}
-
-#buttonColumn {
-    padding: 3px;
-    text-align: right;
-    vertical-align: middle;
-}
-
-#capColumn {
-    padding-left: 3px;
-    text-align: left;
-    vertical-align: middle;
-}
-
-#locColumn {
-    border: 1px solid;
-    border-left: 0px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-#imgColumn {
-    border: 1px solid;
-    border-right: 0px;
-    text-align: center;
-    vertical-align: middle;
-}

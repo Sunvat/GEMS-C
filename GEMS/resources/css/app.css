@@ -6,10 +6,6 @@ body {
     padding-top: 3.6rem; /*Will set the body of pages to start after header*/
  }
 
-table, tr {
-    border: 1px solid;
-}
-
 #buttonColumn {
     padding: 3px;
     text-align: right;

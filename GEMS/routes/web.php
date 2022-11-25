@@ -80,3 +80,7 @@ Route::get('/RA_region', function () {
 Route::get('/RA_region_create', function () {
     return view('RA_region_create');
 })->name('RA_region_create');
+
+Route::get('/main-RA', function () {
+    return view('main-RA');
+})->name('main-RA');

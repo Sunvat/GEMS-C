@@ -11,7 +11,7 @@
 This is a test. Accommodations will not be accessed from the homepage directly.
 </b></br>
   <div class="container">
-        <a href="/New">
+        <a href="{{route('RA_region_create')}}">
         <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">New Accommodation</button>
         </a>
     </div>

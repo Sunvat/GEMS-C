@@ -50,10 +50,6 @@ Route::get('/Update', function () {
     return view('update-accommodations');
 })->name('Update-Accommodation');
 
-Route::get('/Current-Evacuation-Plans', function () {
-    return view('Current-Evacuation-Plans');
-})->name('Current-Evacuation-Plans');
-
 Route::get('/Latest-Emergency-Updates', function () {
     return view('Latest-Emergency-Updates');
 })->name('Latest-Emergency-Updates');

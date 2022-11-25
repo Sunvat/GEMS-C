@@ -8,9 +8,9 @@
     <div  class = "flex flex-row justify-center items-center">
       <div>
         <div  class = "flex flex-col justify-center items-center">
-          <h1 class="text-xl font-black font-size:25px p-2">Latest Emergancy Updates/Information</h1>
+          <h1 class="text-xl font-black font-size:25px p-2">Latest Emergency Updates/Information</h1>
           <button class = "group bg-Glohaven-Orange rounded-full hover:bg-slate-600">
-            <a href="{{route('Latest-Emergency-Updates')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition"> Latest Emergancy Updates</a>
+            <a href="{{route('Latest-Emergency-Updates')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition"> Latest Emergency Updates</a>
           </button>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class = "flex flex-col justify-center items-center">
         <h1 class="text-xl font-black font-size:25px">Who We Are</h1>
           <p> The Glohaven Emergency Management Solution is a digital platform which makes it easier for disaster response personnel operating in Canada to manage information and resources well during times of emergency. 
-             Comprising of organized lists of accommodations by their locations, Emergancy services can use these lists to find and book nearby accommodations in case they need to evacuate people. 
+             Comprising of organized lists of accommodations by their locations, Emergency services can use these lists to find and book nearby accommodations in case they need to evacuate people. 
           </p>
       </div>
     </div>

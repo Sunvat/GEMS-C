@@ -4,7 +4,7 @@
 <body>
    <div class = "flex flex-col justify-center items-center">
       <h1 class = "font-bold text-3xl text-Chared">
-         Latest Emergancy Information
+         Latest Emergency Information
       </h1>
       <br>
       <table class = "table-fixed border mx-24">

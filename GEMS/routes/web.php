@@ -76,3 +76,11 @@ Route::get('/Registered', function () {
 
 Route::post("/Create-Account",[Controller::class,'getAccInfo']);//route for create account page to submit form and get ID
 Route::view("Registered","/Create-Account");
+
+Route::get('/RA_region', function () {
+    return view('RA_region');
+})->name('RA_region');
+
+Route::get('/RA_region_create', function () {
+    return view('RA_region_create');
+})->name('RA_region_create');

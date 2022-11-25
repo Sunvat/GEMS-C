@@ -9,7 +9,7 @@
         <form> <!-- dont forget to add a post or someother method when needed -->
             <!-- used to create the login id and password slots-->
             <div class = "py-2">
-                <label for="id" class = "px-2 font-bold text-slate-700">Login ID</label>
+                <label class = "px-2 font-bold text-slate-700">Login ID</label>
                 <input type="text" id = "id" name = "id" class="px-3 py-2 placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"><br>  
             </div>
             <div>
@@ -18,7 +18,9 @@
             </div class = "py-2">
             <br>
             <div class = "flex flex-col justify-center items-center"><!--center the login button -->
-                <input type="submit" value = "Login" class = "font-bold text-slate-700 bg-Glohaven-Orange rounded-full hover:bg-slate-600 p-1 hover:text-Glohaven-Hovered"><br><!-- Login Button -->
+                <button class="font-bold text-slate-700 bg-Glohaven-Orange rounded-full">
+                    <a href ="{{route('RA_region')}}" >Login</a>
+                </button><br><!-- Login Button -->
             </div>
         </form>
     </div>

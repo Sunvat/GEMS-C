@@ -19,7 +19,7 @@
             <br>
             <div class = "flex flex-col justify-center items-center"><!--center the login button -->
                 <button class="font-bold text-slate-700 bg-Glohaven-Orange rounded-full">
-                    <a href ="{{route('RA_region')}}" >Login</a>
+                    <a href ="{{route('main-RA')}}" >Login</a>
                 </button><br><!-- Login Button -->
             </div>
         </form>

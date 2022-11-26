@@ -2,6 +2,39 @@
 @section('main')
 <body>
 
+<?php
+/*
+require dirname(__DIR__, 3).'/database/getConnection.php';
+$con = getConn();
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$result = mysqli_query($con,"SELECT * FROM accommodations");
+
+echo "<table border='1'>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Region</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['accID'] . "</td>";
+echo "<td>" . $row['aname'] . "</td>";
+echo "<td>" . $row['rname'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+
+mysqli_close($con);*/
+?>
+</br></br></br></br></br></br>
+
 <div class = "flex flex-col justify-center items-center">
   <b>
   This is a test. Accommodations will not be accessed from the menu bar directly.

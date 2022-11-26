@@ -27,15 +27,26 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `id` int NOT NULL,
   `reg` varchar(50) NOT NULL,
   `provState` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `accommodations` (
-  `name` varchar(50) NOT NULL,
+  `accID` int AUTO_INCREMENT,
+  `aname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
+  `rname` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
   `maxCap` int NOT NULL,
   `curOc` int DEFAULT 0,
-  `desc` varchar(200)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `desc` varchar(200),
+  `image` varchar(50),
+  PRIMARY KEY (accID)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `regions` (
+  `rname` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `image` varchar(50)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 

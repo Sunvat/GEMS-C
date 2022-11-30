@@ -70,9 +70,14 @@
                 <br>
                 <input type="text" placeholder="Confirmation Code" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <input  type="Submit" value="Register" class="p-1.5 border-2 cursor-pointer my-4 mx-16 bg-Glohaven-Orange font-bold text-slate-700 rounded">
         </form>
+        <div class = "flex flex-col justify-center items-center group bg-slate-300 rounded-full hover:bg-slate-600 w-24">
+            <button>
+                <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Log in</a>
+            </button>
          </div>
+    </div>
  </div>
+
 </body>
 @endsection

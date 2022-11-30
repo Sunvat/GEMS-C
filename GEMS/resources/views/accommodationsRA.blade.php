@@ -25,7 +25,7 @@ This is a test. Accommodations will not be accessed from the homepage directly.
   <tr class = "border border-slate-500">
     <td class = "border border-slate-500 p-2 border-r-0" height=100 width=100"><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td class = "bordor bordor-slate-500 border-x-0">UNC</td>
-    <td class = "border border-slate-500 border">10 people</td>
+    <td class = "border border-slate-500 border">40 people</td>
     <td class = "border border-slate-500 p-2">
       <div class="inline-flex rounded-md shadow-sm" role="group">
       <button type="button" onclick="location.href='/View-Accommodation-RA';"class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">View</button>
@@ -35,7 +35,7 @@ This is a test. Accommodations will not be accessed from the homepage directly.
   <tr class = "border border-slate-500">
     <td class = "border border-slate-500 p-2 border-r-0" height=100 width=100><img src="https://ok.ubc.ca/wp-content/uploads/sites/26/2018/02/unc-opens-2009-history.jpg" alt="accommodation"></td>
     <td class = "bordor bordor-slate-500 border-x-0 p-2">City Hall</td>
-    <td class = "border border-slate-500 border">20 people</td>
+    <td class = "border border-slate-500 border">50 people</td>
     <td class = "border border-slate-500 p-2">
     <div class="inline-flex rounded-md shadow-sm" role="group">
       <button type="button" onclick="location.href='/View-Accommodation-RA';" class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white">View</button>

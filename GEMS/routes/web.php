@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('main');
 })->name('Home');
 
-Route::get('/Countries', function () {
+Route::get('/Regions', function () {
     return view('regions-countries');
 })->name('Regions');
 
@@ -84,3 +84,11 @@ Route::get('/RA_region_create', function () {
 Route::get('/main-RA', function () {
     return view('main-RA');
 })->name('main-RA');
+
+Route::get('/RA-Latest-Update', function () {
+    return view('RA-Latest-Update');
+})->name('RA-Latest-Update');
+
+Route::get('/RA-Create-Update', function () {
+    return view('RA-Create-Update');
+})->name('RA-Create-Update');

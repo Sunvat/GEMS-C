@@ -47,10 +47,10 @@
      <br>
      <br>
 
-     <footer class="p-8 bg-white shadow md:px-6 md:py-3 dark:bg-orange-300 flex flex-col h-min">
+     <footer class="p-8 bg-white shadow md:px-6 md:py-0.5 dark:bg-orange-300 flex flex-col h-min">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
-            <img src="/images/gemlogo.jpgs" class="mr-3 h-8" alt="Glohaven Logo" />
+            <img src="Glohaven Image.jpeg" class="mr-3 h-8" alt="Glohaven Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Glohaven Emergency Management Solutions</span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-700">

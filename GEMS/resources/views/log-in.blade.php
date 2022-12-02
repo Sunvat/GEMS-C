@@ -17,10 +17,10 @@
                 <input type="text" id = "id" name = "id" class = "px-3 py-2 placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"><br>
             </div class = "py-2">
             <br>
-            <div class = "flex flex-col justify-center items-center"><!--center the login button -->
+            <div class = "flex flex-col justify-center items-center">
                 <button class="font-bold text-slate-700 bg-Glohaven-Orange rounded-full">
                     <a href ="{{route('main-RA')}}" >Login</a>
-                </button><br><!-- Login Button -->
+                </button><br>
             </div>
         </form>
     </div>

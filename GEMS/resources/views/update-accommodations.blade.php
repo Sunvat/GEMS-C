@@ -1,4 +1,4 @@
-@extends('Layouts.default')
+@extends('Layouts.RA-default')
 @section('main')
 <!DOCTYPE html>
 <html>
@@ -21,8 +21,12 @@ TODO: Create function to change page after submitting. /action_page.php should b
   <label for="desc">Description:</label><br>
   <input type="text" id="desc" name="desc" value="Placeholder"><br><br>
 </form>
-<button type="submit" form="updateForm" value="Submit" onclick="location.href='/View-Accommodation';" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">Submit</button>
-</div>
+  <div class = "flex flex-col justify-center items-center">
+      <button class="font-bold text-slate-700 bg-Glohaven-Orange rounded-full">
+          <a href ="{{route('Accommodation_update_submitted')}}" >Submit</a>
+      </button><br>
+  </div>
+
 
 </body>
 @endsection

@@ -3,8 +3,8 @@
 @section('main')
 
 <body>
+<p><b>Logged in as RA.</b></p>
   <div class = "grid grid-cols-2 grid-row-2 gap-2">
-  <p><b>Logged in as RA.</b></p>
     <div  class = "flex flex-row justify-center items-center">
       <div>
         <div  class = "flex flex-col justify-center items-center">
@@ -24,6 +24,15 @@
           </p>
       </div>
     </div>
+  
+    <div class = "h-60 flex flex-row justify-center items-center">
+      <div class = "flex flex-col justify-center items-center">
+        <h1 class = "text-xl font-black font-size:25px"> Logged in as RA:</h1>
+        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
+          <a href="{{route('Home')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Logout</a>
+        </button>
+      </div>
+    </div>
 
     <div class = "h-60 flex flex-row justify-center items-center">
       <div>
@@ -34,15 +43,6 @@
         </div>
       </div>
     </div>  
-  
-    <div class = "h-60 flex flex-row justify-center items-center">
-      <div class = "flex flex-col justify-center items-center">
-        <h1 class = "text-xl font-black font-size:25px"> Logged in as RA:</h1>
-        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
-          <a href="{{route('Home')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Logout</a>
-        </button>
-      </div>
-    </div>
 
   </div>
 </body>

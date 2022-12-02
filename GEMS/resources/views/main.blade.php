@@ -24,6 +24,15 @@
           </p>
       </div>
     </div>
+  
+    <div class = "h-60 flex flex-row justify-center items-center">
+      <div class = "flex flex-col justify-center items-center">
+        <h1 class = "text-xl font-black font-size:25px"> RA Log In:</h1>
+        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
+          <a href="{{route('Log-In')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Log In</a>
+        </button>
+      </div>
+    </div>
 
     <div class = "h-60 flex flex-row justify-center items-center">
       <div>
@@ -34,15 +43,6 @@
         </div>
       </div>
     </div>  
-  
-    <div class = "h-60 flex flex-row justify-center items-center">
-      <div class = "flex flex-col justify-center items-center">
-        <h1 class = "text-xl font-black font-size:25px"> RA Log In:</h1>
-        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
-          <a href="{{route('Log-In')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Log In</a>
-        </button>
-      </div>
-    </div>
 
   </div>
 </body>

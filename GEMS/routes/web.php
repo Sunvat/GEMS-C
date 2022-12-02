@@ -34,17 +34,29 @@ Route::get('/Log-In', function () {
     return view('Log-In');
 })->name('Log-In');
 
-Route::get('/New', function () {
-    return view('create-accommodation');
-})->name('New-Accommodations');
+Route::get('/Accommodation_Created', function () {
+    return view('Accommodation_Created');
+})->name('Accommodation_Created');
 
-Route::get('/View-Accommodation', function () {
+Route::get('/New-Accommodation-RA', function () {
+    return view('New-Accommodation-RA');
+})->name('New-Accommodation-RA');
+
+Route::get('/view-accommodation', function () {
     return view('view-accommodation');
-})->name('View-Accommodation');
+})->name('view-accommodation');
 
-Route::get('/View-Accommodation-RA', function () {
-    return view('view-accommodationRA');
-})->name('View-Accommodation-RA');
+Route::get('/Accommodation_update_submitted', function () {
+    return view('Accommodation_update_submitted');
+})->name('Accommodation_update_submitted');
+
+Route::get('/view-accommodationRA_UNC', function () {
+    return view('view-accommodationRA_UNC');
+})->name('view-accommodationRA_UNC');
+
+Route::get('/view-accommodationRA_CITYHALL', function () {
+    return view('view-accommodationRA_CITYHALL');
+})->name('view-accommodationRA_CITYHALL');
 
 Route::get('/Update', function () {
     return view('update-accommodations');
@@ -58,13 +70,25 @@ Route::get('/Contact', function () {
     return view('Contact');
 })->name('Contact');
 
+Route::get('/RA-Contact', function () {
+    return view('RA-Contact');
+})->name('RA-Contact');
+
 Route::get('/Create-Account', function () {
     return view('Create-Account');
 })->name('Create-Account');
 
+Route::get('/Account-Created', function () {
+    return view('Account-Created');
+})->name('Account-Created');
+
 Route::get('/Booking', function () {
     return view('Booking');
 })->name('Booking');
+
+Route::get('/Booking-Submitted', function () {
+    return view('Booking-Submitted');
+})->name('Booking-Submitted');
 
 Route::get('/Registered', function () {
     return view('Registered');
@@ -80,6 +104,10 @@ Route::get('/RA_region', function () {
 Route::get('/RA_region_create', function () {
     return view('RA_region_create');
 })->name('RA_region_create');
+
+Route::get('/Region-Created', function () {
+    return view('Region-Created');
+})->name('Region-Created');
 
 Route::get('/main-RA', function () {
     return view('main-RA');

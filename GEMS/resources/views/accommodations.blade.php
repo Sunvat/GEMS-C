@@ -1,6 +1,7 @@
 @extends('Layouts.default')
 @section('main')
 <body>
+This is a test. Accommodations will not be accessed from the homepage directly.</br>
 
 <?php
 /*

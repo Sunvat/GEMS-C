@@ -7,7 +7,7 @@
 </head>
 <body>
 <b>
-This is a test. Accommodations will not be accessed from the homepage directly.</br>
+
 
 </b></br></br>
 

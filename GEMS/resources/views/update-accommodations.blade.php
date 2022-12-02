@@ -8,8 +8,17 @@
 <body>
 <b>
 This is a test. Accommodations will not be accessed from the homepage directly.</br>
-TODO: Create function to change page after submitting. /action_page.php should be replaced with an actual function
+
 </b></br></br>
+
+<div class = "flex flex-col justify-center items-center">
+  <div class = "p-1 bg-Glohaven-Orange rounded-md">
+    <h1 class = "text-4xl">Update Accommodation:</h1>
+  </div> 
+</div>
+
+
+
 <div class="container py-10 px-10 mx-0 min-w-full grid place-items-center" id = "container">
 <form action="/action_page.php" method="get" id="updateForm">
   <label for="locName">Location Name:</label><br>

@@ -70,12 +70,19 @@
                 <br>
                 <input type="text" placeholder="Confirmation Code" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
+                <br>
+                <br>
+                <br>
         </form>
-        <div class = "flex flex-col justify-center items-center group bg-slate-300 rounded-full hover:bg-slate-600 w-24">
+        <div class = "flex flex-col justify-center items-center group bg-slate-300 rounded-full hover:bg-slate-600 w-25">
             <button>
-                <a href="{{route('Log-In')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Log in</a>
+                <a href="{{route('Account-Created')}}" class="text-lg mx-3 text-slate-800 group-hover:text-Glohaven-Hovered transition">Create Account</a>
             </button>
          </div>
+         <br>
+         <br>
+         <br>
+         <br>
     </div>
  </div>
 

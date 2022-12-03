@@ -9,15 +9,15 @@
     @vite('resources/css/app.css')
 
 </head>
-<body class = "flex flex-col min-h-screen bg-slate-400" >
+<body class = "float-none flex flex-col min-h-screen bg-slate-400" >
      <header class = "fixed bg-Glohaven-Orange border broder-y-2 h-16 border-slate-500 top-0 left-0 right-0 z-12">
         <div class="flex justify-center items-center">
             <h1 class="text-xl font-bold text-slate-800">
                 Glohaven Emergency Management System
             </h1>
         </div>
-        <div class ="flex flex-auto justify-center items-center">
-            <nav class="-mx-1">
+        <div class =" float-none flex flex-auto justify-center items-center">
+            <nav class="-mx-1 float-none">
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
                     <a href="{{route('Home')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Home</a>
                 </button>
@@ -47,7 +47,7 @@
      <br>
      <br>
 
-     <footer class="p-8 bg-white shadow md:px-6 md:py-0.5 dark:bg-orange-300 flex flex-col h-min">
+     <footer class="p-8 bg-white shadow md:px-6 md:py-0.5 dark:bg-orange-300 flex flex-col h-min ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-4 h-10" />
@@ -68,8 +68,8 @@
             </li>
         </ul>
     </div>
-    <p class="text-l italic text-gray-700 ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; You cannot properly manage that, which you don't know you have.</p>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <p class="text-l italic text-gray-700 ">You cannot properly manage that, which you don't know you have.</p>
+    
     <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-700">"© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved."
     </span>
 </footer>

@@ -5,7 +5,7 @@
 <body class="mx-auto pt-4">
 <div>
     <div class=" w-fit mx-auto py-4 px-52 " id = "container">
-        <form action="Create-Account"  method="POST">
+        <form class="mx-auto" action="Create-Account"  method="POST">
                 <label name ="fr_name" for="first_name" class="mx-2 font-bold text-slate-700">First Name:</label>
                 <br>
                 <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">

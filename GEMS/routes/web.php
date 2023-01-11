@@ -120,3 +120,11 @@ Route::get('/RA-Latest-Update', function () {
 Route::get('/RA-Create-Update', function () {
     return view('RA-Create-Update');
 })->name('RA-Create-Update');
+
+Route::get('/WaitingList', function () {
+    return view('WaitingList');
+})->name('WaitingList');
+
+Route::get('/Bookings', function () {
+    return view('Bookings');
+})->name('Bookings');

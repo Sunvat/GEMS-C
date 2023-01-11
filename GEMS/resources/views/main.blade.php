@@ -35,12 +35,11 @@
     </div>
 
     <div class = "h-60 flex flex-row justify-center items-center">
-      <div>
-        <div class = "flex flex-col justify-center items-center">
-          <h1 class = "text-lg font-black font-size:15">Booking Contact</h1>
-          <p>To book accomodations, or to get any help</p>
-          <p>Call (xxx) xxx xxxx to speak with one of our Reservation agents</p>
-        </div>
+      <div class = "flex flex-col justify-center items-center">
+        <h1 class = "text-xl font-black font-size:25px">Regions</h1>
+        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
+          <a href="{{route('Regions')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Regions</a>
+        </button>
       </div>
     </div>  
 

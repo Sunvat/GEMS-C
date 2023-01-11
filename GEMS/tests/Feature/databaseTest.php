@@ -34,13 +34,16 @@ class databaseTest extends TestCase
         // Create connection
         $conn = getConn();
 
+        //Get results
         $sql = "SELECT aname FROM accommodations WHERE aname='UBCO LIB 305';";
         $result = mysqli_query($conn,$sql);
         $rows = $result->fetch_row();
 
+        //Results exist
         if (strcmp($rows[0], "UBCO LIB 305") == 0) {
             $conn->close();
             $this->assertTrue(true);
+        //Results don't exist
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             $conn->close();

@@ -50,9 +50,9 @@ Route::get('/Accommodation_update_submitted', function () {
     return view('Accommodation_update_submitted');
 })->name('Accommodation_update_submitted');
 
-Route::get('/view-accommodationRA_UNC', function () {
-    return view('view-accommodationRA_UNC');
-})->name('view-accommodationRA_UNC');
+Route::get('/view-accommodationRA', function () {
+    return view('view-accommodationRA');
+})->name('view-accommodationRA');
 
 Route::get('/view-accommodationRA_CITYHALL', function () {
     return view('view-accommodationRA_CITYHALL');

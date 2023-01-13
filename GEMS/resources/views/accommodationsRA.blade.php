@@ -22,7 +22,7 @@
 <?php
 require dirname(__DIR__, 3).'/database/getAllAcc.php';
 
-$result = getAllAcc("Okanagan");
+$result = getAllAcc();
 
 echo "<div class = \"flex flex-col justify-center items-center\">
 <table class = \"table-fixed border bordor-slate-500\">

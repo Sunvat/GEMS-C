@@ -4,15 +4,9 @@
 This is a test. Accommodations will not be accessed from the homepage directly.</br>
 
 <?php
-require dirname(__DIR__, 3).'/database/getConnection.php';
-$con = getConn();
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
+require dirname(__DIR__, 3).'/database/getAllAcc.php';
 
-$result = mysqli_query($con,"SELECT *, maxCap-curOc AS openSpace FROM accommodations");
+$result = getAllAcc();
 
 echo "<div class = \"flex flex-col justify-center items-center\">
 <table class = \"table-fixed border bordor-slate-500\">

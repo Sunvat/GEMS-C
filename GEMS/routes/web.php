@@ -50,9 +50,9 @@ Route::get('/Accommodation_update_submitted', function () {
     return view('Accommodation_update_submitted');
 })->name('Accommodation_update_submitted');
 
-Route::get('/view-accommodationRA_UNC', function () {
-    return view('view-accommodationRA_UNC');
-})->name('view-accommodationRA_UNC');
+Route::get('/view-accommodationRA', function () {
+    return view('view-accommodationRA');
+})->name('view-accommodationRA');
 
 Route::get('/view-accommodationRA_CITYHALL', function () {
     return view('view-accommodationRA_CITYHALL');
@@ -120,3 +120,11 @@ Route::get('/RA-Latest-Update', function () {
 Route::get('/RA-Create-Update', function () {
     return view('RA-Create-Update');
 })->name('RA-Create-Update');
+
+Route::get('/WaitingList', function () {
+    return view('WaitingList');
+})->name('WaitingList');
+
+Route::get('/Bookings', function () {
+    return view('Bookings');
+})->name('Bookings');

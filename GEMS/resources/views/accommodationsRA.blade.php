@@ -6,26 +6,23 @@
 <br>
 
 <div class="flex flex-col justify-center items-center">
-        <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">
-        <a href="{{route('New-Accommodation-RA')}}">
-        New Accommodation
-        </a>
+  <div class = "flex flex-row justify-center items-center">
+        <button type="button" class= "focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">
+        <a href="{{route('New-Accommodation-RA')}}">New Accommodation</a>
         </button>
 
-    </div>
+        <button type="button" class= "focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered">
+        <a href="{{route('WaitingList')}}">Waiting List</a>
+        </button>
+  </div>
+</div>
 
 <br>
 
 <?php
-require dirname(__DIR__, 3).'/database/getConnection.php';
-$con = getConn();
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
+require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
-$result = mysqli_query($con,"SELECT *, maxCap-curOc AS openSpace FROM accommodations");
+$result = getAllAcc();
 
 echo "<div class = \"flex flex-col justify-center items-center\">
 <table class = \"table-fixed border bordor-slate-500\">
@@ -45,7 +42,7 @@ echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] .
 echo "<td class = \"border border-slate-500 p-2\">" . $row['openSpace'] . " People </td>";
 echo "<td class = \"border border-slate-500 p-2\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"location.href='/view-accommodationRA_UNC';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">View/Update</button>
+        <button type=\"button\" onclick=\"location.href='/view-accommodationRA?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">View/Update</button>
       </div></td>";
 echo "<td class = \"border border-slate-500 p-2\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
@@ -56,7 +53,6 @@ echo "</tr>";
 echo "</table>
 </div>";
 
-mysqli_close($con);
 ?>
 <?php elseif (false) : ?>
   YOU DO NO HAVE PERMISSION TO VIEW THIS PAGE

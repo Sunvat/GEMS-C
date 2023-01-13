@@ -1,7 +1,7 @@
 <?php
-//Get general details of all accommodations
+//Get general details of all accommodations in a region
 require 'getConnection.php';
-    function getAllAcc($Reg){
+    function getAllAcc($Reg = 'all'){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -9,7 +9,14 @@ require 'getConnection.php';
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE rname='" . $Reg . "';");
+        //Return accommodations regardless of region
+        if (strcmp( $Reg, 'all' )){
+            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations;");
+        }
+        //Return specified region
+        else{
+            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE rname='$Reg';");
+        }
         
         mysqli_close($con);
 

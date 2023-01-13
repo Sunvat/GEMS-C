@@ -4,7 +4,7 @@
 This is a test. Accommodations will not be accessed from the homepage directly.</br>
 
 <?php
-require dirname(__DIR__, 3).'/database/getAllAcc.php';
+require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
 $result = getAllAcc();
 
@@ -26,7 +26,7 @@ echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] .
 echo "<td class = \"border border-slate-500 p-2\">" . $row['openSpace'] . " People </td>";
 echo "<td class = \"border border-slate-500 p-2\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"location.href='/view-accommodation';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">View</button>
+        <button type=\"button\" onclick=\"location.href='/view-accommodation?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">View</button>
       </div></td>";
 echo "<td class = \"border border-slate-500 p-2\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
@@ -37,7 +37,6 @@ echo "</tr>";
 echo "</table>
 </div>";
 
-mysqli_close($con);
 ?>
 </br></br>
 

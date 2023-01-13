@@ -20,7 +20,7 @@
 <br>
 
 <?php
-require dirname(__DIR__, 3).'/database/getAllAcc.php';
+require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
 $result = getAllAcc();
 

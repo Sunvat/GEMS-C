@@ -18,20 +18,11 @@
 
 <body>
 <?php
-require dirname(__DIR__, 3).'/database/getAccDet.php';
+require dirname(__DIR__, 3).'/database/selectFuncs.php';
 $ID = $_GET["ID"];
 $result = getAccDet($ID);
 $row = mysqli_fetch_array($result);
 echo "
-<br> 
-
-<div class = \"flex flex-col justify-center items-center\">
-  <div class = \"p-1 bg-Glohaven-Orange rounded-md\">
-    <h2 class = \"text-3xl\">Accommodations</h2>
-  </div> 
-</div>
-
-<br>
 <br>
 
 <div class = \"flex flex-col justify-center items-center\">
@@ -51,11 +42,11 @@ echo "
       <td class = \"border border-slate-500 p-2\" id=\"CapColumn\">" . $row['openSpace'] . "</td>
       <td class = \"border border-slate-500 p-2\">
       <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-      <button type=\"button\" onclick=\"location.href='/Update?ID=". $ID ."';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-Glohaven-Orange dark:focus:text-white\">Update</button>
+      <button type=\"button\" onclick=\"location.href='/Update?ID=$ID';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-Glohaven-Orange dark:focus:text-white\">Update</button>
       </div></td>
       <td class = \"border border-slate-500 p-2\">
       <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-      <button type=\"button\" onclick=\"deletePopup(". $ID .")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Delete</button>
+      <button type=\"button\" onclick=\"deletePopup($ID)\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Delete</button>
       </div></td>
     </tr>
     

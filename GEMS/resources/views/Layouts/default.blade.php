@@ -9,17 +9,17 @@
     @vite('resources/css/app.css')
 
 </head>
-<body class = "float-none flex flex-col min-h-screen bg-slate-400" >
-     <header class = "fixed bg-Glohaven-Orange border broder-y-2 h-16 border-slate-500 top-0 left-0 right-0 z-12">
+<body class = "float-none flex flex-col min-h-screen  bg-gradient-to-b from-Dgreen to-Lgreen" >
+     <header class = "fixed bg-Dgreen top-0 left-0 right-0 z-12">
         <div class="flex justify-center items-center">
-            <h1 class="text-xl font-bold text-slate-800">
+            <h1 class="text-xl font-bold text-Apricot">
                 Glohaven Emergency Management System
             </h1>
         </div>
         <div class =" float-none flex flex-auto justify-center items-center">
             <nav class="-mx-1 float-none">
-                <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
-                    <a href="{{route('Home')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Home</a>
+                <button class = "group  rounded-full hover:bg-gold text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100">
+                    <a href="{{route('Home')}}" class="font-sans text-lg mx-2 group-hover:text-white transition">Home</a>
                 </button>
                 <button class = "group bg-slate-400 rounded-full hover:bg-slate-600">
                     <a href="{{route('Regions')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Regions</a>

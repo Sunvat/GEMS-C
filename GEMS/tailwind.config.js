@@ -11,13 +11,15 @@ module.exports = {
         'Glohaven-Orange': '#EC925D',
         'Glohaven-Hovered': '#c97b4f',
         'Glovhaven-bg': '#fdf4ef',
-        'Cedar': 'BA5B4F',
-        'Apricot': 'FFD8BE',
-        'MBG':'7FD1B9',
-        'Chared':'2E4052',
-        'Bdazzled':'3D5A80'
+        'Dgreen': '#164A41',
+        'Lgreen': '#9DC88D',
+        'Mgreen':'#4D774E',
+        'gold':'#F1B24A',
       }
     },
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
   },
   plugins: [],
+}
 }

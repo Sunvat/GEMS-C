@@ -5,13 +5,32 @@ require('getConnection.php');
 
         //Insert data from newAccomodation into the database
         $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
-        VALUES ('" . $newAccommodation[0] . "', '". $newAccommodation[1] ."', '". $newAccommodation[2] ."',
-         '". $newAccommodation[3] ."', '". $newAccommodation[4] ."')";
+        VALUES ('$newAccommodation[0]', '$newAccommodation[1]', '$newAccommodation[2]',
+         '$newAccommodation[3]', $newAccommodation[4])";
 
         //Check if the insert was successful
         if ($conn->query($sql) === FALSE) {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
             
-            $conn->close();
+        mysqli_close($conn);
+    }
+
+    function insertTestAcc(){
+        $conn = getConn();
+        $result = true;
+
+        //Insert data from newAccomodation into the database
+        $sql = "INSERT INTO testAccommodations (aname, rname, country, address, maxCap)
+        VALUES ('Hotel California', 'California', 'USA',
+         'Dark Desert Highway', 40)";
+
+        //Check if the insert was successful
+        if ($conn->query($sql) === FALSE) {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+            $result = false;
+        }
+            
+        mysqli_close($conn);
+        return $result;
     }

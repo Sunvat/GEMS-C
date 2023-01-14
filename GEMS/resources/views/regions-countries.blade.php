@@ -3,15 +3,15 @@
 @section('main')
 <br>
 <div class = "flex flex-col justify-center items-center">
-  <div class = "p-1 bg-Glohaven-Orange rounded-md">
-    <h1 class = "text-4xl">Select Region</h1>
+  <div class = "my-14 p-1 bg-Lgreen rounded-md">
+    <h1 class = " text-4xl text-white">Select Region</h1>
   </div> 
 </div>
 
 <div class = "flex flex-col jusify-center items-center">
   <form id="ChooseRegion">
     <br>
-    <label for="chooseRegion" class="block mb-2 text-large font-medium text-gray-900 dark:text-grey">Select a region to browse available accommodations in that region:</label>
+    <label for="chooseRegion" class="block mb-2 text-large font-medium text-white dark:text-grey">Select a region to browse available accommodations in that region:</label>
 
     <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option value="none" selected disabled hidden>--Please choose an option--</option>
@@ -24,7 +24,7 @@
     <br>
     <br>
 
-    <button class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">
+    <button class="py-2 px-4 text-sm font-medium text-white bg-Lgreen rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange ">
     <a href = "{{route('Accommodations')}}">Submit</a>
     </button>
     

@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `ems` varchar(50) NOT NULL,
   `id` int NOT NULL,
   `reg` varchar(50) NOT NULL,
-  'rID' int NOT NULL,
+  `rID` int NOT NULL,
   `provState` varchar(50) NOT NULL,
   FOREIGN KEY (rID) REFERENCES regions(rID)
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
 
 CREATE TABLE IF NOT EXISTS `accommodations` (
   `accID` int AUTO_INCREMENT,
-  'rID' int NOT NULL,
+  `rID` int NOT NULL,
   `aname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `rname` varchar(50) NOT NULL,
@@ -56,60 +56,62 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `curOc` int DEFAULT 0,
   `desc` varchar(200),
   `image` varchar(50),
-  'WCA' boolean DEFAULT False,
-  'Pets' boolean DEFAULT False,
-  'Med' boolean DEFAULT False,
-  'Bed' boolean DEFAULT False,
-  'isFull' boolean DEFAULT False,
-  'HighGround' boolean DEFAULT False,
+  `WCA` boolean DEFAULT False,
+  `Pets` boolean DEFAULT False,
+  `Med` boolean DEFAULT False,
+  `Bed` boolean DEFAULT False,
+  `isFull` boolean DEFAULT False,
+  `HighGround` boolean DEFAULT False,
   PRIMARY KEY (accID),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `regions` (
-  'rID' int AUTO_INCREMENT,
+  `rID` int AUTO_INCREMENT,
   `rname` varchar(50) NOT NULL,
   `country` varchar(50) NOT NULL,
-  'provState' varchar(50) Not Null,
-  `image` varchar(50)
+  `provState` varchar(50) Not Null,
+  `image` varchar(50),
+  PRIMARY KEY (rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `bookings` (
-  `accID` int AUTO_INCREMENT,
+  `accID` INT NOT NULL,
   `aname` varchar(50) NOT NULL,
   `bookingID`int AUTO_INCREMENT,
-  'name' varchar(50) NOT NULL,
-  'phoneNumber' varchar(17) NOT NULL,
-  'groupName' varchar(50) NOT Null,
-  'NumPeople' int NOT NULL,
-  'WCA' boolean DEFAULT False,
-  'Pets' boolean DEFAULT False,
-  'Med' boolean DEFAULT False,
-  'Bed' boolean DEFAULT False,
+  `name` varchar(50) NOT NULL,
+  `phoneNumber` varchar(17) NOT NULL,
+  `groupName` varchar(50) NOT Null,
+  `NumPeople` int NOT NULL,
+  `WCA` boolean DEFAULT False,
+  `Pets` boolean DEFAULT False,
+  `Med` boolean DEFAULT False,
+  `Bed` boolean DEFAULT False,
   PRIMARY KEY (bookingID),
   FOREIGN KEY (accID) REFERENCES accommodations(accID)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `wishlist` (
-  `bookingID`int AUTO_INCREMENT,
-  'name' varchar(50) NOT NULL,
-  'phoneNumber' varchar(17) NOT NULL,
-  'groupName' varchar(50) NOT Null,
-  'NumPeople' int NOT NULL,
-  'WCA' boolean DEFAULT False,
-  'Pets' boolean DEFAULT False,
-  'Med' boolean DEFAULT False,
-  'Bed' boolean DEFAULT False,
-  'DateTime' DateTIME,
-
+  `wishID`int AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `phoneNumber` varchar(17) NOT NULL,
+  `groupName` varchar(50) NOT Null,
+  `NumPeople` int NOT NULL,
+  `WCA` boolean DEFAULT False,
+  `Pets` boolean DEFAULT False,
+  `Med` boolean DEFAULT False,
+  `Bed` boolean DEFAULT False,
+  `DateTime` DateTIME,
+	PRIMARY KEY (wishID)
+	
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `LEI` (
-  'rID'
-  'location' varchar(50) NOT NULL,
-  'LEI' varchar(300) NOT Null,
-  'datetime' DATETIME,
+  `rID` INT NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `LEI` varchar(300) NOT Null,
+  `datetime` DATETIME,
   FOREIGN KEY (rID) REFERENCES regions(rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

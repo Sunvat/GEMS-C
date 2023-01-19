@@ -50,7 +50,7 @@ require 'getConnection.php';
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT rname AS Region FROM regions ");
+        $result = mysqli_query($con,"SELECT rname FROM regions ");
 
         mysqli_close($con);
 

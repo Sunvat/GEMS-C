@@ -49,3 +49,17 @@ require('getConnection.php');
         //close connection
         mysqli_close($conn);
     }
+
+    function InsertLEI($newLEI){
+        //get connecttion
+        $conn = getConn();
+        //sql query inserting into region table
+        $sql = "INSERT INTO lei(location, LEI, Datetime)
+        Values ('$newLEI[0]', '$newLEI[1]', '$newLEI[2]')";
+        //check if insert worked
+        if ($conn->query($sql) === FALSE) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        //close connection
+        mysqli_close($conn);
+    }

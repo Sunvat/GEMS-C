@@ -56,3 +56,18 @@ require 'getConnection.php';
 
         return $result;
     }
+
+    function getRegionAndID(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT rID, rname FROM regions ");
+
+        mysqli_close($con);
+
+        return $result;
+    }

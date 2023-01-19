@@ -2,7 +2,49 @@
 
 @section('main')
 
-Congrats you have created a New Update
-(You have completed your Task)
+<?php
+if(isset($_POST['dropdown'])) {
+  $selected = $_POST['dropdown'];
+  
+
+}
+?>
+
+<body>
+<br>
+<div class = "flex flex-col justify-center items-center">
+  <div class = "p-1 bg-Glohaven-Orange rounded-md">
+    <h1 class = "text-4xl">Select Region</h1>
+  </div> 
+</div>
+
+<div class = "flex flex-col jusify-center items-center">
+    <br>
+    
+    <?php
+    require dirname(__DIR__, 3).'/database/selectFuncs.php';
+
+    $result = getRegionAndID();
+
+    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-gray-900 dark:text-grey\">Select a region to browse available accommodations in that region:</label>";
+    echo "<form action = \"submit.php\" method = \"post\">";
+    echo "<select name = \"dropdown\" id=\"countries\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
+
+    while($row = mysqli_fetch_array($result)){
+      echo "<option value =" . htmlspecialchars($row['rname'], ENT_QUOTES, 'UTF-8') . ">" . htmlspecialchars($row['rID'], ENT_QUOTES, 'UTF-8') .": ". htmlspecialchars($row['rname'], ENT_QUOTES, 'UTF-8') . "</option>";
+    }
+    echo"</select>";
+    echo "<br>";
+    echo "<div class = \"flex flex-col jusify-center items-center\">";
+    echo "  <input type=\"submit\" value = \"Submit\" class = \"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">";
+    echo "</div>";
+    echo"</form>";
+    ?>
+</div>
+    <br>
+    <br>
+
+</body>
+</body>
 
 @endsection

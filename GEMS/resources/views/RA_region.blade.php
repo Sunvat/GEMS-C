@@ -40,5 +40,4 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
   </div>
 
   </form>
-</body>
 @endsection

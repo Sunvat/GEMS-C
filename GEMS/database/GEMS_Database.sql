@@ -115,6 +115,12 @@ CREATE TABLE IF NOT EXISTS `LEI` (
   FOREIGN KEY (rID) REFERENCES regions(rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE IF NOT EXISTS `Contact` (
+  `rID` INT NOT NULL,
+  `PNumber` varchar(50) NOT NULL,
+  FOREIGN KEY (rID) REFERENCES regions(rID)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Data exporting was unselected.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

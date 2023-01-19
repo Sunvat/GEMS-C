@@ -1,6 +1,6 @@
 <?php
 //Get the details of one accommodation
-require 'getConnection.php';
+require_once("getConnection.php");
     function getAccDet($ID){
         $con = getConn();
         // Check connection

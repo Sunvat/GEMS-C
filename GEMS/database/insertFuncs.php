@@ -1,5 +1,5 @@
 <?php
-require('getConnection.php');
+require_once("getConnection.php");
     function insertAcc($newAccommodation){
         $conn = getConn();
 

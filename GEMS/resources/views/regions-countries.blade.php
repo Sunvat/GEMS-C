@@ -3,8 +3,8 @@
 @section('main')
 <br>
 <div class = "flex flex-col justify-center items-center">
-  <div class = "my-14 p-1 bg-Lgreen rounded-md">
-    <h1 class = " text-4xl text-white">Select Region</h1>
+  <div class = "my-14 p-1 bg-gold rounded-md">
+    <h1 class = "bg-Dgreen text-3xl text-white p-2">Select Region</h1>
   </div> 
 </div>
 

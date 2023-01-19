@@ -2,9 +2,9 @@
 
 @section('main')
 <div class = "flex justify-center items-center p-4">
-    <h1 class = " text-lg font-semibold text-slate-800">Please Log In(Only for Reservation Agents)</h1>
+    <h1 class = " text-lg font-semibold text-Lgreen my-14">Please Log In(Only for Reservation Agents)</h1>
 </div>
-<div class = "flex flex-col items-center h-screen w-full ">
+<div class = "flex flex-col items-center">
     <div>
         <form> <!-- dont forget to add a post or someother method when needed -->
             <!-- used to create the login id and password slots-->
@@ -30,7 +30,7 @@
         </div>
         <div>
             <button>
-                <a href="{{route('Create-Account')}}" class ="display: block p-1 font-bold text-Dgreen bg-Lgreen rounded-full hover:bg-gold">Create Account</a>
+                <a href="{{route('Create-Account')}}" class ="display: block  font-bold text-Dgreen bg-Lgreen rounded-full hover:bg-gold">Create Account</a>
             </button>
         </div>
     </div>

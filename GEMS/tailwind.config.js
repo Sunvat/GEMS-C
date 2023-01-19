@@ -15,6 +15,7 @@ module.exports = {
         'Lgreen': '#9DC88D',
         'Mgreen':'#4D774E',
         'gold':'#F1B24A',
+        'emred':'#e61212',
       }
     },
     fontFamily: {

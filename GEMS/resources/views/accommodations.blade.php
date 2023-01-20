@@ -18,6 +18,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
       <th class = \"border border-slate-500 p-2\"></th>
     </tr>";
 
+
 while($row = mysqli_fetch_array($result))
 {
 echo "<tr>";
@@ -38,6 +39,7 @@ echo "</table>
 </div>";
 
 ?>
+
 </br></br>
 
 <!-- Below if statement will check if user is RA -->

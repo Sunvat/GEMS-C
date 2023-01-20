@@ -6,9 +6,13 @@
   <link rel="stylesheet" href="app.css">
   <script>
     function deletePopup($ID) {
-        var r = confirm("Are you sure you want to delete this accommodation? (task completed, press ok)");
+        var r = confirm("Are you sure you want to delete this accommodation?");
         if (r == true) {
-          window.location.href = "/RA-Accommodations";
+          var id = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+          });
+
+          window.location.href = "/DeleteAcc?ID="+id.ID;
      }
         else {
      }

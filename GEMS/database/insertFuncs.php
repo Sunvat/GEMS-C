@@ -1,5 +1,5 @@
 <?php
-require('getConnection.php');
+require_once("getConnection.php");
     function insertAcc($newAccommodation){
         $conn = getConn();
 
@@ -33,4 +33,33 @@ require('getConnection.php');
             
         mysqli_close($conn);
         return $result;
+    }
+
+    //Insert function for Regions
+    function InsertRegion($newRegion){
+        //get connecttion
+        $conn = getConn();
+        //sql query inserting into region table
+        $sql = "INSERT INTO regions(rname, country, provState, image)
+        Values ('$newRegion[0]', '$newRegion[1]', '$newRegion[2]', NULL)";
+        //check if insert worked
+        if ($conn->query($sql) === FALSE) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        //close connection
+        mysqli_close($conn);
+    }
+
+    function InsertLEI($newLEI){
+        //get connecttion
+        $conn = getConn();
+        //sql query inserting into region table
+        $sql = "INSERT INTO lei(location, LEI, Datetime)
+        Values ('$newLEI[0]', '$newLEI[1]', '$newLEI[2]')";
+        //check if insert worked
+        if ($conn->query($sql) === FALSE) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        //close connection
+        mysqli_close($conn);
     }

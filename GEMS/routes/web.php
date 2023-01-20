@@ -54,10 +54,6 @@ Route::get('/view-accommodationRA', function () {
     return view('view-accommodationRA');
 })->name('view-accommodationRA');
 
-Route::get('/view-accommodationRA_CITYHALL', function () {
-    return view('view-accommodationRA_CITYHALL');
-})->name('view-accommodationRA_CITYHALL');
-
 Route::get('/Update', function () {
     return view('update-accommodations');
 })->name('Update-Accommodation');
@@ -128,3 +124,7 @@ Route::get('/WaitingList', function () {
 Route::get('/Bookings', function () {
     return view('Bookings');
 })->name('Bookings');
+
+Route::get('/DeleteAcc', function () {
+    return view('DeleteAcc');
+})->name('DeleteAcc');

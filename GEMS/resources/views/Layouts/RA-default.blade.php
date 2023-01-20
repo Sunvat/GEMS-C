@@ -65,7 +65,7 @@
             </li>
         </ul>
     </div>
-    <p class="text-l italic text-gray-700 ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; You cannot properly manage that, which you don't know you have.</p>
+    <p class="text-l italic text-gray-700 ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; You cannot properly manage that which you do not know you have.</p>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-700">"© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved."
     </span>

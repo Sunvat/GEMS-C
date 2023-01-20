@@ -5,7 +5,7 @@
 <body class="mx-auto">
 <div>
     <div class=" w-fit mx-auto px-52 py-24" id = "container">
-        <form class="mx-auto" action="Create-Account"  method="POST">
+        <form  method="post" class="mx-auto" action="Create-Account" >
                 <label name ="fr_name" for="first_name" class="mx-2 font-bold text-white">First Name:</label>
                 <br>
                 <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
@@ -20,7 +20,7 @@
                 <br>
                 <label for="password"class="mx-2 font-bold text-white">Password:</label>
                 <br>
-                <input type="password" placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input type="password" id="password" name="password" placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <p class = "mx-2 text-xs text-white ">New password must contain:<br>
                 <ul class = " mx-6 text-xs list-disc text-white">
                     <li>At least 8 characters</li>
@@ -74,6 +74,8 @@
                 <br>
                 <br>
         </form>
+        <!--checking password criteria-->
+
         <div class = "flex flex-col justify-center items-center group bg-Lgreen border-2 border-Dgreen rounded-full hover:bg-gold w-25 ">
             <button>
                 <a href="{{route('Account-Created')}}" class="text-lg mx-3 text-slate-800 group-hover:text-white transition">Create Account</a>

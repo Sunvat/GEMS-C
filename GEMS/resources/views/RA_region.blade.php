@@ -17,7 +17,7 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
     $result = getRegion();
 
-    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-gray-900 dark:text-grey\">Select a region to browse available accommodations in that region:</label>";
+    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-Lgreen\">Select a region to browse available accommodations in that region:</label>";
     echo "<select id=\"countries\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
   
     while($row = mysqli_fetch_array($result)){
@@ -30,11 +30,11 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
     <br>
 
   <div class = "flex flex-col jusify-center items-center">
-    <button class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">
+    <button class="py-2 px-4 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen ">
       <a href = "{{route('RA-Accommodations')}}">Submit</a>
     </button>
 
-    <button type="submit" value="Submit" class="mt-8 py-2 px-2 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white">
+    <button type="submit" value="Submit" class="mt-8 py-2 px-2 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen hover:text-white ">
       <a href="{{route('RA_region_create')}}">Create Region</a>
     </button>
   </div>

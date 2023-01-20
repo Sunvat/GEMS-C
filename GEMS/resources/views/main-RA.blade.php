@@ -9,27 +9,22 @@
       <div>
         <div  class = "flex flex-col justify-center items-center">
           <h1 class="text-xl font-black font-size:25px p-2">Latest Emergancy Updates/Information</h1>
-          <button class = "group bg-Glohaven-Orange rounded-full hover:bg-slate-600">
-            <a href="{{route('RA-Latest-Update')}}" class = "text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition"> Latest Emergancy Updates</a>
+          <button class = "border-2 border-gold group bg-Dgreen rounded-full hover:bg-Lgreen">
+            <a href="{{route('RA-Latest-Update')}}" class = "text-lg mx-2 text-white group-hover:text-gold "> Latest Emergancy Updates</a>
           </button>
         </div>
       </div>
     </div>
 
     <div class = "py-10 flex flex-row justify-center items-center">
-      <div class = "flex flex-col justify-center items-center">
-        <h1 class="text-xl font-black font-size:25px">Who We Are</h1>
-          <p> The Glohaven Emergency Management Solution is a digital platform which makes it easier for disaster response personnel operating in Canada to manage information and resources well during times of emergency. 
-             Comprising of organized lists of accommodations by their locations, Emergancy services can use these lists to find and book nearby accommodations in case they need to evacuate people. 
-          </p>
-      </div>
+      
     </div>
   
     <div class = "h-60 flex flex-row justify-center items-center">
       <div class = "flex flex-col justify-center items-center">
         <h1 class = "text-xl font-black font-size:25px"> Logged in as RA:</h1>
-        <button class = "group bg-Glohaven-Orange rounded-full px-1 hover:bg-slate-600">
-          <a href="{{route('Home')}}" class = "text-lg group-hover:text-Glohaven-Hovered">Logout</a>
+        <button class = "text-white group bg-Dgreen border-2 border-gold rounded-full px-1 hover:bg-Lgreen">
+          <a href="{{route('Home')}}" class = "text-lg group-hover:text-gold">Logout</a>
         </button>
       </div>
     </div>

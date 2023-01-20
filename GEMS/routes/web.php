@@ -82,9 +82,17 @@ Route::get('/Booking', function () {
     return view('Booking');
 })->name('Booking');
 
+Route::get('/RA_Booking', function () {
+    return view('RA_Booking');
+})->name('RA_Booking');
+
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');
 })->name('Booking-Submitted');
+
+Route::get('/RA_Booking-Submitted', function () {
+    return view('RA_Booking-Submitted');
+})->name('RA_Booking-Submitted');
 
 Route::get('/Registered', function () {
     return view('Registered');

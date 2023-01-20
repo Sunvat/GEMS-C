@@ -24,7 +24,8 @@
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('Regions')}}" class="text-lg mx-2 group-hover:text-white">Regions</a>
                 </button>
-                
+                <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2"> 
+                    <a href="{{route('Booking')}}" class ="text-lg mx-2  hover:text-Glohaven-Hovered transition">Make Booking</a>
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('Log-In')}}" class="text-lg mx-2 group-hover:text-white">Log in</a>
                 </button>

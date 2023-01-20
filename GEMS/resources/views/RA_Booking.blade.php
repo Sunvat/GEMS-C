@@ -1,4 +1,4 @@
-@extends('Layouts.default')
+@extends('Layouts.RA-default')
 
 @section('main')
 <html class = "ml-0">
@@ -48,7 +48,7 @@
                 <br>
                 <br>
                 <div class="inline-flex rounded-md shadow-sm" role="group">
-                <button type="button" onclick="location.href='/Booking-Submitted';" class="py-2 px-4 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold ">Submit</button>
+                <button type="button" onclick="location.href='/RA_Booking-Submitted';" class="py-2 px-4 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold ">Submit</button>
                 </div>
         </div>
         

@@ -63,3 +63,15 @@ require_once("getConnection.php");
         //close connection
         mysqli_close($conn);
     }
+    function insertAccountInfo($newAccount){
+        // get connection
+        $conn = getConn();
+        // sql query inserting account info into the user acounts table
+        $sql = "INSERT INTO useraccounts(fname, lname, email, pword, ems, id, reg, provState)
+        Values ('$newAccount[0]', '$newAccount[1]', '$newAccount[2]', '$newAccount[3]', '$newAccount[4]', '$newAccount[5]','$newAccount[6]' )";
+        //check if the query worked
+        if($conn->query($sql) === FALSE){
+            echo "Error:" . $sql . "<br>" . $conn->error;
+        }
+        mysqli_close($conn);
+    }

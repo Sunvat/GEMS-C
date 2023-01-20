@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS `testAccommodations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `useraccounts` (
-  `email` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `pword` varchar(50) NOT NULL,
   `ems` varchar(50) NOT NULL,
   `id` int NOT NULL,

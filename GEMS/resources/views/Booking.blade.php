@@ -8,13 +8,15 @@
     <body>
         
         <br>
-        <p>&nbsp; &nbsp; Make a booking request by filling up this form</p>
+        <div class ="pt-14 text-white text-center ">
+        <p class="bg-Dgreen border-2"> Make a booking request by filling up this form</p>
+        </div>
         <br>
         <body >
         <div class="w-96  mx-auto">
             <form class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
-                    <legend class="mb-5 text-xl font-bold">Request Booking.</legend>
+                    <legend class="mb-5 text-xl font-bold text-white">Request Booking.</legend>
                     <label for="contactname">Caller First Name:</label>
                      <input type="text" class = "border solid 5px  mb-2 display block ">
                      <br>

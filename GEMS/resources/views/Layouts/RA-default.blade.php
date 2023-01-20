@@ -44,13 +44,13 @@
      <br>
      <br>
 
-     <footer class="p-6 bg-white flex flex-col bg-gradient-to-b from-Lgreen to-Dgreen">
+     <footer class="p-2 bg-white flex flex-col bg-gradient-to-b from-Lgreen to-Dgreen">
     <div>
-        <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
+        <a href="{{route('Home')}}" class="flex items-center ">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-4 h-10" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Glohaven Emergency Management Solutions</span>
         </a>
-        <ul class="flex flex-wrap items-center mb-6 text-lg text-gray-500 sm:mb-0 dark:text-gray-700">
+        <ul class="flex flex-wrap items-center mb-2 text-lg text-white sm:mb-0">
             <li>
                 <a href="{{route('Home')}}" class="mr-4 hover:underline md:mr-6 ">About</a>
             </li>
@@ -65,9 +65,7 @@
             </li>
         </ul>
     </div>
-    <p class="text-l italic text-gray-700 ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; You cannot properly manage that which you do not know you have.</p>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-700">"© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved."
+    <span class="block text-sm text-white sm:text-center ">"© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved."
     </span>
 </footer>
 </body>

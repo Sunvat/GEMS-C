@@ -63,7 +63,7 @@ require_once("getConnection.php");
         //close connection
         mysqli_close($conn);
     }
-    function insertAccountInfo($newAccount){
+    function InsertAccountInfo($newAccount){
         // get connection
         $conn = getConn();
         // sql query inserting account info into the user acounts table

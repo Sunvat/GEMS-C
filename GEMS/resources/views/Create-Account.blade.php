@@ -4,23 +4,34 @@
 @section('main')
 <body class="mx-auto">
 <div>
+    <?php
+    if(isset($_GET['submit'])){
+    require dirname(__DIR__, 3).'/database/insertFuncs.php';
+
+    $newAccount = array(htmlentities($_GET['fname'],$_GET['lname'],$_GET['email'],$_GET['pword'],$_GET['ems'],$_GET['id'],$_GET['reg'],));
+
+    InsertAccountInfo($newAccount);
+    header('Location: /Create-Account');
+    die();
+    }
+    ?>
     <div class=" w-fit mx-auto px-52 py-24" id = "container">
         <form  method="post" class="mx-auto" action="Create-Account" >
-                <label name ="fr_name" for="first_name" class="mx-2 font-bold text-white">First Name:</label>
+                <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
                 <br>
-                <input type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name ="fname" type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="last_name"class="mx-2 font-bold text-white">Last Name:</label>
+                <label name ="lname" for="lname"class="mx-2 font-bold text-white">Last Name:</label>
                 <br>
-                <input type="text" placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input  name ="lname" type="text" placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="email"class="mx-2 font-bold text-white">E-mail:</label>
+                <label name ="email" for="email"class="mx-2 font-bold text-white">E-mail:</label>
                 <br>
-                <input type="email" placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name ="email" type="email" placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="password"class="mx-2 font-bold text-white">Password:</label>
+                <label name ="pword" for="password"class="mx-2 font-bold text-white">Password:</label>
                 <br>
-                <input type="password" id="password" name="password" placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name ="pword" type="password" id="password"  placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <p class = "mx-2 text-xs text-white ">New password must contain:<br>
                 <ul class = " mx-6 text-xs list-disc text-white">
                     <li>At least 8 characters</li>
@@ -31,23 +42,23 @@
                 </ul>
                 </p>
                 <br>
-                <label for="confirm_pass"class="mx-2 font-bold text-white">Confirm Password:</label>
+                <label name ="pword" for="confirm_pass"class="mx-2 font-bold text-white">Confirm Password:</label>
                 <br>
-                <input type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name ="pword" type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="EMS Division"class="mx-2 font-bold text-white">EMS Division:</label>
+                <label name="ems" for="EMS Division"class="mx-2 font-bold text-white">EMS Division:</label>
                 <br>
-                <input type="text" placeholder="EMS Division" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name="ems" type="text" placeholder="EMS Division" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="I.D Number"class="mx-2 font-bold text-white">I.D Number:</label>
+                <label  name="id" for="I.D Number"class="mx-2 font-bold text-white">I.D Number:</label>
                 <br>
-                <input type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input name="id" type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="Local Region"class="mx-2 font-bold text-white">Local Region Presiding Over:</label>
+                <label  name="reg" for="Local Region"class="mx-2 font-bold text-white">Local Region Presiding Over:</label>
                 <br>
-                <input type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input  name="reg" type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="Provice"class="mx-2 font-bold text-white">Province:</label>
+                <label for="Province"class="mx-2 font-bold text-white">Province:</label>
                 <br>
                 <select class= "mx-2 mb-4 py-2 border-2 rounded">
                     <option value="select">Select</option>

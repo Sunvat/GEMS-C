@@ -13,7 +13,7 @@ if( isset($_GET['submit']) )
     $LEI = array(htmlentities($_GET['rID']), htmlentities($_GET['Location']), htmlentities($_GET['Update']), htmlentities($_GET["DateTime"]));
 
     InsertLEI($LEI);
-    header('Location: /RA_region');
+    header('Location: /RA-Latest-Update');
     die();
 }
 ?>

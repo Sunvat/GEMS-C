@@ -1,10 +1,6 @@
 @extends('Layouts.default')
 
 @section('main')
-<html class = "ml-0">
-    <head>
-    <link rel="stylesheet" href="app.css">
-    </head>
     <body>
         
         <br>
@@ -53,6 +49,6 @@
         </div>
         
     </body>
-</html>
+
 
 @endsection

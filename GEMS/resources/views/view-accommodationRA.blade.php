@@ -7,11 +7,14 @@
   <script>
     function deletePopup($ID) {
         var r = confirm("Are you sure you want to delete this accommodation?");
+        //This is a very roundabout way of deleting things. Look into AJAX.
         if (r == true) {
+          //Grabs ID from query string in the URL.
           var id = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
           });
 
+          //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
           window.location.href = "/DeleteAcc?ID="+id.ID;
      }
         else {

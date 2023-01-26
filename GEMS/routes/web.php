@@ -136,3 +136,7 @@ Route::get('/Bookings', function () {
 Route::get('/DeleteAcc', function () {
     return view('DeleteAcc');
 })->name('DeleteAcc');
+
+Route::get('/LEI-Create-RA', function () {
+    return view('LEI-Create-RA');
+})->name('LEI-Create-RA');

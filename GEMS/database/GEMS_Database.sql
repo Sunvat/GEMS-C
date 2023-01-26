@@ -54,14 +54,16 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `country` varchar(50) NOT NULL,
   `maxCap` int NOT NULL,
   `curOc` int DEFAULT 0,
-  `desc` varchar(200),
-  `image` varchar(50),
+  `descr` varchar(200),
+  `image` varchar(200),
   `WCA` boolean DEFAULT False,
   `Pets` boolean DEFAULT False,
   `Med` boolean DEFAULT False,
   `Bed` boolean DEFAULT False,
   `isFull` boolean DEFAULT False,
   `HighGround` boolean DEFAULT False,
+  `Food` boolean DEFAULT False,
+  `Water` boolean DEFAULT False,
   PRIMARY KEY (accID),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

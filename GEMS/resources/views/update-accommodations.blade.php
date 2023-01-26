@@ -22,13 +22,14 @@ if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/updateFuncs.php';
 
-    $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['maxCap']),
-    htmlentities($_GET['popChange']), htmlentities($_GET['desc']), htmlentities($_GET['image']),
-    htmlentities($_GET['desc']), htmlentities($_GET['desc']), htmlentities($_GET['desc']));
+    $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['address']), htmlentities($_GET['rname']),
+    htmlentities($_GET['country']), htmlentities($_GET['maxCap']), htmlentities($_GET['popChange']), htmlentities($_GET['desc']),
+    htmlentities($_GET['image']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']),
+    htmlentities($_GET['beds']), htmlentities($_GET['high']), htmlentities($_GET['food']), htmlentities($_GET['water']),
+    htmlentities($_GET['ID']));
 
-    //updateAccDet($updateAccommodation);
-    $ID = $_GET["ID"];
-    header('Location: /view-accommodationRA?ID='. $ID);
+    updateAccDet($updateAccommodation);
+    header('Location: /view-accommodationRA?ID='. $updateAccommodation[15]);
     exit();
 }
 ?>
@@ -70,31 +71,45 @@ if ($row['Water'] == true){
 echo true;
 echo "<div class=\"container py-10 px-10 mx-0 min-w-full grid place-items-center\" id = \"container\">
 <form action= \"?ID=$ID\" method=\"get\" id=\"updateForm\">
+  <input type=\"hidden\" name=\"ID\" value=\"$ID\" />
+  <input type=\"hidden\" id=\"wca\" name=\"wca\" value=\"False\" />
+  <input type=\"hidden\" id=\"pets\" name=\"pets\" value=\"False\" />
+  <input type=\"hidden\" id=\"med\" name=\"med\" value=\"False\" />
+  <input type=\"hidden\" id=\"beds\" name=\"beds\" value=\"False\" />
+  <input type=\"hidden\" id=\"high\" name=\"high\" value=\"False\" />
+  <input type=\"hidden\" id=\"food\" name=\"food\" value=\"False\" />
+  <input type=\"hidden\" id=\"water\" name=\"water\" value=\"False\" />
+
   <label for=\"locName\">Location Name:</label><br>
   <input type=\"text\" id=\"locName\" name=\"locName\" value=\"" . $row['aname'] . "\"><br>
+  <label for=\"locName\">Address:</label><br>
+  <input type=\"text\" id=\"address\" name=\"address\" value=\"" . $row['address'] . "\"><br>
+  <label for=\"locName\">Region:</label><br>
+  <input type=\"text\" id=\"rname\" name=\"rname\" value=\"" . $row['rname'] . "\"><br>
+  <label for=\"locName\">Country:</label><br>
+  <input type=\"text\" id=\"country\" name=\"country\" value=\"" . $row['country'] . "\"><br>
   <label for=\"maxCap\">Maximum Capacity:</label><br>
   <input type=\"text\" id=\"maxCap\" name=\"maxCap\" value=\"" . $row['maxCap'] . "\"><br>
   <label for=\"popChange\">Net Change in Occupancy:</label><br>
   <input type=\"text\" id=\"popChange\" name=\"popChange\" value=\"0\"><br>
   <label for=\"desc\">Description:</label><br>
-  <input type=\"text\" id=\"desc\" name=\"desc\" value=\"" . $row['desc'] . "\"><br>
+  <input type=\"text\" id=\"desc\" name=\"desc\" value=\"" . $row['descr'] . "\"><br>
   <label for=\"desc\">Image URL:</label><br>
   <input type=\"text\" id=\"image\" name=\"image\" value=\"" . $row['image'] . "\"><br>
-  <input type=\"checkbox\" id=\"wca\" value=\"true\" ". $boolCheck[0] .">
-  <label for=\"wca\">Wheelchair Access</label><br>
-  <input type=\"checkbox\" id=\"pets\" value=\"true\" ". $boolCheck[1] .">
-  <label for=\"pets\">Allows Pets</label><br>
-  <input type=\"checkbox\" id=\"med\" value=\"true\" ". $boolCheck[2] .">
-  <label for=\"med\">Medecine Available</label><br>
-  <input type=\"checkbox\" id=\"beds\" value=\"true\" ". $boolCheck[3] .">
-  <label for=\"beds\">Beds Available</label><br>
-  <input type=\"checkbox\" id=\"high\" value=\"true\" ". $boolCheck[4] .">
-  <label for=\"high\">On High Ground</label><br>
-  <input type=\"checkbox\" id=\"food\" value=\"true\" ". $boolCheck[5] .">
-  <label for=\"food\">Food Provided</label><br>
-  <input type=\"checkbox\" id=\"water\" value=\"true\" ". $boolCheck[6] .">
-  <label for=\"water\">Water Provided</label><br><br>
-  <input type=\"hidden\" name=\"ID\" value=\"$ID\" />
+  <label for=\"wca\">Wheelchair Access</label>
+  <input type=\"checkbox\" id=\"wca\" name=\"wca\" value=\"True\" ". $boolCheck[0] ."><br>
+  <label for=\"pets\">Allows Pets</label>
+  <input type=\"checkbox\" id=\"pets\" name=\"pets\" value=\"true\" ". $boolCheck[1] ."><br>
+  <label for=\"med\">Medecine Available</label>
+  <input type=\"checkbox\" id=\"med\"  name=\"med\" value=\"true\" ". $boolCheck[2] ."><br>
+  <label for=\"beds\">Beds Available</label>
+  <input type=\"checkbox\" id=\"beds\" name=\"beds\" value=\"true\" ". $boolCheck[3] ."><br>
+  <label for=\"high\">On High Ground</label>
+  <input type=\"checkbox\" id=\"high\" name=\"high\" value=\"true\" ". $boolCheck[4] ."><br>
+  <label for=\"food\">Food Provided</label>
+  <input type=\"checkbox\" id=\"food\" name=\"food\" value=\"true\" ". $boolCheck[5] ."><br>
+  <label for=\"water\">Water Provided</label>
+  <input type=\"checkbox\" id=\"water\" name=\"water\" value=\"true\" ". $boolCheck[6] ."><br><br>
   <div class=\"md:flex md:items-center\">
     <div class=\"md:w-1/3\"></div>
     <div class=\"md:w-2/3\">

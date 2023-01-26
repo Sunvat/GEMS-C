@@ -8,9 +8,9 @@
     <div  class = "flex flex-row justify-center items-center">
       <div>
         <div  class = "flex flex-col justify-center items-center">
-          <h1 class="text-xl font-black font-size:25px p-2">Latest Emergancy Updates/Information</h1>
+          <h1 class="text-xl font-black font-size:25px p-2">Latest Emergency Updates/Information</h1>
           <button class = "border-2 border-gold group bg-Dgreen rounded-full hover:bg-Lgreen">
-            <a href="{{route('RA-Latest-Update')}}" class = "text-lg mx-2 text-white group-hover:text-gold "> Latest Emergancy Updates</a>
+            <a href="{{route('RA-Latest-Update')}}" class = "text-lg mx-2 text-white group-hover:text-gold "> Latest Emergency Updates</a>
           </button>
         </div>
       </div>

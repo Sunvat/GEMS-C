@@ -62,6 +62,8 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `Bed` boolean DEFAULT False,
   `isFull` boolean DEFAULT False,
   `HighGround` boolean DEFAULT False,
+  `Food` boolean DEFAULT False,
+  `Water` boolean DEFAULT False,
   PRIMARY KEY (accID),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

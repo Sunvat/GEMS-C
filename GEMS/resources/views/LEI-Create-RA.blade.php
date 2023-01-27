@@ -31,7 +31,7 @@ if( isset($_GET['submit']) )
   <textarea id = "Update" name = "Update" form = "updateForm" cols = 25 rows=5></textarea><br>
 
   <label for="DateTime" class="mx-2 font-bold text-slate-700">Province:</label><br>
-  <input type=DateTime" id="DateTime" name="DateTime" placeholder="yyyy-mm-dd" class="rounded p-2"><br>
+  <input type="DateTime" id="DateTime" name="DateTime" placeholder="yyyy-mm-dd" class="rounded p-2"><br>
 
  <br>
  <div class="md:flex md:items-center">

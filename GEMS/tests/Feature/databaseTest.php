@@ -33,7 +33,7 @@ class databaseTest extends TestCase
     public function test_Select()
     {
         //Get Results
-        $result = getAllAcc("TESTING");
+        $result = getAllAcc(-1);
         $rows = $result->fetch_row();
 
         //Results exist

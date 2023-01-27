@@ -13,7 +13,9 @@ require_once("getConnection.php");
 
         mysqli_close($con);
 
-        return $result;
+        $row = mysqli_fetch_array($result);
+
+        return $row;
     }
 
     function getAllAcc($Reg = 'all'){

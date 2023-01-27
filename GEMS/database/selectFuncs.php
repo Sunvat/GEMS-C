@@ -71,3 +71,18 @@ require_once("getConnection.php");
 
         return $result;
     }
+    //Function for getting LEI and will be used for sorting.
+    function getLEIandID(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT rID, location, lei, datetime FROM LEI ");
+
+        mysqli_close($con);
+
+        return $result;
+    }

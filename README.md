@@ -92,3 +92,11 @@ functions interact with each other will be taken into account when designing Uni
 |Akshaj Srinivasan|Client Liason|Managing communication with client,setting up weekly meetings with clients,taking minutes,submit weekly report meeting with client.|
 |Mack Schmaltz|QA Lead|Defining quality standards for the project, refining documentation. Ensuring validation techniques, required documentation is complete.|
 |Sunvat Singh Brar|Technical Lead|Making sure that technical requirements of the projects are being met. Setting up git repository, unit testing for the project.|
+
+# Code Documentation
+## PHP Functions
+
+
+## SQL Triggers
+
+## Javascript Functions

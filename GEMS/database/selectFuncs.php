@@ -13,10 +13,12 @@ require_once("getConnection.php");
 
         mysqli_close($con);
 
-        return $result;
+        $row = mysqli_fetch_array($result);
+
+        return $row;
     }
 
-    function getAllAcc($Reg = 'all'){
+    function getAllAcc($Reg = 0){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -25,11 +27,11 @@ require_once("getConnection.php");
         }
 
         //Return accommodations regardless of region
-        if (strcmp( $Reg, 'all' ) == 0){
+        if ($Reg == 0){
             $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations;");
         }
         //Return accommodations regardless of region
-        else if (strcmp( $Reg, 'TESTING' ) == 0){
+        else if ($Reg == -1){
             $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM testAccommodations;");
         }
         //Return specified region

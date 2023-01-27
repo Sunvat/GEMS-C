@@ -27,8 +27,7 @@
 <?php
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
 $ID = $_GET["ID"];
-$result = getAccDet($ID);
-$row = mysqli_fetch_array($result);
+$row = getAccDet($ID);
 echo "
 <br>
 

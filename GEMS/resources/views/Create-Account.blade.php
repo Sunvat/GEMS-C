@@ -8,13 +8,14 @@
     if(isset($_GET['submit'])){
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
 
-    $newAccount = array(htmlentities($_GET['fname'],$_GET['lname'],$_GET['email'],$_GET['pword'],$_GET['ems'],$_GET['id'],$_GET['reg'],));
+    $newAccount = array(htmlentities($_GET['fname'],htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['ems']),htmlentities($_GET['id']),htmlentities($_GET['reg'])));
 
     InsertAccountInfo($newAccount);
     header('Location: /Create-Account');
     die();
     }
     ?>
+    
     <div class=" w-fit mx-auto px-52 py-24" id = "container">
         <form  method="post" class="mx-auto" action="Create-Account" >
                 <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
@@ -58,24 +59,22 @@
                 <br>
                 <input  name="reg" type="text" placeholder="Local Region" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label for="Province"class="mx-2 font-bold text-white">Province:</label>
+                <div class = "flex flex-col jusify-center items-center">
                 <br>
-                <select class= "mx-2 mb-4 py-2 border-2 rounded">
-                    <option value="select">Select</option>
-                    <option value="ab">Alberta</option>
-                    <option value="bc">British Columbia</option>
-                    <option value="mb">Manitoba</option>
-                    <option value="nb">New Brunswick</option>
-                    <option value="nfl">Newfoundland and Labrador</option>
-                    <option value="nt">Northwest Territories</option>
-                    <option value="ns">Nova Scotia</option>
-                    <option value="nv">Nunavut</option>
-                    <option value="ot">Ontario</option>
-                    <option value="pei">Prince Edward Island</option>
-                    <option value="qb">Quebec</option>
-                    <option value="sk">Saskatchewan</option>
-                    <option value="yk">Yukon</option>
-                </select>
+    
+                <?php
+                require dirname(__DIR__, 3).'/database/selectFuncs.php';
+
+                  $result = getRegion();
+
+                  echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-white\">Select a region to browse available accommodations in that region:</label>";
+                  echo "<select id=\"countries\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
+  
+                while($row = mysqli_fetch_array($result)){
+                 echo "<option value =" . htmlspecialchars($row['rname'], ENT_QUOTES, 'UTF-8') . ">" . htmlspecialchars($row['rname'], ENT_QUOTES, 'UTF-8') . "</option>";
+                 }
+                 echo"</select>";
+                ?>
                 <br>
                 <label for="Confirmation Code"class="mx-2 font-bold text-white">Confirmation Code: (Emailed to new assignee when new RA is assigned)</label>
                 <br>

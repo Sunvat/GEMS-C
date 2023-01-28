@@ -37,10 +37,11 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `email` varchar(50) NOT NULL,
   `pword` varchar(50) NOT NULL,
   `ems` varchar(50) NOT NULL,
-  `id` int NOT NULL,
+  `id` int AUTO_INCREMENT,
   `reg` varchar(50) NOT NULL,
   `rID` int NOT NULL,
   `provState` varchar(50) NOT NULL,
+  PRIMARY KEY (id),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -92,3 +92,28 @@ functions interact with each other will be taken into account when designing Uni
 |Akshaj Srinivasan|Client Liason|Managing communication with client,setting up weekly meetings with clients,taking minutes,submit weekly report meeting with client.|
 |Mack Schmaltz|QA Lead|Defining quality standards for the project, refining documentation. Ensuring validation techniques, required documentation is complete.|
 |Sunvat Singh Brar|Technical Lead|Making sure that technical requirements of the projects are being met. Setting up git repository, unit testing for the project.|
+
+# Code Documentation
+## Useful Commands
+These are to be used with a terminal currently open to the GEMS folder.
+
+|Name|Usage|
+|-----------|------------------------|
+|php artisan serv|Starts the local server for the site to be hosted on.|
+|npm run dev|Runs the scripts needed for the site's base level functionality.|
+|php artisan test|Runs all unit tests. Results are shown in the terminal.|
+
+## PHP Functions
+|Name|Usage|File Location|
+|--------|---------------------------|--------|
+|getConn()|Holds all the needed information to connect to the database. Returns a connection to the database. This connection must be closed in the function that called this method.|database/getConnection.php|
+|insertAcc($newAccommodation)|Insert a new accommodation into the database. $newAccommodation must be an array containing the accommodation name, region name, country, street address, and the maximum capacity in that order. Does not return anything|database/insertFuncs.php|
+|insertTestAcc()|Inserts mock data into a mock table in the database. Used to ensure the database can be connected to, as well as insert syntax is correct for the used version of SQL. Accommodation will be deleted when running all unit tests.|database/insertFuncs.php|
+|updateAccDet($accommodation)|Updates an accommodation in the database. $accommodation must be an array containing, in order, the accommodation name, the street address, region name, country, maximum capacity, the change in number of occupants (can be positive or negative), the description, the image URL, if there's wheelchair access (boolean), if pets are allows (boolean), if there is medical attention available (boolean), if there are beds (boolean), if it is located on high ground (boolean), if food is available (boolean), if water is available (boolean), and the accommodation ID. The site has been set up to add unchanged values to the array automatically. Does not return anything|database/updateFuncs.php|
+|getAccDet($ID)|Gets the details of a single accommodation, and processes the SQL data returned by the database. $ID is an int that corresponds to the ID of the desired accommodation. Returns the details as a usable array.|database/selectFuncs.php|
+|getAllAcc($Reg)|Gets the basic details of all accommodations in the database. $Reg is an int that corresponds to the ID of the desired region. If $Reg is set to 0 or left blank, it will return accommodations of all regions. If $Reg is set to -1, it will connect to the table in the database used for testing, and return any mock data stored within. Returns SQL data that must be processed into rows using mysqli_fetch_array($result).|database/selectFuncs.php|
+|delAcc($ID)|Deletes a single accommodation from the database. $ID is an int that corresponds to the ID of the accommodation to be deleted. Does not return anything.|database/selectFuncs.php|
+
+## SQL Triggers
+
+## Javascript Functions

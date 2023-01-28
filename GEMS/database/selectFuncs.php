@@ -59,6 +59,21 @@ require_once("getConnection.php");
         return $result;
     }
 
+    function getAllBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings ");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
     function getRegionAndID(){
         $con = getConn();
         // Check connection

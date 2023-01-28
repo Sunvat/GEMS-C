@@ -80,12 +80,16 @@ CREATE TABLE IF NOT EXISTS `regions` (
 
 CREATE TABLE IF NOT EXISTS `bookings` (
   `accID` INT NOT NULL,
+  `region` varchar(50) NOT NULL,
   `aname` varchar(50) NOT NULL,
   `bookingID`int AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `phoneNumber` varchar(17) NOT NULL,
   `groupName` varchar(50) NOT Null,
   `NumPeople` int NOT NULL,
+  `Caller Name` varchar(50) NOT Null,
+  `Caller E.M.S I.D` varchar(50) NOT Null,
+  `Caller Contact Number` varchar(50) NOT Null,
   `WCA` boolean DEFAULT False,
   `Pets` boolean DEFAULT False,
   `Med` boolean DEFAULT False,

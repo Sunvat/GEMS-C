@@ -30,9 +30,9 @@ require_once("getConnection.php");
         if ($Reg == 0){
             $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations;");
         }
-        //Return accommodations regardless of region
+        //Return test accommodation
         else if ($Reg == -1){
-            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM testAccommodations;");
+            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE aname='Hotel California' AND address = 'Dark Desert Highway';");
         }
         //Return specified region
         else{

@@ -21,7 +21,7 @@ require_once("getConnection.php");
         $result = true;
 
         //Insert data from newAccomodation into the database
-        $sql = "INSERT INTO testAccommodations (aname, rname, country, address, maxCap)
+        $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
         VALUES ('Hotel California', 'California', 'USA',
          'Dark Desert Highway', 40)";
 

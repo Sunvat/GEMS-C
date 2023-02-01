@@ -14,7 +14,7 @@ require_once('getConnection.php');
         mysqli_close($con);
     }
 
-    function delAccTest($ID){
+    function delAccTest(){
         $result = true;
 
         $con = getConn();
@@ -24,7 +24,7 @@ require_once('getConnection.php');
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        $sql = "DELETE FROM testAccommodations WHERE accID = $ID";
+        $sql = "DELETE FROM accommodations WHERE aname='Hotel California' AND address = 'Dark Desert Highway'";
 
         if ($con->query($sql) === FALSE) {
             echo "Error: " . $sql . "<br>" . $conn->error;

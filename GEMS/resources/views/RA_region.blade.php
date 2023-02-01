@@ -31,7 +31,7 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
   <div class = "flex flex-col jusify-center items-center">
     <button class="py-2 px-4 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen ">
-      <a href = "{{route('RA-Accommodations')}}">Submit</a>
+      <a href = "/RA-Accommodations?ID=">Submit</a>
     </button>
 
     <button type="submit" value="Submit" class="mt-8 py-2 px-2 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen hover:text-white ">

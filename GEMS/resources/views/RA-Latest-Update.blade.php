@@ -10,7 +10,7 @@
       <br>
       <div>
         <button class = "group bg-slate-300 rounded-full hover:bg-slate-600 m-2">
-            <a href="{{route('RA-Create-Update')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Create Update</a>
+            <a href="{{route('RA-Create-Update')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Create</a>
         </button>
       </div>
 
@@ -31,6 +31,9 @@
          echo "<th class = \"border p-2 border-slate-500\">".$row[1]."</th>";
          echo "<th class = \"border p-2 border-slate-500\">".$row[3]."</th>";
          echo "<th class = \"border p-2 border-slate-500\">".$row[2]."</th>";
+         echo "<th class = \"border p-2 border-slate-500\"><button class = \"group bg-slate-300 rounded-full hover:bg-slate-600 m-2\">
+                  <a href=\"{{route('Update-LEI-RA')}}\" class=\"text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition\">Update</a>
+               </button></th>";
          echo "</tr>";
       }
       echo "</table>";

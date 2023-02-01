@@ -13,11 +13,9 @@ if( isset($_GET['submit']) )
 }
 ?>
 
-<br>
+<br><br>
 <div class = "flex flex-col justify-center items-center">
-  <div class = "p-1 bg-Glohaven-Orange rounded-md">
-    <h1 class = "text-4xl">Select Region</h1>
-  </div> 
+    <h1 class = "p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen">Select Region</h1>
 </div>
 
 <div class = "flex flex-col jusify-center items-center">
@@ -25,7 +23,7 @@ if( isset($_GET['submit']) )
     <br>
     
     <?php
-require dirname(__DIR__, 3).'/database/selectFuncs.php';
+    require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
     $result = getRegionAndID();
 

@@ -36,7 +36,7 @@ require_once("getConnection.php");
         }
         //Return specified region
         else{
-            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE rname='$Reg';");
+            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE rID='$Reg';");
         }
         
         mysqli_close($con);
@@ -88,6 +88,7 @@ require_once("getConnection.php");
 
         return $result;
     }
+    
     //Function for getting LEI and will be used for sorting.
     function getLEIandID(){
         $con = getConn();

@@ -4,9 +4,11 @@ require_once("getConnection.php");
         $conn = getConn();
 
         //Insert data from newAccomodation into the database
-        $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
+        $sql = "INSERT INTO accommodations (aname, address, rID, maxCap, curOc, descr, image, wca, pets, med, bed, highground, food, water)
         VALUES ('$newAccommodation[0]', '$newAccommodation[1]', '$newAccommodation[2]',
-         '$newAccommodation[3]', $newAccommodation[4])";
+         $newAccommodation[3], 0, '$newAccommodation[4]', '$newAccommodation[5]', $newAccommodation[6],
+         $newAccommodation[7], $newAccommodation[8], $newAccommodation[9], $newAccommodation[10],
+         $newAccommodation[11], $newAccommodation[12])";
 
         //Check if the insert was successful
         if ($conn->query($sql) === FALSE) {
@@ -21,7 +23,7 @@ require_once("getConnection.php");
         $result = true;
 
         //Insert data from newAccomodation into the database
-        $sql = "INSERT INTO testAccommodations (aname, rname, country, address, maxCap)
+        $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
         VALUES ('Hotel California', 'California', 'USA',
          'Dark Desert Highway', 40)";
 

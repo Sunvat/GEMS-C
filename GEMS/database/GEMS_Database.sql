@@ -48,8 +48,6 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `rID` int NOT NULL,
   `aname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
-  `rname` varchar(50) NOT NULL,
-  `country` varchar(50) NOT NULL,
   `maxCap` int NOT NULL,
   `curOc` int DEFAULT 0,
   `descr` varchar(200),

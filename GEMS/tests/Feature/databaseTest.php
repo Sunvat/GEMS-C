@@ -48,14 +48,10 @@ class databaseTest extends TestCase
 
     public function test_Delete()
     {
-        //Jury rigged method of getting ID number
-        //In place until I can figure out why PHP won't let me change the class variable $ID
-        $result = getAllAcc("TESTING");
-        $rows = $result->fetch_row();
-        $success = delAccTest($rows[0]);
+        $success = delAccTest();
         
         if ($success == TRUE) {
-            echo "Deleted $rows[0] Successfully.\n";
+            echo "Deleted test accommodation Successfully.\n";
             $this->assertTrue(true);
         } else {
             echo "Failed to delete record.\n";

@@ -36,11 +36,9 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `lname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `pword` varchar(50) NOT NULL,
-  `ems` varchar(50) NOT NULL,
   `id` int AUTO_INCREMENT,
   `reg` varchar(50) NOT NULL,
   `rID` int NOT NULL,
-  `provState` varchar(50) NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 
@@ -51,8 +49,6 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `rID` int NOT NULL,
   `aname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
-  `rname` varchar(50) NOT NULL,
-  `country` varchar(50) NOT NULL,
   `maxCap` int NOT NULL,
   `curOc` int DEFAULT 0,
   `descr` varchar(200),

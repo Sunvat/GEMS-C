@@ -11,7 +11,7 @@ if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
 
-    $newBooking = array(htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['PrimEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
+    $newBooking = array(htmlentities($_GET['bookingID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['PrimEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
 
     InsertBooking($newBooking);
     header('Location: /RA_Booking-Submitted');
@@ -29,6 +29,9 @@ if( isset($_GET['submit']) )
             <form class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
                     <legend class="mb-5 text-xl font-bold text-white">Request Booking.</legend>
+                    <label for="bookingID" class=" text-white">Booking ID:</label>
+                     <input type="text" id="bookingID" name="bookingID" class = "border solid 5px  mb-2 display block ">
+                     <br>
                     <label for="cname" class=" text-white">Caller Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block ">
                      <br>

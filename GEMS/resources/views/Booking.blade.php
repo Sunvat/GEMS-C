@@ -8,8 +8,8 @@ if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
 
-    $newBooking = array(htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['PrimEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
-
+    $newBooking = array(htmlentities($_GET['bookingID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['accID']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
+    //echo implode(" ",$newBooking);
     InsertBooking($newBooking);
     header('Location: /Booking-Submitted');
     die();
@@ -26,6 +26,9 @@ if( isset($_GET['submit']) )
             <form action="" method="get" class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
                     <legend class="mb-5 text-xl font-bold text-white">Request Booking.</legend>
+                    <label for="bookingID" class=" text-white">Booking ID:</label>
+                     <input type="number" id="bookingID" name="bookingID" class = "border solid 5px  mb-2 display block ">
+                     <br>
                     <label for="cname" class=" text-white">Caller Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block ">
                      <br>
@@ -41,6 +44,9 @@ if( isset($_GET['submit']) )
                      <label for="aname" class=" text-white">Accommodation Name:</label>
                      <input type="text" id="aname" name="aname" class = "border solid 5px  mb-2 display block ">
                      <br>
+                     <label for="accID" class=" text-white">Accommodation ID:</label>
+                     <input type="number" id="accID" name="accID" class = "border solid 5px  mb-2 display block ">
+                     <br>
                      <label for="region" class=" text-white">Region:</label>
                      <input type="text" id="region" name="region" class = "border solid 5px  mb-2 display block ">
                      <br>
@@ -48,25 +54,25 @@ if( isset($_GET['submit']) )
                      <input type="text" id="gname" name="gname" class = "border solid 5px  mb-2 display block ">
                      <br>
                      <label for="numOfEvacs"class=" text-white">Number of Evacuees:</label>
-                     <input type="text" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block ">
+                     <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block ">
                      <br>
                      <label for="primEvacName"class=" text-white">Primary Evacuee First Name:</label>
-                     <input type="text" id="primEvacName" name="PrimEvacName" class = "border solid 5px  mb-2 display block ">
+                     <input type="text" id="primEvacName" name="primEvacName" class = "border solid 5px  mb-2 display block ">
                      <br>
                      <label for="primEvacContactNum"class=" text-white">Primary Evacuee Contact Number:</label>
                      <input type="text" id="primEvacContactNum" name="primEvacContactNum" class = "border solid 5px; mb-2; display block ">
                      <br>
                      <label for="WCA" class=" text-white">Wheel Chair Assistance Required?</label>
-                     <input type="text" id="WCA" name="WCA" class = "border solid 5px  mb-2 display block ">
+                     <input type="number" id="WCA" name="WCA" class = "border solid 5px  mb-2 display block ">
                      <br>
                      <label for="pets" class=" text-white">Pet friendly accommodation Required?</label>
-                     <input type="text" id="pets" name="pets" class = "border solid 5px  mb-2 display block ">
+                     <input type="number" id="pets" name="pets" class = "border solid 5px  mb-2 display block ">
                      <br>
                      <label for="med" class=" text-white">Medical Assistance Required?</label>
-                     <input type="text" id="med" name="med" class = "border solid 5px  mb-2 display block ">
+                     <input type="number" id="med" name="med" class = "border solid 5px  mb-2 display block ">
                      <br>
                      <label for="bed" class=" text-white">Beds Required?</label>
-                     <input type="text" id="bed" name="bed" class = "border solid 5px  mb-2 display block ">
+                     <input type="number" id="bed" name="bed" class = "border solid 5px  mb-2 display block ">
                      <br>
                  </fieldset>
                  <div class="md:w-2/3">

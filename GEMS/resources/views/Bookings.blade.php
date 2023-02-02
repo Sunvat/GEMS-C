@@ -41,15 +41,15 @@ while($row = mysqli_fetch_array($result))
 {
 echo "<tr>";
 echo "<td class = \"border border-slate-500 p-2 border-r-0 height=100 width=100\">" . $row['bookingID'] . "</td>";
-echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['name'] . "</td>";
+echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['primEvacName'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['phoneNumber'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['NumPeople'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">"   . $row['aname'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">"   . $row['region'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['groupName'] . "</td>";
-echo "<td class = \"border border-slate-500 p-2\">" . $row['Caller Name'] . "</td>";
-echo "<td class = \"border border-slate-500 p-2\">" . $row['Caller EMS I.D'] . "</td>";
-echo "<td class = \"border border-slate-500 p-2\">" . $row['Caller Contact Number'] . "</td>";
+echo "<td class = \"border border-slate-500 p-2\">" . $row['CallerName'] . "</td>";
+echo "<td class = \"border border-slate-500 p-2\">" . $row['CallerEMSID'] . "</td>";
+echo "<td class = \"border border-slate-500 p-2\">" . $row['CallerContactNumber'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['Pets'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['WCA'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['Med'] . "</td>";

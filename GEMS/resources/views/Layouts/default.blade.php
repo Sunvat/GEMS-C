@@ -46,7 +46,7 @@
      <br>
      <br>
 
-     <footer class="p-8 bg-gradient-to-b from-Lgreen to-Dgreen ">
+     <footer class="p-5 bg-gradient-to-b from-Lgreen to-Dgreen ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-4 h-10" />

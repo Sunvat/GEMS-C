@@ -4,6 +4,24 @@
 
 <!DOCTYPE html>
 <html>
+  <header>
+
+  <script>
+    function deletePopup(bookingID) {
+        var r = confirm("Are you sure you want to delete this booking request?");
+        //This is a very roundabout way of deleting things. Look into AJAX.
+        if (r == true) {
+          //Grabs ID from query string in the URL.
+          //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
+          window.location.href = "/DeleteBooking?bookingID="+bookingID;
+     }
+        else {
+     }
+}
+</script>
+
+
+</header>
 
 <body>
     
@@ -61,7 +79,7 @@ echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
       </div></td>";
 echo "<td class = \"border border-slate-500 p-2\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"location.href='/Contact';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Decline</button>
+  <button type=\"button\" onclick=\"deletePopup(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Decline</button>
 </div></td>";
 echo "</tr>";
 }

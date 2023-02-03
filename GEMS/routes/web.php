@@ -82,9 +82,9 @@ Route::get('/Booking', function () {
     return view('Booking');
 })->name('Booking');
 
-Route::get('/RA_Booking', function () {
-    return view('RA_Booking');
-})->name('RA_Booking');
+Route::get('/RA-Booking', function () {
+    return view('RA-Booking');
+})->name('RA-Booking');
 
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');
@@ -140,3 +140,7 @@ Route::get('/DeleteAcc', function () {
 Route::get('/LEI-Create-RA', function () {
     return view('LEI-Create-RA');
 })->name('LEI-Create-RA');
+
+Route::get('/DeleteBooking', function () {
+    return view('DeleteBooking');
+})->name('DeleteBooking');

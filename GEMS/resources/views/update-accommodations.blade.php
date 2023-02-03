@@ -42,9 +42,8 @@ $boolCheck = ["unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "
 //Get the ID from the URL
 $ID = $_GET["ID"];
 //Get the accommodation info
-$result = getAccDet($ID);
 //Translate results into an array
-$row = mysqli_fetch_array($result);
+$row = getAccDet($ID);
 
 //See which boxes need to be checked
 if ($row['WCA'] == true){

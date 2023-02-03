@@ -10,7 +10,7 @@
 <?php
   require dirname(__DIR__, 3).'/database/deleteFuncs.php';
   delAcc($_GET["ID"]);
-  header("Location: /RA-Accommodations");
+  header("Location: /RA-Accommodations?rID=".$_GET["rID"]);
   exit();
 ?>
 

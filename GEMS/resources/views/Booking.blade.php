@@ -8,12 +8,13 @@ if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
 
-    $newBooking = array(htmlentities($_GET['bookingID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['accID']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
+    $newBooking = array(htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['aname']), htmlentities($_GET['accID']), htmlentities($_GET['region']), htmlentities($_GET['gname']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['WCA']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['bed']));
     //echo implode(" ",$newBooking);
     InsertBooking($newBooking);
     header('Location: /Booking-Submitted');
     die();
 }
+
 ?>
         
         <br>
@@ -26,9 +27,6 @@ if( isset($_GET['submit']) )
             <form action="" method="get" class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
                     <legend class="mb-5 text-xl font-bold text-white">Request Booking.</legend>
-                    <label for="bookingID" class=" text-white">Booking ID:</label>
-                     <input type="number" id="bookingID" name="bookingID" class = "border solid 5px  mb-2 display block ">
-                     <br>
                     <label for="cname" class=" text-white">Caller Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block ">
                      <br>
@@ -42,10 +40,17 @@ if( isset($_GET['submit']) )
                      <input type="text" id="callerContactNumber" name="callerContactNumber" class = "border solid 5px; mb-2; display block ">
                      <br>
                      <label for="aname" class=" text-white">Accommodation Name:</label>
-                     <input type="text" id="aname" name="aname" class = "border solid 5px  mb-2 display block ">
-                     <br>
-                     <label for="accID" class=" text-white">Accommodation ID:</label>
-                     <input type="number" id="accID" name="accID" class = "border solid 5px  mb-2 display block ">
+                     <?php
+                     require dirname(__DIR__, 3).'/database/selectFuncs.php';
+                     $accID = $_GET["accID"];
+                     $aname = $_GET["aname"];
+
+                     echo "<input type=\"text\" id=\"aname\" name=\"aname\" value=\"$aname\" class = \"border solid 5px  mb-2 display block \" readonly>";
+                     echo "<br>"; 
+                     echo "<label for=\"accID\" class=\" text-white\">Accommodation ID:</label>";
+                     echo "<input type=\"number\" id=\"accID\" name=\"accID\" value=$accID class = \"border solid 5px  mb-2 display block \" readonly>";
+                     ?>
+                     
                      <br>
                      <label for="region" class=" text-white">Region:</label>
                      <input type="text" id="region" name="region" class = "border solid 5px  mb-2 display block ">

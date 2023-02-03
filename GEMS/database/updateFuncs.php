@@ -10,11 +10,11 @@ require_once("getConnection.php");
         }
 
         $result = mysqli_query($con,"UPDATE accommodations SET 
-        aname = '$accommodation[0]', address = '$accommodation[1]', rname = '$accommodation[2]', country = '$accommodation[3]',
-        maxCap = $accommodation[4], curOc = curOc + $accommodation[5], descr = '$accommodation[6]', image = '$accommodation[7]',
-        WCA = $accommodation[8], Pets = $accommodation[9], Med = $accommodation[10], Bed = $accommodation[11],
-        HighGround = $accommodation[12], Food = $accommodation[13], Water = $accommodation[14]
-        WHERE accID=$accommodation[15]");
+        aname = '$accommodation[0]', address = '$accommodation[1]',
+        maxCap = $accommodation[2], curOc = curOc + $accommodation[3], descr = '$accommodation[4]', image = '$accommodation[5]',
+        WCA = $accommodation[6], Pets = $accommodation[7], Med = $accommodation[8], Bed = $accommodation[9],
+        HighGround = $accommodation[10], Food = $accommodation[11], Water = $accommodation[12]
+        WHERE accID=$accommodation[13]");
 
         mysqli_close($con);
 
@@ -30,4 +30,25 @@ require_once("getConnection.php");
         }
 
         mysqli_close($con);
+    }
+
+    //function for getting LEI Information.
+    function updateLEI($LEI){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // get query
+        $result = mysqli_query($con,"UPDATE LEI SET 
+        location = '$LEI[0]',
+        LEI = '$accommodation[1]',
+        datetime = '$accommodation[2]',
+        country = '$accommodation[3]',
+        WHERE accID=$accommodation[15]");
+        //close connection
+        mysqli_close($con);
+        // return query
+        return $result;
     }

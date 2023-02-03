@@ -9,8 +9,8 @@
 <body>
 <?php
   require dirname(__DIR__, 3).'/database/deleteFuncs.php';
-  delAcc($_GET["ID"]);
-  header("Location: /RA-Accommodations?rID=".$_GET["rID"]);
+  delBooking($_GET["bookingID"]);
+  header("Location: /Bookings");
   exit();
 ?>
 

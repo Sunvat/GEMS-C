@@ -22,14 +22,13 @@ if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/updateFuncs.php';
 
-    $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['address']), htmlentities($_GET['rname']),
-    htmlentities($_GET['country']), htmlentities($_GET['maxCap']), htmlentities($_GET['popChange']), htmlentities($_GET['desc']),
+    $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['address']), htmlentities($_GET['maxCap']), htmlentities($_GET['popChange']), htmlentities($_GET['desc']),
     htmlentities($_GET['image']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']),
     htmlentities($_GET['beds']), htmlentities($_GET['high']), htmlentities($_GET['food']), htmlentities($_GET['water']),
     htmlentities($_GET['ID']));
 
     updateAccDet($updateAccommodation);
-    header('Location: /view-accommodationRA?ID='. $updateAccommodation[15]);
+    header('Location: /view-accommodationRA?ID='. $updateAccommodation[13]);
     exit();
 }
 ?>
@@ -83,10 +82,6 @@ echo "<div class=\"container py-10 px-10 mx-0 min-w-full grid place-items-center
   <input type=\"text\" id=\"locName\" name=\"locName\" value=\"" . $row['aname'] . "\"><br>
   <label for=\"locName\">Address:</label><br>
   <input type=\"text\" id=\"address\" name=\"address\" value=\"" . $row['address'] . "\"><br>
-  <label for=\"locName\">Region:</label><br>
-  <input type=\"text\" id=\"rname\" name=\"rname\" value=\"" . $row['rname'] . "\"><br>
-  <label for=\"locName\">Country:</label><br>
-  <input type=\"text\" id=\"country\" name=\"country\" value=\"" . $row['country'] . "\"><br>
   <label for=\"maxCap\">Maximum Capacity:</label><br>
   <input type=\"text\" id=\"maxCap\" name=\"maxCap\" value=\"" . $row['maxCap'] . "\"><br>
   <label for=\"popChange\">Net Change in Occupancy:</label><br>

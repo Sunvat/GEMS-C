@@ -144,3 +144,7 @@ Route::get('/LEI-Create-RA', function () {
 Route::get('/DeleteBooking', function () {
     return view('DeleteBooking');
 })->name('DeleteBooking');
+
+Route::get('/Update-LEI-RA', function () {
+    return view('Update-LEI-RA');
+})->name('Update-LEI-RA');

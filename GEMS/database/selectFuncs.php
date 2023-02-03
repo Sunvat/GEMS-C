@@ -28,15 +28,15 @@ require_once("getConnection.php");
 
         //Return accommodations regardless of region
         if ($Reg == 0){
-            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations;");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, maxCap-curOc AS openSpace FROM accommodations;");
         }
         //Return test accommodation
         else if ($Reg == -1){
-            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE aname='Hotel California' AND address = 'Dark Desert Highway';");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, maxCap-curOc AS openSpace FROM accommodations WHERE aname='Hotel California' AND address = 'Dark Desert Highway';");
         }
         //Return specified region
         else{
-            $result = mysqli_query($con,"SELECT accID, aname, address, maxCap-curOc AS openSpace FROM accommodations WHERE rID='$Reg';");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, maxCap-curOc AS openSpace FROM accommodations WHERE rID='$Reg';");
         }
         
         mysqli_close($con);

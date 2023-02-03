@@ -22,7 +22,8 @@
 <?php
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
-$result = getAllAcc();
+$rID = $_GET["rID"];
+$result = getAllAcc($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center\">
 <table class = \"table-fixed border bordor-slate-500\">

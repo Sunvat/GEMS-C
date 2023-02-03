@@ -22,9 +22,6 @@
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('RA_region')}}" class="text-lg mx-2  hover:text-Glohaven-Hovered transition">Regions</a>
                 </button>
-                <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
-                    <a href="{{route('RA-Accommodations')}}" class="text-lg mx-2  hover:text-Glohaven-Hovered transition">Accommodations</a>
-                </button>
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">       
                     <a href="{{route('RA-Contact')}}" class = "text-lg mx-2  hover:text-Glohaven-Hovered transition">Contact</a>
                 </button>
@@ -47,13 +44,13 @@
      <br>
      <br>
 
-     <footer class="p-2 bg-white flex flex-col bg-gradient-to-b from-Lgreen to-Dgreen">
-    <div>
-        <a href="{{route('Home')}}" class="flex items-center ">
+     <footer class="p-5 bg-gradient-to-b from-Lgreen to-Dgreen ">
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-4 h-10" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Glohaven Emergency Management Solutions</span>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap ">Glohaven Emergency Management Solutions</span>
         </a>
-        <ul class="flex flex-wrap items-center mb-2 text-lg text-white sm:mb-0">
+        <ul class="flex flex-wrap items-center text-lg text-white">
             <li>
                 <a href="{{route('Home')}}" class="mr-4 hover:underline md:mr-6 ">About</a>
             </li>
@@ -68,7 +65,9 @@
             </li>
         </ul>
     </div>
-    <span class="block text-sm text-white sm:text-center ">"© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved."
+    <p class="text-l italic text-white ">You cannot properly manage that, which you don't know you have.</p>
+    
+    <span class="block text-sm text-white sm:text-center dark:text-gray-700">© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved.
     </span>
 </footer>
 </body>

@@ -37,7 +37,6 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `email` varchar(50) NOT NULL,
   `pword` varchar(50) NOT NULL,
   `id` int AUTO_INCREMENT,
-  `reg` varchar(50) NOT NULL,
   `rID` int NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (rID) REFERENCES regions(rID)

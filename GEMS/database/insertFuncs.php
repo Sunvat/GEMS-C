@@ -4,9 +4,11 @@ require_once("getConnection.php");
         $conn = getConn();
 
         //Insert data from newAccomodation into the database
-        $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
+        $sql = "INSERT INTO accommodations (aname, address, rID, maxCap, curOc, descr, image, wca, pets, med, bed, highground, food, water)
         VALUES ('$newAccommodation[0]', '$newAccommodation[1]', '$newAccommodation[2]',
-         '$newAccommodation[3]', $newAccommodation[4])";
+         $newAccommodation[3], 0, '$newAccommodation[4]', '$newAccommodation[5]', $newAccommodation[6],
+         $newAccommodation[7], $newAccommodation[8], $newAccommodation[9], $newAccommodation[10],
+         $newAccommodation[11], $newAccommodation[12])";
 
         //Check if the insert was successful
         if ($conn->query($sql) === FALSE) {
@@ -21,7 +23,7 @@ require_once("getConnection.php");
         $result = true;
 
         //Insert data from newAccomodation into the database
-        $sql = "INSERT INTO testAccommodations (aname, rname, country, address, maxCap)
+        $sql = "INSERT INTO accommodations (aname, rname, country, address, maxCap)
         VALUES ('Hotel California', 'California', 'USA',
          'Dark Desert Highway', 40)";
 
@@ -54,8 +56,8 @@ require_once("getConnection.php");
         //get connecttion
         $conn = getConn();
         //sql query inserting into region table
-        $sql = "INSERT INTO bookings(accID, aname, region, name, phoneNumber, groupName, NumPeople, Caller Name, Caller E.M.S I.D, Caller Contact Number, WCA, Pets, Med, Bed)
-        Values ('1', $newBooking[4]', '$newBooking[5]', '$newBooking[8]', '$newBooking[9]', '$newBooking[6]', '$newBooking[7]', '$newBooking[0]', $newBooking[2]', '$newBooking[3]', '$newBooking[10]', '$newBooking[11]', '$newBooking[12]', '$newBooking[13]')";
+        $sql = "INSERT INTO bookings(accID, aname, region, primEvacName, phoneNumber, groupName, NumPeople, CallerName, CallerEMSID, CallerContactNumber, WCA, Pets, Med, Bed)
+        Values ('$newBooking[6]', '$newBooking[5]', '$newBooking[7]', '$newBooking[10]', '$newBooking[11]', '$newBooking[8]', '$newBooking[9]', '$newBooking[1]', '$newBooking[2]', '$newBooking[4]', '$newBooking[12]', '$newBooking[13]', '$newBooking[14]', '$newBooking[15]')";
         //check if insert worked
         if ($conn->query($sql) === FALSE) {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -68,8 +70,8 @@ require_once("getConnection.php");
         // get connection
         $conn = getConn();
         // sql query inserting account info into the user acounts table
-        $sql = "INSERT INTO useraccounts(fname, lname, email, pword, ems, id, reg, provState)
-        Values ('$newAccount[0]', '$newAccount[1]', '$newAccount[2]', '$newAccount[3]', '$newAccount[4]', '$newAccount[5]','$newAccount[6]','$newAccount[7]' )";
+        $sql = "INSERT INTO useraccounts(fname, lname, email, pword, id, rID)
+        Values ('$newAccount[0]', '$newAccount[1]', '$newAccount[2]', '$newAccount[3]', '$newAccount[4]', '$newAccount[5]' )";
         //check if the query worked
         if($conn->query($sql) === FALSE){
             echo "Error:" . $sql . "<br>" . $conn->error;

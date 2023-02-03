@@ -140,3 +140,7 @@ Route::get('/DeleteAcc', function () {
 Route::get('/LEI-Create-RA', function () {
     return view('LEI-Create-RA');
 })->name('LEI-Create-RA');
+
+Route::get('/Update-LEI-RA', function () {
+    return view('Update-LEI-RA');
+})->name('Update-LEI-RA');

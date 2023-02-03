@@ -31,3 +31,24 @@ require_once("getConnection.php");
 
         mysqli_close($con);
     }
+
+    //function for getting LEI Information.
+    function updateLEI($LEI){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // get query
+        $result = mysqli_query($con,"UPDATE LEI SET 
+        location = '$LEI[0]',
+        LEI = '$accommodation[1]',
+        datetime = '$accommodation[2]',
+        country = '$accommodation[3]',
+        WHERE accID=$accommodation[15]");
+        //close connection
+        mysqli_close($con);
+        // return query
+        return $result;
+    }

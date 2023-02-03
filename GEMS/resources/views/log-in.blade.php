@@ -6,7 +6,7 @@
 </div>
 <div class = "flex flex-col items-center">
     <div>
-        <form> <!-- dont forget to add a post or someother method when needed -->
+        <form action="" method = get> <!-- dont forget to add a post or someother method when needed -->
             <!-- used to create the login id and password slots-->
             <div class = "py-2">
                 <label class = "px-2 font-bold text-white">Login ID</label>
@@ -14,7 +14,7 @@
             </div>
             <div>
                 <label for="Password" class = "px-2 font-bold text-white ">Password</label>
-                <input type="text" id = "id" name = "id" class = "px-3 py-2 placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"><br>
+                <input type="password" id = "pword" name = "id" class = "px-3 py-2 placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"><br>
             </div class = "py-2">
             <br>
             <div class = "flex flex-col justify-center items-center">

@@ -112,8 +112,15 @@ These are to be used with a terminal currently open to the GEMS folder.
 |updateAccDet($accommodation)|Updates an accommodation in the database. $accommodation must be an array containing, in order, the accommodation name, the street address, region name, country, maximum capacity, the change in number of occupants (can be positive or negative), the description, the image URL, if there's wheelchair access (boolean), if pets are allows (boolean), if there is medical attention available (boolean), if there are beds (boolean), if it is located on high ground (boolean), if food is available (boolean), if water is available (boolean), and the accommodation ID. The site has been set up to add unchanged values to the array automatically. Does not return anything|database/updateFuncs.php|
 |getAccDet($ID)|Gets the details of a single accommodation, and processes the SQL data returned by the database. $ID is an int that corresponds to the ID of the desired accommodation. Returns the details as a usable array.|database/selectFuncs.php|
 |getAllAcc($Reg)|Gets the basic details of all accommodations in the database. $Reg is an int that corresponds to the ID of the desired region. If $Reg is set to 0 or left blank, it will return accommodations of all regions. If $Reg is set to -1, it will connect to the table in the database used for testing, and return any mock data stored within. Returns SQL data that must be processed into rows using mysqli_fetch_array($result).|database/selectFuncs.php|
+|getRegion()|Returns all region names from the database.|database/selectFuncs.php|
+|getRegionAndID()|Returns all region names and IDs from the database|database/selectFuncs.php|
+|getAllBookings()|Returns all bookings in the database.|database/selectFuncs.php|
+|getLEIandID()|Returns the region id, location, update information, and time of emergency updates from the database.|database/selectFuncs.php|
 |delAcc($ID)|Deletes a single accommodation from the database. $ID is an int that corresponds to the ID of the accommodation to be deleted. Does not return anything.|database/selectFuncs.php|
 
 ## SQL Triggers
+|Name|Usage|File Location|
+|checkIfFull|Compares the maximum occupancy to the current occupancy to determine if there is still available space at the location being updated, then adjusts the isFull variable as needed.|database/databaseTriggers.sql|
 
 ## Javascript Functions
+Nothing for now...

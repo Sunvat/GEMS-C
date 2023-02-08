@@ -32,9 +32,9 @@
          echo "<th class = \"border p-2 border-slate-500\">".$row[3]."</th>";
          echo "<th class = \"border p-2 border-slate-500\">".$row[2]."</th>";
          echo "<th class = \"border p-2 border-slate-500\">
-               <button class = \"group bg-slate-300 rounded-full hover:bg-slate-600 m-2\">
-                  <a href=\"{{route('Update-LEI-RA')}}\" class=\"text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition\">Update</a>
-               </button></th>";
+               <div class=\"inline-flex rounded-md shadow-sm group bg-slate-300 rounded-full hover:bg-slate-600 m-2\" role=\"group\">
+                  <button type=\"button\" name = \"Update\" id=\"Update\" onclick=\"location.href='/Update-LEI-RA?location=". $row['location']." ';\" class=\"text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition\">Update</button>
+               </div></td>";;
          echo "</tr>";
       }
       echo "</table>";

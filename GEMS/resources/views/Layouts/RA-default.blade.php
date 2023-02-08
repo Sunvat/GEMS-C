@@ -22,14 +22,11 @@
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('RA_region')}}" class="text-lg mx-2  hover:text-Glohaven-Hovered transition">Regions</a>
                 </button>
-                <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">       
-                    <a href="{{route('RA-Contact')}}" class = "text-lg mx-2  hover:text-Glohaven-Hovered transition">Contact</a>
-                </button>
-                <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2"> 
-                    <a href="{{route('RA-Booking')}}" class ="text-lg mx-2  hover:text-Glohaven-Hovered transition">Make Booking</a>
-                </button>
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('Bookings')}}" class ="text-lg mx-2  hover:text-Glohaven-Hovered transition">Bookings Waitlist</a>
+                </button>
+                <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">       
+                    <a href="{{route('RA-Contact')}}" class = "text-lg mx-2  hover:text-Glohaven-Hovered transition">Contact</a>
                 </button>
                 <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Lgreen duration-100 mx-2">
                     <a href="{{route('Home')}}" class ="text-lg mx-2  hover:text-Glohaven-Hovered transition">Log out</a>

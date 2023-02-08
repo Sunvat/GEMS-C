@@ -42,7 +42,7 @@
 if(isset($_GET['dropdown'])) {
   $selected = $_GET['dropdown'];
  
-  header("location: /LEI-Create-RA?rID=$selected");
+  header("location: /RA-LEI-Create-Info?rID=$selected");
   exit();
 }
 ?>

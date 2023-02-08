@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('Home');
 
 Route::get('/Regions', function () {
-    return view('regions-countries');
+    return view('EMS-Region');
 })->name('Regions');
 
 Route::get('/Accommodations', function () {
@@ -58,9 +58,9 @@ Route::get('/Update', function () {
     return view('update-accommodations');
 })->name('Update-Accommodation');
 
-Route::get('/Latest-Emergency-Updates', function () {
-    return view('Latest-Emergency-Updates');
-})->name('Latest-Emergency-Updates');
+Route::get('/EMS-LEI', function () {
+    return view('EMS-LEI');
+})->name('EMS-LEI');
 
 Route::get('/Contact', function () {
     return view('Contact');
@@ -117,13 +117,13 @@ Route::get('/main-RA', function () {
     return view('main-RA');
 })->name('main-RA');
 
-Route::get('/RA-Latest-Update', function () {
-    return view('RA-Latest-Update');
-})->name('RA-Latest-Update');
+Route::get('/RA-LEI', function () {
+    return view('RA-LEI');
+})->name('RA-LEI');
 
-Route::get('/RA-Create-Update', function () {
-    return view('RA-Create-Update');
-})->name('RA-Create-Update');
+Route::get('/RA-LEI-Create-Region', function () {
+    return view('RA-LEI-Create-Region');
+})->name('RA-LEI-Create-Region');
 
 Route::get('/WaitingList', function () {
     return view('WaitingList');
@@ -137,9 +137,9 @@ Route::get('/DeleteAcc', function () {
     return view('DeleteAcc');
 })->name('DeleteAcc');
 
-Route::get('/LEI-Create-RA', function () {
-    return view('LEI-Create-RA');
-})->name('LEI-Create-RA');
+Route::get('/RA-LEI-Create-Info', function () {
+    return view('RA-LEI-Create-Info');
+})->name('RA-LEI-Create-Info');
 
 Route::get('/DeleteBooking', function () {
     return view('DeleteBooking');

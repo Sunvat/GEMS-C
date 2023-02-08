@@ -10,7 +10,7 @@
         <div  class = "flex flex-col justify-center items-center">
           <h1 class="text-xl text-white font-size:25px p-2">Latest Emergency Updates/Information</h1>
           <button class = " text-lg text-white  group bg-Dgreen rounded-full hover:bg-Lgreen border-2 border-gold ">
-            <a href="{{route('Latest-Emergency-Updates')}} " class="mx-2 "> Latest Emergency Updates</a>
+            <a href="{{route('EMS-LEI')}} " class="mx-2 "> Latest Emergency Updates</a>
           </button> 
         </div>
       </div>

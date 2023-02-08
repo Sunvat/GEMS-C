@@ -43,19 +43,15 @@ Route::get('/New-Accommodation-RA', function () {
 })->name('New-Accommodation-RA');
 
 Route::get('/view-accommodation', function () {
-    return view('view-accommodation');
+    return view('accommodation-view');
 })->name('view-accommodation');
 
-Route::get('/Accommodation_update_submitted', function () {
-    return view('Accommodation_update_submitted');
-})->name('Accommodation_update_submitted');
-
 Route::get('/view-accommodationRA', function () {
-    return view('view-accommodationRA');
+    return view('accommodationRA-view');
 })->name('view-accommodationRA');
 
 Route::get('/Update', function () {
-    return view('update-accommodations');
+    return view('accommodations-update');
 })->name('Update-Accommodation');
 
 Route::get('/Latest-Emergency-Updates', function () {

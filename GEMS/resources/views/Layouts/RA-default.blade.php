@@ -7,7 +7,7 @@
     <title>Glohaven Emergency Management System</title>
     @vite('resources/css/app.css')
 </head>
-<body class = "flex flex-col min-h-screen bg-gradient-to-b from-Dgreen to-Lgreen" >
+
 <header class = "fixed bg-Dgreen top-0 left-0 right-0 z-12">
         <div class="flex justify-center items-center">
             <h1 class="text-2xl font-bold text-Lgreen p-2">
@@ -34,6 +34,7 @@
             </nav>
         </div>
      </header>
+     <body class = "flex flex-col min-h-screen bg-gradient-to-b from-Dgreen to-Lgreen" >
 
      <main class="flex-grow">
         @yield('main')
@@ -41,6 +42,7 @@
      <br>
      <br>
 
+     </body>
      <footer class="p-5 bg-gradient-to-b from-Lgreen to-Dgreen ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
@@ -67,5 +69,4 @@
     <span class="block text-sm text-white sm:text-center dark:text-gray-700">© 2022 <a href="{{route('Home')}}" class="hover:underline">Glohaven™</a>. All Rights Reserved.
     </span>
 </footer>
-</body>
 </html>

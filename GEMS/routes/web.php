@@ -23,7 +23,7 @@ Route::get('/Regions', function () {
 })->name('Regions');
 
 Route::get('/Accommodations', function () {
-    return view('accommodations');
+    return view('EMS-accommodations');
 })->name('Accommodations');
 
 Route::get('/RA-Accommodations', function () {
@@ -34,16 +34,12 @@ Route::get('/Log-In', function () {
     return view('Log-In');
 })->name('Log-In');
 
-Route::get('/Accommodation_Created', function () {
-    return view('Accommodation_Created');
-})->name('Accommodation_Created');
-
 Route::get('/New-Accommodation-RA', function () {
     return view('RA-New-Accommodation');
 })->name('New-Accommodation-RA');
 
 Route::get('/view-accommodation', function () {
-    return view('accommodation-view');
+    return view('EMS-accommodation-view');
 })->name('view-accommodation');
 
 Route::get('/view-accommodationRA', function () {
@@ -130,7 +126,7 @@ Route::get('/Bookings', function () {
 })->name('Bookings');
 
 Route::get('/DeleteAcc', function () {
-    return view('DeleteAcc');
+    return view('RA-DeleteAcc');
 })->name('DeleteAcc');
 
 Route::get('/LEI-Create-RA', function () {

@@ -27,7 +27,7 @@ Route::get('/Accommodations', function () {
 })->name('Accommodations');
 
 Route::get('/RA-Accommodations', function () {
-    return view('accommodationsRA');
+    return view('RA-accommodations');
 })->name('RA-Accommodations');
 
 Route::get('/Log-In', function () {
@@ -39,7 +39,7 @@ Route::get('/Accommodation_Created', function () {
 })->name('Accommodation_Created');
 
 Route::get('/New-Accommodation-RA', function () {
-    return view('New-Accommodation-RA');
+    return view('RA-New-Accommodation');
 })->name('New-Accommodation-RA');
 
 Route::get('/view-accommodation', function () {
@@ -47,11 +47,11 @@ Route::get('/view-accommodation', function () {
 })->name('view-accommodation');
 
 Route::get('/view-accommodationRA', function () {
-    return view('accommodationRA-view');
+    return view('RA-accommodation-view');
 })->name('view-accommodationRA');
 
 Route::get('/Update', function () {
-    return view('accommodations-update');
+    return view('RA-accommodations-update');
 })->name('Update-Accommodation');
 
 Route::get('/Latest-Emergency-Updates', function () {

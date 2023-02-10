@@ -18,18 +18,6 @@ CREATE DATABASE IF NOT EXISTS `gems` /*!40100 DEFAULT CHARACTER SET latin1 COLLA
 USE `gems`;
 
 -- Dumping structure for table gems.useraccounts
-CREATE TABLE IF NOT EXISTS `testAccommodations` (
-  `accID` int AUTO_INCREMENT,
-  `aname` varchar(50) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `rname` varchar(50) NOT NULL,
-  `country` varchar(50) NOT NULL,
-  `maxCap` int NOT NULL,
-  `curOc` int DEFAULT 0,
-  `desc` varchar(200),
-  `image` varchar(50),
-  PRIMARY KEY (accID)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `useraccounts` (
   `fname` varchar(50) NOT NULL,
@@ -76,6 +64,7 @@ CREATE TABLE IF NOT EXISTS `regions` (
 CREATE TABLE IF NOT EXISTS `bookings` (
   `accID` INT NOT NULL,
   `region` varchar(50) NOT NULL,
+  `rID` int NOT NULL,
   `aname` varchar(50) NOT NULL,
   `bookingID`int AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -90,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `Med` boolean DEFAULT False,
   `Bed` boolean DEFAULT False,
   PRIMARY KEY (bookingID),
-  FOREIGN KEY (accID) REFERENCES accommodations(accID)
+  FOREIGN KEY (accID) REFERENCES accommodations(accID),
+  FOREIGN KEY (rID) REFERENCES regions(rID)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

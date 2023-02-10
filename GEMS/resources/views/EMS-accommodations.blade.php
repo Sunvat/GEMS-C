@@ -1,13 +1,11 @@
 @extends('Layouts.default')
 @section('main')
-<body>
+<br><br>
 
 <?php
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
-//Uncomment this line and modify regions page after Hark's commit to ensure it goes through
-//$rID = $_GET["rID"];
-$rID = 1;
+$rID = $_GET["rID"];
 $result = getAllAcc($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center\">
@@ -26,7 +24,11 @@ while($row = mysqli_fetch_array($result))
 echo "<tr id=\"" . $row['aname'] . "\">";
 echo "<td class = \"border border-slate-500 p-2 border-r-0\" height=100 width=100><img src=\"". $row['image'] ."\" alt=\"accommodation\"></td>";
 echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] . "</td>";
-echo "<td class = \"border border-slate-500 p-2\">" . $row['openSpace'] . " People </td>";
+if ($row['isFull'] == true) {
+  echo "<td class = \"border border-slate-500 p-2 font-bold text-red-600\">FULL</td>";
+} else {
+  echo "<td class = \"border border-slate-500 p-2\">" . $row['openSpace'] . " People </td>";
+}
 echo "<td class = \"border border-slate-500 p-2\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
         <button type=\"button\" onclick=\"location.href='/view-accommodation?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">View</button>
@@ -56,5 +58,4 @@ echo "</table>
 
 </br>
 
-</body>
 @endsection

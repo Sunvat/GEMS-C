@@ -44,9 +44,9 @@ require_once("getConnection.php");
         $result = mysqli_query($con,"UPDATE LEI SET 
         location = '$LEI[0]',
         LEI = '$LEI[1]',
-        datetime = '$LEI[2]',
-        country = '$LEI[3]',
-        WHERE location =$accommodation[15]");
+        datetime = '$LEI[2]'
+    
+        WHERE location = '$LEI[3]'");
         //close connection
         mysqli_close($con);
         // return query

@@ -2,6 +2,17 @@
 @section('main')
 <?php
 $loc = $_GET["location"];
+
+if( isset($_GET['submit']) )
+{
+    require dirname(__DIR__, 3).'/database/updateFuncs.php';
+
+    $newUpdate = array(htmlentities($_GET['location']), htmlentities($_GET['Update']), htmlentities($_GET['datetime']), htmlentities($loc));
+
+    updateLEI($newUpdate);
+    header('Location: /RA-LEI');
+    die();
+}
 ?>
 
 <body>
@@ -51,4 +62,5 @@ $loc = $_GET["location"];
   echo "</div>";
 ?>
 </body>
+
 @endsection

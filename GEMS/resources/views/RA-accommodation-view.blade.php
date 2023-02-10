@@ -38,9 +38,13 @@ echo "
     <tr class = \"border border-slate-500\">
       <td class = \"border border-slate-500 p-2 border-r-0\" id=\"ImgColumn\" height=100 width=100><img src=\"" . $row['image'] . "\" alt=\"accommodation\"></td>
       <td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] . "</td>
-      <td class = \"border border-slate-500 p-2\" id=\"AdressColumn\">" . $row['address'] . "</td>
-      <td class = \"border border-slate-500 p-2\" id=\"CapColumn\">" . $row['openSpace'] . "</td>
-      <td class = \"border border-slate-500 p-2\" colspan=\"2\">
+      <td class = \"border border-slate-500 p-2\" id=\"AdressColumn\">" . $row['address'] . "</td>";
+      if ($row['isFull'] == true) {
+        echo "<td class = \"border border-slate-500 p-2 font-bold text-red-600\" id=\"CapColumn\">FULL</td>";
+      } else {
+        echo "<td class = \"border border-slate-500 p-2\" id=\"CapColumn\">" . $row['openSpace'] . " People </td>";
+      }
+      echo "<td class = \"border border-slate-500 p-2\" colspan=\"2\">
       <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
       <button type=\"button\" onclick=\"location.href='/Update?ID=$ID';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-Glohaven-Orange dark:focus:text-white\">Update</button>
       <button type=\"button\" onclick=\"deletePopup($ID, ".$row['rID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Delete</button>

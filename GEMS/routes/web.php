@@ -23,39 +23,31 @@ Route::get('/Regions', function () {
 })->name('Regions');
 
 Route::get('/Accommodations', function () {
-    return view('accommodations');
+    return view('EMS-accommodations');
 })->name('Accommodations');
 
 Route::get('/RA-Accommodations', function () {
-    return view('accommodationsRA');
+    return view('RA-accommodations');
 })->name('RA-Accommodations');
 
 Route::get('/Log-In', function () {
     return view('Log-In');
 })->name('Log-In');
 
-Route::get('/Accommodation_Created', function () {
-    return view('Accommodation_Created');
-})->name('Accommodation_Created');
-
 Route::get('/New-Accommodation-RA', function () {
-    return view('New-Accommodation-RA');
+    return view('RA-New-Accommodation');
 })->name('New-Accommodation-RA');
 
 Route::get('/view-accommodation', function () {
-    return view('view-accommodation');
+    return view('EMS-accommodation-view');
 })->name('view-accommodation');
 
-Route::get('/Accommodation_update_submitted', function () {
-    return view('Accommodation_update_submitted');
-})->name('Accommodation_update_submitted');
-
 Route::get('/view-accommodationRA', function () {
-    return view('view-accommodationRA');
+    return view('RA-accommodation-view');
 })->name('view-accommodationRA');
 
 Route::get('/Update', function () {
-    return view('update-accommodations');
+    return view('RA-accommodations-update');
 })->name('Update-Accommodation');
 
 Route::get('/EMS-LEI', function () {
@@ -134,7 +126,7 @@ Route::get('/Bookings', function () {
 })->name('Bookings');
 
 Route::get('/DeleteAcc', function () {
-    return view('DeleteAcc');
+    return view('RA-DeleteAcc');
 })->name('DeleteAcc');
 
 Route::get('/RA-LEI-Create-Info', function () {

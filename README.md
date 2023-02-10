@@ -105,7 +105,7 @@ These are to be used with a terminal currently open to the GEMS folder.
 
 ## PHP Functions
 |Name|Usage|File Location|
-|--------|---------------------------|--------|
+|-----------|------------------------|-----------|
 |getConn()|Holds all the needed information to connect to the database. Returns a connection to the database. This connection must be closed in the function that called this method.|database/getConnection.php|
 |insertAcc($newAccommodation)|Insert a new accommodation into the database. $newAccommodation must be an array containing the accommodation name, region name, country, street address, and the maximum capacity in that order. Does not return anything|database/insertFuncs.php|
 |insertTestAcc()|Inserts mock data into a mock table in the database. Used to ensure the database can be connected to, as well as insert syntax is correct for the used version of SQL. Accommodation will be deleted when running all unit tests.|database/insertFuncs.php|
@@ -126,7 +126,19 @@ These are to be used with a terminal currently open to the GEMS folder.
 
 ## SQL Triggers
 |Name|Usage|File Location|
+|-----------|------------------------|-----------|
 |checkIfFull|Compares the maximum occupancy to the current occupancy to determine if there is still available space at the location being updated, then adjusts the isFull variable as needed.|database/databaseTriggers.sql|
+
+## SQL Database
+|Table|Purpose|
+|-----------|------------------------|
+|useraccounts|Stores information about the accounts of RA members. These are first name (`fname`), last name (`lname`), email (`email`), password (`pword`), the account ID (`id`), and the region ID (`rID`).|
+|accommodations|Stores information about accommodation locations. These are account ID (`accID`), region ID (`rID`), accommodation name (`aname`), the accommodation's adress (`address`), it's maximum capacity (`maxCap`), the number of people currently occupying it (`curOc`), a description (`descr`), a URL to a representative image (`image`), if it is wheelchair accessible (`WCA`), if pets are allowed (`Pets`), if medical assistance is available (`Med`), if beds are provided (`Bed`), if it is at/over capacity (`isFull`), if it is located on high ground (`HighGround`), if food is provided (`Food`), and if water is provided (`Water`).|
+|regions|Stores information about regions. Each table that uses a region ID will link here to keep region information and spelling standardized. The information stored is the region ID (`rID`), the region name (`rname`), the country (`country`), the province or state the region is in (`provState`),and a URL to a representative image (`image`).|
+|bookings|Stores information about bookings. This is the accommodation ID (`accID`) taken from the accommodation table, the region ID (`rID`), the booking's ID (`bookingID`), the booking's name (`name`), a phone number for the booked group (`phoneNumber`), a name for the group (`groupName`), the number of people in the group (`NumPeople`), the name of the first responder member making the request (`Caller Name`), the name of the first responder `Caller E.M.S I.D`, the first responder's phone number (`Caller Contact Number`), if wheelchair access is required (`WCA`), if a pet friendly location is required (`Pets`),if medical assistance is needed (`Med`), and if beds are desired (`Bed`).|
+|wishlist|Stores information about pending booking requests. This is the wishlist ID (`wishID`), the request's name (`name`),an associated phone number for the pending group (`phoneNumber`), the name of the pending group (`groupName`), the number of people in the pending group (`NumPeople`), is wheel chair access will be required (`WCA`), if a pet friendly location is desired (`Pets`), if medical assistance will be required (`Med`), if beds are desired (`Bed`), and the time the request is made (`DateTime`).|
+|LEI|Stores emergency updates. The stored information is the region ID (`rID`), the affected location (`location`), the description (`LEI`), and the date that the update was created (`datetime`).|
+|Contact|Stores the contact information for the Regional Admin. This is the region ID (`rID`), and the admin's phone number (`PNumber`).|
 
 ## Javascript Functions
 Nothing for now...

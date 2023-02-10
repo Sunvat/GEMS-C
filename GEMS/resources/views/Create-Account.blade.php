@@ -7,19 +7,37 @@
 <div>
         
     <?php
-    if(isset($_GET['submit'])){
-    require dirname(__DIR__, 3).'/database/insertFuncs.php';
+     require dirname(__DIR__, 3).'/database/insertFuncs.php';
+      if (isset($_POST['submit'])) {
+        $paword = htmlentities($_POST['pword']);
+        $conpass = htmlentities($_POST['confrim_pword']);
+        if (strcmp($paword, $conpass) != 0) {
+            echo "Invalid Password please use the criteria mentioned.";
+        } else if (strlen($paword) < 8) {
+                echo "Password must be at least 8 characters long";
+            } elseif (!preg_match("#[a-z]+#", $paword)) {
+                echo "Password must contain at least one lowercase letter";
+            } elseif (!preg_match("#[A-Z]+#", $paword)) {
+                echo "Password must contain at least one uppercase letter";
+            } elseif (!preg_match("#[0-9]+#", $paword)) {
+                echo "Password must contain at least one number";
+            } elseif (!preg_match("#[\W]+#", $paword)) {
+                echo "Password must contain at least one special character";
+        }
+    else {
 
-    $newAccount = array(htmlentities($_GET['fname']),htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['id']),htmlentities($_GET['rID']));
+    $newAccount = array(htmlentities($_POST['fname']),htmlentities($_POST['lname']),htmlentities($_POST['email']),htmlentities($_POST['pword']),htmlentities($_POST['id']),htmlentities($_POST['rID']));
 
     InsertAccountInfo($newAccount);
     header('Location: /Create-Account');
     die();
     }
+    }
+    
     ?>
     
     <div class=" w-fit mx-auto px-52 py-24" id = "container">
-        <form  method="get" class="mx-auto" action="" >
+        <form  method="post" class="mx-auto" action="" >
                 
                 <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
                 <br>
@@ -38,25 +56,7 @@
                 <input id="pword" name ="pword" type="password"   placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <p class = "mx-2 text-xs text-white ">New password must contain:<br>
                 <?php
-                if (isset($_GET['submit'])) {
-                    $paword = $_GET['pword'];
-                    $conpass = $_GET['confrim_pword'];
-                    if (strcmp($pword, $conpass) != 0) {
-                        echo "Invalid Password please use the criteria mentioned.";
-                    } else {
-                        if (strlen($password) < 8) {
-                            echo "Password must be at least 8 characters long";
-                        } elseif (!preg_match("#[a-z]+#", $paword)) {
-                            echo "Password must contain at least one lowercase letter";
-                        } elseif (!preg_match("#[A-Z]+#", $aword)) {
-                            echo "Password must contain at least one uppercase letter";
-                        } elseif (!preg_match("#[0-9]+#", $paword)) {
-                            echo "Password must contain at least one number";
-                        } elseif (!preg_match("#[\W]+#", $paword)) {
-                            echo "Password must contain at least one special character";
-                    }
-                }
-            }
+              
                 ?>
                 <ul class = " mx-6 text-xs list-disc text-white">
                     <li>At least 8 characters</li>

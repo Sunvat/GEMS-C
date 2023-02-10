@@ -8,25 +8,56 @@
         
     <?php
      require dirname(__DIR__, 3).'/database/insertFuncs.php';
-      if (isset($_POST['submit'])) {
-        $paword = htmlentities($_POST['pword']);
-        $conpass = htmlentities($_POST['confrim_pword']);
+      if (isset($_GET['submit'])) {
+        $paword = htmlentities($_GET['pword']);
+        $conpass = htmlentities($_GET['confrim_pword']);
         if (strcmp($paword, $conpass) != 0) {
-            echo "Invalid Password please use the criteria mentioned.";
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
+            echo "<div class=\"mt-20px font-bold text-red \">The passwords do not match please try again.</div>";
+           echo "<script>
+                    ";
         } else if (strlen($paword) < 8) {
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
                 echo "Password must be at least 8 characters long";
+                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
             } elseif (!preg_match("#[a-z]+#", $paword)) {
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
                 echo "Password must contain at least one lowercase letter";
+                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
             } elseif (!preg_match("#[A-Z]+#", $paword)) {
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
                 echo "Password must contain at least one uppercase letter";
+                echo "<div class=\"mt-20px text-red-500 \">The passwords do not match please try again.</div>";
             } elseif (!preg_match("#[0-9]+#", $paword)) {
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
                 echo "Password must contain at least one number";
+                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
             } elseif (!preg_match("#[\W]+#", $paword)) {
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
                 echo "Password must contain at least one special character";
+                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
         }
     else {
 
-    $newAccount = array(htmlentities($_POST['fname']),htmlentities($_POST['lname']),htmlentities($_POST['email']),htmlentities($_POST['pword']),htmlentities($_POST['id']),htmlentities($_POST['rID']));
+    $newAccount = array(htmlentities($_GET['fname']),htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['id']),htmlentities($_GET['rID']));
 
     InsertAccountInfo($newAccount);
     header('Location: /Create-Account');
@@ -35,9 +66,8 @@
     }
     
     ?>
-    
     <div class=" w-fit mx-auto px-52 py-24" id = "container">
-        <form  method="post" class="mx-auto" action="" >
+        <form  method="get" class="mx-auto" action="" >
                 
                 <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
                 <br>
@@ -98,7 +128,7 @@
                 <input type="text" placeholder="Confirmation Code" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
                 <div class = "flex flex-col justify-center items-center group bg-Lgreen border-2 border-Dgreen rounded-full hover:bg-gold w-25 ">
-                <input type='submit' name='submit' value='submit'></input>
+                <input onclick="" type='submit' name='submit' value='submit'></input>
                  </div>
         </form>
     </div>

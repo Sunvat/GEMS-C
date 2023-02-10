@@ -11,49 +11,46 @@
       if (isset($_GET['submit'])) {
         $paword = htmlentities($_GET['pword']);
         $conpass = htmlentities($_GET['confrim_pword']);
+        
         if (strcmp($paword, $conpass) != 0) {
             echo "<br>";
             echo "<br>";
-            echo "<br>";
-            echo "<br>";
-            echo "<div class=\"mt-20px font-bold text-red \">The passwords do not match please try again.</div>";
-           echo "<script>
-                    ";
+           
+            echo "<div class=\"mt-20px flex flex-col justify-center items-center font-bold text-red \">The passwords do not match please try again.</div>";
+           
         } else if (strlen($paword) < 8) {
+       
             echo "<br>";
             echo "<br>";
-            echo "<br>";
-            echo "<br>";
-                echo "Password must be at least 8 characters long";
-                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
+            echo "<script type=\"text/JavaScript\"> 
+            document.getElementById(\"minChar\").style.color = \"#fc7703\";
+            </script>";
+                echo "<div class=\"mt-20px  flex flex-col justify-center items-center text-red-500 \">Password must be at least 8 characters long.</div>";
+
             } elseif (!preg_match("#[a-z]+#", $paword)) {
                 echo "<br>";
                 echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "Password must contain at least one lowercase letter";
-                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
+               
+                echo "<div class=\"mt-20px  flex flex-col justify-center items-center text-red-500 \">Password must contain at least one lowercase letter.</div>";
+                
             } elseif (!preg_match("#[A-Z]+#", $paword)) {
+               
                 echo "<br>";
                 echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "Password must contain at least one uppercase letter";
-                echo "<div class=\"mt-20px text-red-500 \">The passwords do not match please try again.</div>";
+                echo "<div class=\"mt-20px  flex flex-col justify-center items-center text-red-500 \">Password must contain at least one uppercase letter.</div>";
+
             } elseif (!preg_match("#[0-9]+#", $paword)) {
+                
                 echo "<br>";
                 echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "Password must contain at least one number";
-                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
+                echo "<div class=\"mt-20px flex flex-col justify-center items-center text-red-500 \">Password must contain at least one number.</div>";
+               
             } elseif (!preg_match("#[\W]+#", $paword)) {
+                
                 echo "<br>";
                 echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "Password must contain at least one special character";
-                echo "<div class=\"mt-20px text-red-500  \">The passwords do not match please try again.</div>";
+                echo "<div class=\"mt-20px  flex flex-col justify-center items-center text-red-500 \">Password must contain at least one special character.</div>";
+               
         }
     else {
 
@@ -66,8 +63,8 @@
     }
     
     ?>
-    <div class=" w-fit mx-auto px-52 py-24" id = "container">
-        <form  method="get" class="mx-auto" action="" >
+    <div class=" w-fit mx-auto px-52 py-14" id = "container">
+        <form class="flex-items-center" method="get" class="mx-auto" action="" >
                 
                 <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
                 <br>
@@ -89,11 +86,11 @@
               
                 ?>
                 <ul class = " mx-6 text-xs list-disc text-white">
-                    <li>At least 8 characters</li>
-                    <li>At least 1 lowercase character</li>
-                    <li>At least 1 upper character</li>
-                    <li>At least 1 number</li>
-                    <li>At least 1 special character</li>
+                    <li id="minChar">At least 8 characters</li>
+                    <li id="lowChar">At least 1 lowercase character</li>
+                    <li id="upChar">At least 1 upper character</li>
+                    <li id="numChat">At least 1 number</li>
+                    <li id="speChar">At least 1 special character</li>
                 </ul>
                 </p>
                 <br>

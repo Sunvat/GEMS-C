@@ -37,7 +37,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
 
 while($row = mysqli_fetch_array($result))
 {
-echo "<tr>";
+echo "<tr id=\"" . $row['aname'] . "\">";
 echo "<td class = \"border border-slate-500 p-2 border-r-0\" height=100 width=100><img src=\"". $row['image'] ."\" alt=\"accommodation\"></td>";
 echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] . "</td>";
 echo "<td class = \"border border-slate-500 p-2\">" . $row['openSpace'] . " People </td>";

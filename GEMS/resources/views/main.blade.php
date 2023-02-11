@@ -2,32 +2,33 @@
 
 @section('main')
 
-<body>
-  <div class = "grid grid-cols-2 grid-row-2 gap-2">
+<body class>
 
-    <div  class = "flex flex-row justify-center items-center">
-      <div>
+  <div class = "grid grid-cols-2">
+
+    <div  class = "h-60 flex justify-center ">
         <div  class = "flex flex-col justify-center items-center">
-          <h1 class="text-xl text-white font-size:25px p-2">Latest Emergency Updates/Information</h1>
-          <button class = " text-lg text-white  group bg-Dgreen rounded-full hover:bg-Lgreen border-2 border-gold ">
+          <h1 class="text-xl text-black font-size:25px p-2">Latest Emergency Updates/Information</h1>
+          <button class = " group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2 ">
             <a href="{{route('EMS-LEI')}} " class="mx-2 "> Latest Emergency Updates</a>
           </button> 
         </div>
-      </div>
-    </div>  
+   </div>
     
-    <div class = "h-60 flex flex-row justify-center items-center">
+    
+    <div class = "h-60 flex justify-center">
       <div class = "flex flex-col justify-center items-center">
-        <h1 class = "text-xl font-black text-white font-size:25px"> RA Log In:</h1>
-        <button class = "px-2 group bg-Dgreen rounded-full text-white border-2 border-gold ">
-          <a href="{{route('Log-In')}}" class = "text-lg ">Log In</a>
-        </button>
+               <h1 class = "text-xl text-black font-size:25px p-2"> RA Log In:</h1>
+               <button class = "group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:text-white hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2 ">
+                  <a href="{{route('Log-In')}}" class = "mx-2 "> Log In </a>
+               </button>
       </div>
     </div>
 
+
   </div>
   
-  <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september-->
+  <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september
   <aside id="default-sidebar" class=" fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
@@ -67,6 +68,7 @@
    </div>
   </aside>
 
+  -->
 
   <?php
   //this code will be used to make the lei content on main page.

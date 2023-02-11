@@ -66,19 +66,19 @@
     <div class=" w-fit mx-auto px-52 py-14" id = "container">
         <form class="flex-items-center" method="get" class="mx-auto" action="" >
                 
-                <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:</label>
+                <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:<a class="text-red-500"> *</a></label>
                 <br>
-                <input id="fname" name ="fname" type="text" placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input id="fname" name ="fname" type="text" required placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label name ="lname" for="lname"class="mx-2 font-bold text-white">Last Name:</label>
+                <label name ="lname" for="lname"class="mx-2 font-bold text-white">Last Name:<a class="text-red-500"> *</a></label>
                 <br>
-                <input id="lname" name ="lname" type="text" placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input id="lname" name ="lname" type="text" required placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label name ="email" for="email"class="mx-2 font-bold text-white">E-mail:</label>
+                <label name ="email" for="email"class="mx-2  font-bold text-white">E-mail:<a class="text-red-500"> *</a></label>
                 <br>
-                <input  id="email" name ="email" type="email" placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input  id="email" name ="email" type="email" required placeholder="john.doe@gmail.com" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <label  name ="pword" for="password"class="mx-2 font-bold text-white">Password:</label>
+                <label  name ="pword" for="password"class="mx-2 font-bold text-white">Password:<a class="text-red-500"> *</a></label>
                 <br>
                 <input id="pword" name ="pword" type="password"   placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <p class = "mx-2 text-xs text-white ">New password must contain:<br>
@@ -94,14 +94,14 @@
                 </ul>
                 </p>
                 <br>
-                <label name ="confrim_pword" for="confirm_pass"class="mx-2 font-bold text-white">Confirm Password:</label>
+                <label name ="confrim_pword" for="confirm_pass"class="mx-2 font-bold text-white">Confirm Password:<a class="text-red-500"> *</a></label>
                 <br>
-                <input id="confirm_pword" name ="confrim_pword" type="password" placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input id="confirm_pword" name ="confrim_pword" type="password" required placeholder="Confirm Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
                 
-                <label  name="id" for="I.D Number"class="mx-2 font-bold text-white">I.D Number:</label>
+                <label  name="id" for="I.D Number"class="mx-2 font-bold text-white">I.D Number:<a class="text-red-500"> *</a></label>
                 <br>
-                <input id="id" name="id" type="text" placeholder="I.D Number" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input id="id" name="id" type="text" placeholder="I.D Number" required class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
                 <?php
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
@@ -128,6 +128,7 @@
                 <input onclick="" type='submit' name='submit' value='submit'></input>
                  </div>
         </form>
+        <p class="mt-10 font-bold text-white"><a class="font-bold text-red-500">*</a> Are Required fields</p>
     </div>
  </div>
 

@@ -15,13 +15,13 @@
   <div  class = "flex flex-row justify-center items-center">
       <div  class = "flex flex-col justify-center items-center border rounded">
         <h1 class="text-xl font-black font-size:25px p-2">Latest Emergency Updates/Information</h1>
-        <button class = "border-2 border-gold group bg-Dgreen rounded-full hover:bg-Lgreen m-4">
+        <button class = "group rounded-full text-white border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2">
           <a href="{{route('RA-LEI')}}" class = "text-lg mx-2 text-white group-hover:text-gold "> Latest Emergency Updates</a>
         </button>
      </div>
   </div>
 
-  <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september-->
+  <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september
   <aside id="default-sidebar" class=" fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
@@ -60,7 +60,7 @@
       </ul>
    </div>
   </aside>
-
+-->
 
   <?php
   //this code will be used to make the lei content on main page.

@@ -19,7 +19,7 @@
       require dirname(__DIR__, 3).'/database/selectFuncs.php';
       $LEI = getLEIandID();
 
-      echo "<table class = \"table-fixed border mx-24\">
+      echo "<table class = \"table-fixed border mx-24 bg-white\">
       <tr class = \"border border-slate-500\">
          <th class = \"border border-slate-500\">location</th>
          <th class = \"bordor border-slate-500\">DateTime</th>

@@ -2,6 +2,26 @@
 @section('main')
 <br><br>
 
+<div id = "searchBar" class = "flex flex-col justify-center items-center center">
+  <input type="text" onkeyup="searchAccount()" id="search" name="search" placeholder="Search..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"><br>
+  <script>
+    //Bad practice, but laravel will not let us simply include a js file in HTML
+    function searchAccount(){
+      let input = document.getElementById('search').value
+      input=input.toLowerCase();
+      let x = document.getElementsByClassName('accRow');
+        
+      for (i = 0; i < x.length; i++) { 
+          if (!x[i].innerHTML.toLowerCase().includes(input)) {
+              x[i].style.display="none";
+          }
+          else {
+              x[i].style.display="revert";                 
+          }
+      }
+    } </script>
+</div>
+
 <?php
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
@@ -21,7 +41,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
 
 while($row = mysqli_fetch_array($result))
 {
-echo "<tr id=\"" . $row['aname'] . "\">";
+echo "<tr id=\"" . $row['aname'] . "\" class=\"accRow\">";
 echo "<td class = \"border border-slate-500 p-2 border-r-0\" height=100 width=100><img src=\"". $row['image'] ."\" alt=\"accommodation\"></td>";
 echo "<td class = \"border border-slate-500 p-2 border-x-0\">" . $row['aname'] . "</td>";
 if ($row['isFull'] == true) {

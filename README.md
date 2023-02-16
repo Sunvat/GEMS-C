@@ -141,4 +141,6 @@ These are to be used with a terminal currently open to the GEMS folder.
 |Contact|Stores the contact information for the Regional Admin. This is the region ID (`rID`), and the admin's phone number (`PNumber`).|
 
 ## Javascript Functions
-Nothing for now...
+|Name|Usage|File Location|
+|-----------|------------------------|-----------|
+|searchAccommodations()|Provides a dynamic search bar for the accommodations pages. Hides rows that do not have accommodation names similar to the search term.|Ideally will be in resources/js/searchAcc.js but due to limitations with laravel currently exists of EMS-accommodations.blade.php and RA-accommodations.blade.php|

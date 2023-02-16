@@ -7,7 +7,7 @@
   <div class = "grid grid-cols-2">
 
     <div  class = "h-60 flex justify-center ">
-        <div  class = "flex flex-col justify-center items-center">
+        <div  class = "flex flex-col justify-center items-center" style = "margin-left: -200px">
           <h1 class="text-xl text-black font-size:25px p-2">Latest Emergency Updates/Information</h1>
           <button class = " group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2 ">
             <a href="{{route('EMS-LEI')}} " class="mx-2 "> Latest Emergency Updates</a>
@@ -15,16 +15,6 @@
         </div>
    </div>
     
-    
-    <div class = "h-60 flex justify-center">
-      <div class = "flex flex-col justify-center items-center">
-               <h1 class = "text-xl text-black font-size:25px p-2"> RA Log In:</h1>
-               <button class = "group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:-translate-y-1 hover:text-white hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2 ">
-                  <a href="{{route('Log-In')}}" class = "mx-2 "> Log In </a>
-               </button>
-      </div>
-    </div>
-
 
   </div>
   

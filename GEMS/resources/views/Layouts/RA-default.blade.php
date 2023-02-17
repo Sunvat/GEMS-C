@@ -36,12 +36,12 @@
      </header>
      <body class = "flex flex-col min-h-screen bg-gradient-to-b from-Dgreen to-Lgreen" >
 
-     <main class="flex-grow bg-background1 bg-cover">
+     <main class="flex-grow bg-background1 bg-blend-multiply bg-cover">
         @yield('main')
      </main>
 
      </body>
-<footer class="p-5 bg-gradient-to-b from-grey to-Lorange ">
+<footer class="fixed bottom-0 left-0 right-0 p-5 bg-gradient-to-b from-grey to-Lorange ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBCu8PJ1o41yD0tynwPfEO4sJ9qzu9igB85bzeOjnxQ&s" class="mr-4 h-10" />

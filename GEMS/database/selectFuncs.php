@@ -114,7 +114,24 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI WHERE location = ."$LEI[2].");
+        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI WHERE location = ".$LEI[2]);
+
+        mysqli_close($con);
+
+        $row = mysqli_fetch_array($result);
+
+        return $row;
+    }
+    // temp function
+    function getRowLEI(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI");
 
         mysqli_close($con);
 

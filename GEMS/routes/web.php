@@ -140,3 +140,11 @@ Route::get('/DeleteBooking', function () {
 Route::get('/Update-LEI-RA', function () {
     return view('Update-LEI-RA');
 })->name('Update-LEI-RA');
+
+Route::get('/Admin-main', function () {
+    return view('Admin-main');
+})->name('Admin-main');
+
+Route::get('/RA-DeleteLEI', function () {
+    return view('RA-DeleteLEI');
+})->name('RA-DeleteLEI');

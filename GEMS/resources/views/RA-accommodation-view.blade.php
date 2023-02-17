@@ -1,7 +1,5 @@
 @extends('Layouts.RA-default')
 @section('main')
-<!DOCTYPE html>
-<html>
 <head>
   <link rel="stylesheet" href="app.css">
   <script>

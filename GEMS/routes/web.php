@@ -144,3 +144,7 @@ Route::get('/Update-LEI-RA', function () {
 Route::get('/Admin-main', function () {
     return view('Admin-main');
 })->name('Admin-main');
+
+Route::get('/RA-DeleteLEI', function () {
+    return view('RA-DeleteLEI');
+})->name('RA-DeleteLEI');

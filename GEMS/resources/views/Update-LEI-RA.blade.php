@@ -32,7 +32,7 @@ if( isset($_GET['submit']) )
   echo "<form action=\"\" method=\"get\" id=\"updateForm\">";
 
   echo "<label for=\"rname\" class=\"mx-2 font-bold\">Location:</label><br>";
-  echo "<input type=\"text\" id=\"location\" name=\"location\" value=" . $LEI['location'] . " \"class=\"rounded\"><br>";
+  echo "<input type=\"text\" id=\"location\" name=\"location\" value=" . $loc . " \"class=\"rounded\"><br>";
 
   echo "<label for=\"country\" class=\"mx-2 font-bold\">Information/Update:</label><br>";
   echo "</div>";

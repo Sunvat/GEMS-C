@@ -11,7 +11,7 @@
      <header class = "fixed bg-gradient-to-b from-grey to-grey top-0 left-0 right-0 z-12 h-20">
         <div class="flex justify-left items-center h-20">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
-            <img src = "https://github.com/akshaj99/GEMS-C/blob/main/GEMS/resources/images/glohavenlogo.png" class="h-20 py-2" />
+            <img src = "https://localhost/../images/glohavenlogo.png" class="h-20 py-2"/>
             <span class="self-center text-2xl font-serif font-bold whitespace-nowrap px-2 " style="color:#f6ad55">Glohaven Emergency Management Solutions</span>
         </a>
         <div class =" float-none flex flex-auto justify-center items-center" style = "margin-right: -300px">

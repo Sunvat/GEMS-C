@@ -106,7 +106,7 @@ require_once("getConnection.php");
     }
 
     //Function for getting LEI info.
-    function getLEI(){
+    function getRowLEI($LEI){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -114,7 +114,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI ");
+        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI WHERE location = ."$LEI[2].");
 
         mysqli_close($con);
 

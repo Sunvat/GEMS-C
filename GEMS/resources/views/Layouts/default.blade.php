@@ -7,8 +7,8 @@
     <title>Glohaven Emergency Management System</title>
     <link rel="icon" src="https://github.com/Sunvat/GEMS-C/blob/main/GEMS/resources/images/gemslogo.jpg">
     @vite('resources/css/app.css')
-
-     <header class = "fixed bg-gradient-to-b from-Lorange/90 to-Lorange/60 top-0 left-0 right-0 z-80 h-20">
+<!--
+     <header class = "fixed bg-gradient-to-b from-Lorange/0 to-Lorange/0 top-0 left-0 right-0 z-80 h-20">
         <div class="flex justify-left items-center h-20">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <figure>
@@ -29,10 +29,16 @@
         </div>
      </header>
 </head>
-
+-->
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">
-<aside id="default-sidebar" class=" fixed top-20 left-0 z-0 w-96 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-96 h-5/6 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-Lorange dark:bg-Lorange-800 bg-opacity-50">
+   <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
+            <figure>
+            <img src = "{{ asset('/images/glohavenlogo.png') }}" class=""/>
+            </figure>
+            <span class="self-center text-3xl font-serif whitespace-nowrap px-2 " style="color:#f6ad55">G.E.M.S</span>
+        </a>
       <ul class="space-y-2">
         <br>
         
@@ -55,6 +61,18 @@
                <span class="flex-1 ml-3 whitespace-nowrap">Contact</span>
             </a>
          </li>
+         <li>
+            <a href="{{route('Create-Account')}}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+               <span class="flex-1 ml-3 whitespace-nowrap">Create Account</span>
+            </a>
+         </li>
+         <li>
+            <a href="{{route('Log-In')}}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+               <span class="flex-1 ml-3 whitespace-nowrap">Log-In</span>
+            </a>
+         </li>
       </ul>
    </div>
   </aside>
@@ -65,7 +83,7 @@
 </body>
 
 
-<footer class="bg-gradient-to-b from-Lorange/60 to-Lorange/80 bottom-0 left-0 right-0 z-40 p-5 ">
+<footer class="bg-gradient-to-b from-Lorange/60 to-Lorange/80 bottom-0 left-0 right-0 z-40 p-4 h-32">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <span class="self-center text-2xl font-sans whitespace-nowrap" style="color:#f6ad55">Glohaven Emergency Management Solutions</span>

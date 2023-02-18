@@ -16,7 +16,7 @@
    </div>
   </div>
 
-  <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september   -->
+  <div class = "flex flex-row justify-center items-center" style = "margin-right: -100px">
   <?php
 
       require dirname(__DIR__, 3).'/database/selectFuncs.php';
@@ -38,6 +38,7 @@
       }
       echo "</table>";
       ?>
+      </div>
 </body>
 
 @endsection

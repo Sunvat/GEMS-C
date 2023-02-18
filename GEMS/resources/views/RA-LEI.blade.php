@@ -1,6 +1,21 @@
 @extends('Layouts.RA-default')
 
 @section('main')
+<head>
+  <script>
+   // not working 
+    function deletePopup(rID, datetime, lei) {
+        var r = confirm("Are you sure you want to delete this accommodation?");
+        //This is a very roundabout way of deleting things. Look into AJAX.
+        if (r == true) {
+          //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
+          window.location.href = "/DeleteLEI?rID="+ID+"&datetime="+datetime+"&lei="+lei;
+        } else {
+         
+        }
+   }
+   </script>
+</head>
 <body>
    <br>
    <div class = "flex flex-col justify-center items-center">
@@ -19,7 +34,7 @@
       require dirname(__DIR__, 3).'/database/selectFuncs.php';
       $LEI = getLEIandID();
 
-      echo "<table class = \"table-fixed border mx-24\">
+      echo "<table class = \"table-fixed border mx-24 bg-white\">
       <tr class = \"border border-slate-500\">
          <th class = \"border border-slate-500\">location</th>
          <th class = \"bordor border-slate-500\">DateTime</th>
@@ -33,8 +48,9 @@
          echo "<th class = \"border p-2 border-slate-500\">".$row[2]."</th>";
          echo "<th class = \"border p-2 border-slate-500\">
                <div class=\"inline-flex rounded-md shadow-sm group bg-slate-300 rounded-full hover:bg-slate-600 m-2\" role=\"group\">
-                  <button type=\"button\" name = \"Update\" id=\"Update\" onclick=\"location.href='/Update-LEI-RA?location=". $row['location']." ';\" class=\"text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition\">Update</button>
-               </div></td>";;
+                  <button type=\"button\" name = \"Update\" id=\"Update\" onclick=\"location.href='/Update-LEI-RA?location=". $row[1]." ';\" class=\"text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition\">Update</button>
+                  <button type=\"button\" onclick=\"deletePopup(".$row[0].", ".$row[3].", ".$row[2].")\" class=\"text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition\">Delete</button>
+               </div></td>";
          echo "</tr>";
       }
       echo "</table>";

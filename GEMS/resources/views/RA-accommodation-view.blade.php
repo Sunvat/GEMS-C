@@ -1,7 +1,5 @@
 @extends('Layouts.RA-default')
 @section('main')
-<!DOCTYPE html>
-<html>
 <head>
   <link rel="stylesheet" href="app.css">
   <script>
@@ -47,7 +45,7 @@ echo "
       echo "<td class = \"border border-slate-500 p-2\" colspan=\"2\">
       <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
       <button type=\"button\" onclick=\"location.href='/Update?ID=$ID';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-l-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-Glohaven-Orange dark:focus:text-white\">Update</button>
-      <button type=\"button\" onclick=\"deletePopup($ID, ".$row['rID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Delete</button>
+      <button type=\"button\" onclick=\"deletePopup($ID, ".$row['rID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-r-md border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Delete</button>
       </div></td>
     </tr>
     <tr class = \"border border-slate-500\">

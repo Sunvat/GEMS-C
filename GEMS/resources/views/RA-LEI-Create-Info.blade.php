@@ -13,7 +13,7 @@ if( isset($_GET['submit']) )
     $LEI = array(htmlentities($_GET['rID']), htmlentities($_GET['Location']), htmlentities($_GET['Update']), htmlentities($_GET["DateTime"]));
 
     InsertLEI($LEI);
-    header('Location: /RA-Latest-Update');
+    header('Location: /RA-LEI');
     die();
 }
 ?>
@@ -29,10 +29,10 @@ if( isset($_GET['submit']) )
 
   <label for="Update" class="mx-2 font-bold text-slate-700">Update:</label><br>
   <textarea id = "Update" name = "Update" form = "updateForm" cols = 25 rows=5></textarea><br>
-
-  <label for="DateTime" class="mx-2 font-bold text-slate-700">Date:</label><br>
-  <input type="DateTime" id="DateTime" name="DateTime" placeholder="yyyy-mm-dd" class="rounded p-2"><br>
-
+  <?php
+    $date = date('Y-m-d H:i:s', time());
+   echo "<input type=\"hidden\" id=\"DateTime\" name=\"DateTime\" value=$date class=\"rounded p-2\"><br>";
+  ?>
  <br>
  <div class="md:flex md:items-center">
     <div class="md:w-1/3">

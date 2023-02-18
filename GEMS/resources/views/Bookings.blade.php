@@ -1,9 +1,6 @@
 @extends('Layouts.RA-default')
 
 @section('main')
-
-<!DOCTYPE html>
-<html>
   <header>
 
   <script>

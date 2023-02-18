@@ -44,6 +44,48 @@ require_once("getConnection.php");
         return $result;
     }
 
+    function getFilteredAcc($Reg = 0, $filter){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        //Return accommodations regardless of region
+        if ($Reg <= 0){
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations;");
+        }
+        //Return specified region
+        else{
+            $SQL_Query = "SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations WHERE
+            rID='$Reg'";
+
+            if (strtolower($filter[0])=="true")
+                $SQL_Query .=  " AND WCA=true";
+            if (strtolower($filter[1])=="true")
+                $SQL_Query .=  " AND Pets=true";
+            if (strtolower($filter[2])=="true")
+                $SQL_Query .=  " AND Med=true";
+            if (strtolower($filter[3])=="true")
+                $SQL_Query .=  " AND Bed=true";
+            if (strtolower($filter[4])=="true")
+                $SQL_Query .=  " AND HighGround=true";
+            if (strtolower($filter[5])=="true")
+                $SQL_Query .=  " AND Food=true";
+            if (strtolower($filter[6])=="true")
+                $SQL_Query .=  " AND Water=true";
+            if (strtolower($filter[7])=="false")
+                $SQL_Query .=  " AND isFull=false";
+                
+            $result = mysqli_query($con,$SQL_Query);
+        }
+        
+        mysqli_close($con);
+
+        return $result;
+    }
+
     function getRegion(){
         $con = getConn();
         // Check connection

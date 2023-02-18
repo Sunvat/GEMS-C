@@ -18,19 +18,26 @@
 
   <!-- this is an exploration feature for you Akshaj let use that sidebar design we thought of in september   -->
   <?php
-  //this code will be used to make the lei content on main page.
-  echo "<div>";
-  echo  "<table class = \"\">";
-  echo  "  <th class = \"\">";
-  echo  "   <tr class = \"\">";
-  echo  "      <td class = \"\">";
 
-  echo  "     </td>";
-  echo  "   </tr>";
-  echo  "  </th>";
-  echo "</table>";
-  echo "</div>";
-?>
+      require dirname(__DIR__, 3).'/database/selectFuncs.php';
+      $LEI = getLEIandID();
+
+      echo "<table class = \"table-fixed border mx-24\">
+      <tr class = \"border border-slate-500\">
+         <th class = \"border border-slate-500\">location</th>
+         <th class = \"bordor border-slate-500\">DateTime</th>
+         <th class = \"border border-slate-500\">Update</th>
+      </tr>";
+
+      while($row = mysqli_fetch_array($LEI)){
+         echo "<tr>";
+         echo "<th class = \"border p-2 border-slate-500\">".$row[1]."</th>";
+         echo "<th class = \"border p-2 border-slate-500\">".$row[3]."</th>";
+         echo "<th class = \"border p-2 border-slate-500\">".$row[2]."</th>";
+         echo "</tr>";
+      }
+      echo "</table>";
+      ?>
 </body>
 
 @endsection

@@ -80,7 +80,7 @@
                 <br>
                 <label  name ="pword" for="password"class="mx-2 font-bold text-white">Password:<a class="text-red-500"> *</a></label>
                 <br>
-                <input id="pword" name ="pword" type="password"   placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
+                <input id="pword" name ="pword" type="password"  required    placeholder="Create Password" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <p class = "mx-2 text-xs text-white ">New password must contain:<br>
                 <?php
               

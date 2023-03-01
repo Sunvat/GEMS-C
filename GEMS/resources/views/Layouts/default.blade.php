@@ -7,29 +7,6 @@
     <title>Glohaven Emergency Management System</title>
     <link rel="icon" src="https://github.com/Sunvat/GEMS-C/blob/main/GEMS/resources/images/gemslogo.jpg">
     @vite('resources/css/app.css')
-<!--
-     <header class = "fixed bg-gradient-to-b from-Lorange/0 to-Lorange/0 top-0 left-0 right-0 z-80 h-20">
-        <div class="flex justify-left items-center h-20">
-        <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
-            <figure>
-            <img src = "{{ asset('/images/glohavenlogo.png') }}" class="h-20 py-2"/>
-            </figure>
-            <span class="self-center text-3xl font-serif whitespace-nowrap px-2 " style="color:#f6ad55">Glohaven Emergency Management Solutions</span>
-        </a>
-        <div class =" float-none flex flex-auto justify-center items-center" style = "margin-right: -400px">
-            <nav class="-mx-1 float-none py-1.5">
-                <button class = "group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2">
-                    <a href="{{route('Create-Account')}}" class="text-lg mx-2 group-hover:text-white">Create Account</a>
-                </button>
-                <button class = "group rounded-full text-Glohaven-Orange border-2 border-gold transition ease-in-out delay-150  hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-Glohaven-Orange duration-100 mx-2">
-                    <a href="{{route('Log-In')}}" class="text-lg mx-2 group-hover:text-white">Log in</a>
-                </button>
-            </nav>
-            </div>
-        </div>
-     </header>
-</head>
--->
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">
 <aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-96 h-5/6 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-Lorange dark:bg-Lorange-800 bg-opacity-50">

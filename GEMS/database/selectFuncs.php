@@ -165,7 +165,7 @@ require_once("getConnection.php");
         return $row;
     }
     // temp function
-    function getRowLEI(){
+    function getEI(){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())

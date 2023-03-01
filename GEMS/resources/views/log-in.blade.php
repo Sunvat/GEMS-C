@@ -6,7 +6,7 @@
 </div>
 <div class = "flex flex-col items-center">
     <div>
-        <form action="login.php" method = post id="loginForm" onSubmit ="return validate();"> <!-- dont forget to add a post or someother method when needed -->
+        <form action="" method = post id="loginForm" onSubmit ="return validate();"> <!-- dont forget to add a post or someother method when needed -->
             <!-- used to create the login id and password slots-->
             <div class = "py-2">
                 <label class = "px-2 font-bold text-white">Login ID</label>
@@ -58,41 +58,17 @@
         return valid;
     }
     </script>
-    <?php  
+   
+   <?php  
+   require dirname(__DIR__, 3).'/database/getConnection.php';
+   $con  = getConn();
 if(isset($_POST["submit"])){  
-  
+  echo "hello";
 if(!empty($_POST['id']) && !empty($_POST['pword'])) {  
     $user=$_POST['id'];  
     $pass=$_POST['pword'];  
   
-    $con=mysql_connect('localhost','root','') or die(mysql_error());  
-    mysql_select_db('user_registration') or die("cannot select DB");  
-  
-    $query=mysql_query("SELECT * FROM useraccounts WHERE id='".$user."' AND pword='".$pass."'");  
-    $numrows=mysql_num_rows($query);  
-    if($numrows!=0)  
-    {  
-    while($row=mysql_fetch_assoc($query))  
-    {  
-    $dbusername=$row['id'];  
-    $dbpassword=$row['pword'];  
-    }  
-  
-    if($user == $dbusername && $pass == $dbpassword)  
-    {  
-    session_start();  
-    $_SESSION['sess_user']=$user;  
-  
-    /* Redirect browser */  
-    header("Location: member.php");  
-}  
-} else {  
-echo "Invalid username or password!";  
-}  
-
-} else {  
-echo "All fields are required!";  
-}  
-}  
+}
+}
 ?>  
 @endsection

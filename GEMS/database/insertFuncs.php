@@ -92,3 +92,17 @@ require_once("getConnection.php");
         }
         mysqli_close($conn);
     }
+
+     //insert function for Contact
+     function InsertContact($contact){
+        // get connection
+        $conn = getConn();
+        // sql query inserting Contact Information into table
+        $sql = "INSERT INTO Contact(rID, pnumber)
+        Values ('$contact[0]', '$contact[1]')";
+        //check if the query worked
+        if($conn->query($sql) === FALSE){
+            echo "Error:" . $sql . "<br>" . $conn->error;
+        }
+        mysqli_close($conn);
+    }

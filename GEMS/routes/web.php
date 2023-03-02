@@ -30,9 +30,9 @@ Route::get('/RA-Accommodations', function () {
     return view('RA-accommodations');
 })->name('RA-Accommodations');
 
-Route::get('/Log-In', function () {
-    return view('Log-In');
-})->name('Log-In');
+Route::get('/Login', function () {
+    return view('Login');
+})->name('Login');
 
 Route::get('/New-Accommodation-RA', function () {
     return view('RA-New-Accommodation');
@@ -149,6 +149,6 @@ Route::get('/RA-DeleteLEI', function () {
     return view('RA-DeleteLEI');
 })->name('RA-DeleteLEI');
 
-Route::get('/Login', function () {
-    return view('Login');
-})->name('Login');
+Route::get('/authenticate', function () {
+    return view('authenticate');
+})->name('authenticate');

@@ -148,3 +148,7 @@ Route::get('/Admin-main', function () {
 Route::get('/RA-DeleteLEI', function () {
     return view('RA-DeleteLEI');
 })->name('RA-DeleteLEI');
+
+Route::get('/Login', function () {
+    return view('Login');
+})->name('Login');

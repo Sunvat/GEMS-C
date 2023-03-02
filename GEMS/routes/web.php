@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,7 @@ Route::get('/RA-Accommodations', function () {
     return view('RA-accommodations');
 })->name('RA-Accommodations');
 
-Route::get('/Login', function () {
+Route::post('/Login', function () {
     return view('Login');
 })->name('Login');
 
@@ -149,6 +150,9 @@ Route::get('/RA-DeleteLEI', function () {
     return view('RA-DeleteLEI');
 })->name('RA-DeleteLEI');
 
-Route::get('/authenticate', function () {
+Route::post('/authenticate', function () {
     return view('authenticate');
 })->name('authenticate');
+
+
+Route::post("authenticate",[UserController::class,"auth"]);

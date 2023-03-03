@@ -8,9 +8,9 @@
 
 <body>
 <?php
-  require dirname(__DIR__, 3).'/database/deleteFuncs.php';
-  delBooking($_GET["bookingID"]);
-  header("Location: /Bookings");
+  require dirname(__DIR__, 3).'/database/updateFuncs.php';
+  confirmDenyBooking(0, $_GET["bookingID"]);
+  header("Location: /RA-Bookings");
   exit();
 ?>
 

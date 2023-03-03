@@ -6,8 +6,8 @@
 <br>
 <br>
 <br>
-<div class ="flex flex-auto justify-center items-center">
-<p>Booking Recorded (not really but task completed)</p>
+<div class ="flex flex-auto justify-center items-center text-white">
+<p>Your booking request has been submitted. Please review and confirm this booking request on the requests page.</p>
 </div>
 
 </body>

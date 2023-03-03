@@ -21,6 +21,38 @@ require_once("getConnection.php");
         return $result;
     }
 
+    function confirmDenyBooking($answer = 0, $bID){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        //If the booking is confirmed
+        if ($answer == 1){
+            mysqli_begin_transaction($con);
+            try{
+                mysqli_query($con,"UPDATE bookings SET status = 'CONFIRMED' WHERE bookingID = $bID;");
+                $result = mysqli_query($con,"SELECT NumPeople, accID FROM bookings WHERE bookingID = $bID;");
+                $row = mysqli_fetch_array($result);
+                $result = mysqli_query($con,"UPDATE accommodations SET curOc = curOc+". $row["NumPeople"] ." WHERE accID = ". $row["accID"] .";");
+                mysqli_commit($con);
+            } catch (mysqli_sql_exception $exception) {
+                mysqli_rollback($con);
+                $result = $exception;
+            }
+            
+        }
+        else{
+            $result = mysqli_query($con,"UPDATE bookings SET status = 'DENIED' WHERE bookingID = $bID;");
+        }
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
     function updateRegion(){
         $con = getConn();
         // Check connection

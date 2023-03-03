@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `bookerPhoneNumber` varchar(50) NOT Null,
   `bookerDepartment` varchar(50) NOT Null,
   `bookerID` varchar(50) NOT Null,
-  `confirmed` boolean DEFAULT False,
+  `status` varchar(9) DEFAULT 'PENDING',
   PRIMARY KEY (bookingID),
   FOREIGN KEY (accID) REFERENCES accommodations(accID),
   FOREIGN KEY (rID) REFERENCES regions(rID)

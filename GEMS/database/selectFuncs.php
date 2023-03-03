@@ -101,7 +101,7 @@ require_once("getConnection.php");
         return $result;
     }
 
-    function getAllBookings(){
+    function getPendingBookings(){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -109,7 +109,37 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings ");
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getConfirmedBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getDeclinedBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
 
         mysqli_close($con);
 

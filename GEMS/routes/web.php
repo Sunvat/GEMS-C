@@ -122,9 +122,9 @@ Route::get('/WaitingList', function () {
     return view('WaitingList');
 })->name('WaitingList');
 
-Route::get('/Bookings', function () {
-    return view('Bookings');
-})->name('Bookings');
+Route::get('/RA-Bookings', function () {
+    return view('RA-Bookings');
+})->name('RA-Bookings');
 
 Route::get('/DeleteAcc', function () {
     return view('RA-DeleteAcc');
@@ -134,9 +134,13 @@ Route::get('/RA-LEI-Create-Info', function () {
     return view('RA-LEI-Create-Info');
 })->name('RA-LEI-Create-Info');
 
-Route::get('/DeleteBooking', function () {
-    return view('DeleteBooking');
-})->name('DeleteBooking');
+Route::get('/RA-declineBooking', function () {
+    return view('RA-declineBooking');
+})->name('RA-declineBooking');
+
+Route::get('/RA-ApproveBooking', function () {
+    return view('RA-ApproveBooking');
+})->name('RA-ApproveBooking');
 
 Route::get('/Update-LEI-RA', function () {
     return view('Update-LEI-RA');

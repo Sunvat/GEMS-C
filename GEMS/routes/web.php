@@ -31,10 +31,6 @@ Route::get('/RA-Accommodations', function () {
     return view('RA-accommodations');
 })->name('RA-Accommodations');
 
-Route::get('/Login', function () {
-    return view('Login');
-})->name('Login');
-
 
 Route::get('/New-Accommodation-RA', function () {
     return view('RA-New-Accommodation');
@@ -155,5 +151,17 @@ Route::post('/authenticate', function () {
     return view('authenticate');
 })->name('authenticate');
 
+//login rotues
+
+
+Route::get('/Login', function () {
+    return view('Login');
+})->name('Login');
+
+Route::post('Login','UserController@Login');
+
+
 
 Route::post("authenticate",[UserController::class,"auth"]);
+
+?>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class UserController extends Controller{
 
     function auth(Request $req){
@@ -17,4 +18,8 @@ class UserController extends Controller{
         echo "db connection";
     }
 }
+
+    function Login(Request $req){
+        return Login::where('workID',$req->input('workID'));
+    }
 ?>

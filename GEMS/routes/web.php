@@ -162,10 +162,10 @@ Route::get('/Login', function () {
     return view('Login');
 })->name('Login');
 
-Route::post('Login','UserController@Login');
+Route::post('Login',[UserController::class,'Login']);
 
 
 
-Route::post("authenticate",[UserController::class,"auth"]);
+//Route::post("authenticate",[UserController::class,"auth"]);
 
 ?>

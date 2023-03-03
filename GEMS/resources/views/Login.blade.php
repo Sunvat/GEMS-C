@@ -4,6 +4,7 @@
     <h1 class="flex flex-col justify-center items-center">Log in:</h1>
     <div>
     <form action="Login" method = post class="flex flex-col justify-center items-center">
+        @csrf
         <label class="" for="workID">ID:</label>
         <input class="" type="text" name="workID" id="workID">
         <br>

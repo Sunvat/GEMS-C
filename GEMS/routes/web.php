@@ -31,9 +31,10 @@ Route::get('/RA-Accommodations', function () {
     return view('RA-accommodations');
 })->name('RA-Accommodations');
 
-Route::post('/Login', function () {
+Route::get('/Login', function () {
     return view('Login');
 })->name('Login');
+
 
 Route::get('/New-Accommodation-RA', function () {
     return view('RA-New-Accommodation');

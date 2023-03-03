@@ -13,5 +13,8 @@ class UserController extends Controller{
         ]);
         return $req->input();
     }
+    function index(){
+        echo "db connection";
+    }
 }
 ?>

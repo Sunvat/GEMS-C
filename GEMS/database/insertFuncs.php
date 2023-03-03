@@ -94,12 +94,12 @@ require_once("getConnection.php");
     }
 
      //insert function for Contact
-     function InsertContact($contact){
+     function InsertContact($rID, $pNumber){
         // get connection
         $conn = getConn();
         // sql query inserting Contact Information into table
         $sql = "INSERT INTO Contact(rID, pnumber)
-        Values ('$contact[0]', '$contact[1]')";
+        Values ('$rID[0]', '$pNumber')";
         //check if the query worked
         if($conn->query($sql) === FALSE){
             echo "Error:" . $sql . "<br>" . $conn->error;

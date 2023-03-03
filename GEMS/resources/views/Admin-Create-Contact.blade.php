@@ -12,6 +12,12 @@
     <div> 
       <form action="">
 
+        <label for=""></label>
+        <input type="text">
+
+        <label for=""></label>
+        <input type="text">
+
       </form>
     </div>
   
@@ -21,6 +27,12 @@
 
     <div>
       <form action="">
+
+        <label for=""></label>
+        <input type="text">
+
+        <label for=""></label>
+        <input type="text">
         
       </form>
     </div>

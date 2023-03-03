@@ -173,3 +173,8 @@ Route::get('/Admin-main', function () {
 Route::get('/RA-DeleteLEI', function () {
     return view('RA-DeleteLEI');
 })->name('RA-DeleteLEI');
+
+//Goes to Admin CREATE CONTACT
+Route::get('/Admin-Create-Contact', function () {
+    return view('/Admin-Create-Contact');
+})->name('/Admin-Create-Contact');

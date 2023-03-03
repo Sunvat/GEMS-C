@@ -181,3 +181,21 @@ require_once("getConnection.php");
 
         return $row;
     }
+    //Function for getting account data
+     //Function for getting LEI info.
+     function getAccountData($LEI){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT fname, lname, email, pword, id, rID FROM useraccounts ");
+
+        mysqli_close($con);
+
+        $row = mysqli_fetch_array($result);
+
+        return $row;
+    }

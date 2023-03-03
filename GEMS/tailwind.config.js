@@ -12,7 +12,9 @@ module.exports = {
         'Glohaven-Hovered': '#c97b4f',
         'Glovhaven-bg': '#fdf4ef',
         'Dorange': '#fef0c2', //peach
-        'Lorange': '#000000', //black
+        'Lorange': '#202020', //black
+        'Lorange3': '#190f00',
+        'Lorange2': '#331e00',
         'Lgreen': '#9DC88D',
         'Mgreen':'#4D774E',
         'grey': '#36454F',

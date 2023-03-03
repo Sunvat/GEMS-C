@@ -8,7 +8,7 @@
     <link rel="icon" src="https://github.com/Sunvat/GEMS-C/blob/main/GEMS/resources/images/gemslogo.jpg">
     @vite('resources/css/app.css')
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">
-<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-96 h-5/6 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-75 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-Lorange dark:bg-Lorange-800 bg-opacity-50">
    <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <figure>
@@ -60,12 +60,12 @@
 </body>
 
 
-<footer class="bg-gradient-to-b from-Lorange/60 to-Lorange/80 bottom-0 left-0 right-0 z-40 p-4 h-32">
+<footer class="bg-gradient-to-b from-Lorange2 to-Lorange3 bottom-0 left-0 right-0 z-40 p-3 h-24">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
-            <span class="self-center text-2xl font-sans whitespace-nowrap" style="color:#f6ad55">Glohaven Emergency Management Solutions</span>
+            <span class="self-center text-xl font-sans whitespace-nowrap" style="color:#f6ad55">Glohaven Emergency Management Solutions</span>
         </a>
-        <ul class="flex flex-wrap items-center text-l text-white">
+        <ul class="flex flex-wrap items-center text-sm text-white">
             <li>
                 <a href="{{route('Home')}}" class="mr-4 hover:underline md:mr-6 ">About</a>
             </li>

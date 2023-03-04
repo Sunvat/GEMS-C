@@ -80,6 +80,8 @@ Route::get('/RA-Contact', function () {
 Route::get('/Create-Account', function () {
     return view('Create-Account');
 })->name('Create-Account');
+//add new post create account 
+//Route::get('Create-Account',[UserController::class,'CreateAccount']);
 
 //Goes to Account Creation Confirmation page.
 Route::get('/Account-Created', function () {
@@ -112,7 +114,6 @@ Route::get('/RA_Booking-Submitted', function () {
 })->name('RA_Booking-Submitted');
 
 //Goes to Admin page to create accounts
-Route::post("/Create-Account",[Controller::class,'getAccInfo']);//route for create account page to submit form and get ID
 Route::view("Registered","/Create-Account");
 
 //Goes to RA Region view.

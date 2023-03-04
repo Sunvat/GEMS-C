@@ -3,14 +3,26 @@
 <body>
     <h1 class="flex flex-col justify-center items-center">Log in:</h1>
     <div>
+    @if (session('status'))
+    <div class="success">
+        {{ session('status') }}
+    </div>
+@endif
     <form action="Login" method = post class="flex flex-col justify-center items-center">
-        
+        <div><a class="font-bold text-white">*</a>are required fields</div>
         @csrf
-        <label class="" for="workID">ID:</label>
+        <label class="" for="workID"><a class="font-bold text-white">*</a>ID:</label>
         <input class="" type="text" name="workID" id="workID">
+        @error('workID')
+                <div class="danger font-bold text-white">{{ $message }}</div>
+            @enderror
+            
         <br>
-        <label class="" for="password">Password</label>
+        <label class="" for="password"><a class="font-bold text-white">*</a>Password</label>
         <input class="" type="password" name="password" id="password">
+        @error('password')
+                <div class="danger font-bold text-white">{{ $message }}</div>
+            @enderror
         <button type="submit" class="mt-2 border-2">Log In</button>
         
     </form>

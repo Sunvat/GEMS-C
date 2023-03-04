@@ -29,13 +29,12 @@ class UserController extends Controller{
            echo "Failed to connect to MySQL: " . mysqli_connect_error();
        }
        // sql query to get region names.
-       $result = mysqli_query($con,"SELECT * FROM regions ");
+       $result = mysqli_query($con,"SELECT fname, id FROM useraccounts ");
 
        mysqli_close($con);
 
        $row = mysqli_fetch_array($result);
-       return $row['rname'] + $row['rid'];
-       return $row['rid'];
+       return $row['id'];
        return $req->input();
     }
 

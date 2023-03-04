@@ -4,10 +4,14 @@
 if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
-
+    require dirname(__DIR__, 3).'/database/selectFuncs.php';
     $newRegion = array(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
-
     InsertRegion($newRegion);
+
+    $id = getRegionID(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
+    
+    InsertContact($id, htmlentities($_GET['pNumber']));
+
     header('Location: /RA_region');
     die();
 }
@@ -29,12 +33,19 @@ Logged in as RA.
 
 <div class="container py-10 px-10 mx-0 min-w-full grid place-items-center" id = "container">
 <form action="" method="get" id="updateForm">
+
   <label for="rname" class="mx-2 font-bold text-slate-700">Region Name:</label><br>
   <input type="text" id="rname" name="rname" placeholder="Okanagan" class="rounded p-2"><br>
+
   <label for="country" class="mx-2 font-bold text-slate-700">Country:</label><br>
   <input type="text" id="country" name="country" placeholder="Canada" class="rounded p-2"><br>
+
   <label for="provState" class="mx-2 font-bold text-slate-700">Province:</label><br>
   <input type="text" id="provState" name="provState" placeholder="BC" class="rounded p-2"><br>
+
+  <label for="provState" class="mx-2 font-bold text-slate-700">Phone Number</label><br>
+  <input type="text" id ="pNumber" name = "pNumber" placeholder = "xxx-xxx-xxxx" class = "rounded p-2"><br>
+
  <br>
  <div class="md:flex md:items-center">
     <div class="md:w-1/3">

@@ -31,9 +31,6 @@ Route::get('/RA-Accommodations', function () {
     return view('RA-accommodations');
 })->name('RA-Accommodations');
 
-Route::post('/Login', function () {
-    return view('Login');
-})->name('Login');
 
 Route::get('/New-Accommodation-RA', function () {
     return view('RA-New-Accommodation');
@@ -122,9 +119,9 @@ Route::get('/WaitingList', function () {
     return view('WaitingList');
 })->name('WaitingList');
 
-Route::get('/Bookings', function () {
-    return view('Bookings');
-})->name('Bookings');
+Route::get('/RA-Bookings', function () {
+    return view('RA-Bookings');
+})->name('RA-Bookings');
 
 Route::get('/DeleteAcc', function () {
     return view('RA-DeleteAcc');
@@ -134,9 +131,13 @@ Route::get('/RA-LEI-Create-Info', function () {
     return view('RA-LEI-Create-Info');
 })->name('RA-LEI-Create-Info');
 
-Route::get('/DeleteBooking', function () {
-    return view('DeleteBooking');
-})->name('DeleteBooking');
+Route::get('/RA-declineBooking', function () {
+    return view('RA-declineBooking');
+})->name('RA-declineBooking');
+
+Route::get('/RA-ApproveBooking', function () {
+    return view('RA-ApproveBooking');
+})->name('RA-ApproveBooking');
 
 Route::get('/Update-LEI-RA', function () {
     return view('Update-LEI-RA');
@@ -154,5 +155,17 @@ Route::post('/authenticate', function () {
     return view('authenticate');
 })->name('authenticate');
 
+//login rotues
 
-Route::post("authenticate",[UserController::class,"auth"]);
+
+Route::get('/Login', function () {
+    return view('Login');
+})->name('Login');
+
+Route::post('Login',[UserController::class,'Login']);
+
+
+
+//Route::post("authenticate",[UserController::class,"auth"]);
+
+?>

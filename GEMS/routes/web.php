@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -154,10 +155,13 @@ Route::get('/RA-LEI-Create-Info', function () {
     return view('RA-LEI-Create-Info');
 })->name('RA-LEI-Create-Info');
 
-//Goes to delete booking for accomodation 
-Route::get('/DeleteBooking', function () {
-    return view('DeleteBooking');
-})->name('DeleteBooking');
+Route::get('/RA-declineBooking', function () {
+    return view('RA-declineBooking');
+})->name('RA-declineBooking');
+
+Route::get('/RA-ApproveBooking', function () {
+    return view('RA-ApproveBooking');
+})->name('RA-ApproveBooking');
 
 //Goes to update LEI Page
 Route::get('/Update-LEI-RA', function () {
@@ -174,7 +178,21 @@ Route::get('/RA-DeleteLEI', function () {
     return view('RA-DeleteLEI');
 })->name('RA-DeleteLEI');
 
-//Goes to Admin CREATE CONTACT
-Route::get('/Admin-Create-Contact', function () {
-    return view('/Admin-Create-Contact');
-})->name('/Admin-Create-Contact');
+Route::post('/authenticate', function () {
+    return view('authenticate');
+})->name('authenticate');
+
+//login rotues
+
+
+Route::get('/Login', function () {
+    return view('Login');
+})->name('Login');
+
+Route::post('Login',[UserController::class,'Login']);
+
+
+
+//Route::post("authenticate",[UserController::class,"auth"]);
+
+?>

@@ -56,8 +56,8 @@ require_once("getConnection.php");
         //get connecttion
         $conn = getConn();
         //sql query inserting into region table
-        $sql = "INSERT INTO bookings(accID, aname, region, primEvacName, phoneNumber, groupName, NumPeople, CallerName, CallerEMSID, CallerContactNumber, WCA, Pets, Med, Bed)
-        Values ('$newBooking[5]', '$newBooking[4]', '$newBooking[6]', '$newBooking[9]', '$newBooking[10]', '$newBooking[7]', '$newBooking[8]', '$newBooking[0]', '$newBooking[1]', '$newBooking[3]', '$newBooking[11]', '$newBooking[12]', '$newBooking[13]', '$newBooking[14]')";
+        $sql = "INSERT INTO bookings(accID, rID, bookerName, bookerDepartment, bookerID, bookerPhoneNumber, NumPeople, evacPrimaryName, evacPhoneNumber)
+        Values ('$newBooking[0]', '$newBooking[1]', '$newBooking[2]', '$newBooking[3]', '$newBooking[4]', '$newBooking[5]', '$newBooking[6]', '$newBooking[7]', '$newBooking[8]')";
         //check if insert worked
         if ($conn->query($sql) === FALSE) {
         echo "Error: " . $sql . "<br>" . $conn->error;

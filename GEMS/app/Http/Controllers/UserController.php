@@ -42,22 +42,18 @@ class UserController extends Controller{
        mysqli_close($con);
 
        $row = mysqli_fetch_array($result);
-       return $row['id'];//works till here
+     //works till here
     // check if workID and id AND password, pword are matching then redirect to RA-main.
        $dbid = $row['id'];
        $dbpass = $row['pword'];
        //if ids are the same
        if($dbid == $inid){
+        return $row['id'];
        }
        else{
        }
        //if passwords match
-       if(password_verify($dbpass,$inpass)){
-       }
-
-       else{
-        
-       }
+        return "falied";
     }
 
 

@@ -96,6 +96,11 @@ Route::get('/RA-Booking', function () {
     return view('RA-Booking');
 })->name('RA-Booking');
 
+//Goes to RA Bookings page.
+Route::get('/RA-Bookings', function () {
+    return view('RA-Bookings');
+})->name('RA-Bookings');
+
 //Goes to page to confirm booking page.
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');

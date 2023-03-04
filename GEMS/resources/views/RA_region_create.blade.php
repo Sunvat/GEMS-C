@@ -9,6 +9,7 @@ if( isset($_GET['submit']) )
     InsertRegion($newRegion);
 
     $id = getRegionID(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
+    
     InsertContact($id, htmlentities($_GET['pNumber']));
 
     header('Location: /RA_region');

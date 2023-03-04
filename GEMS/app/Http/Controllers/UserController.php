@@ -22,8 +22,8 @@ class UserController extends Controller{
 
     function Login(Request $req){
         //input id and password
-        $inid = $req-> input('password');
-        $inpass = $req -> input('workID');
+        $inid = $req-> input('workID');
+        $inpass = $req -> input('password');
         if( $req->validate([
             'workID'=>'required',
             'password'=>'required'],
@@ -37,11 +37,12 @@ class UserController extends Controller{
            echo "Failed to connect to MySQL: " . mysqli_connect_error();
        }
        // sql query to get region names.
-       $result = mysqli_query($con,"SELECT pword, id FROM useraccounts ");
-
+       $result = mysqli_query($con,"SELECT pword, id FROM useraccounts WHERE id = '$inid' ");
+       
        mysqli_close($con);
 
        $row = mysqli_fetch_array($result);
+       return $row['id'];
      //works till here
     // check if workID and id AND password, pword are matching then redirect to RA-main.
        $dbid = $row['id'];

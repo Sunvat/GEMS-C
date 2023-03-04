@@ -101,7 +101,7 @@ require_once("getConnection.php");
         return $result;
     }
 
-    function getPendingBookings(){
+    function getAllBookings(){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -109,37 +109,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
-
-        mysqli_close($con);
-
-        return $result;
-    }
-
-    function getConfirmedBookings(){
-        $con = getConn();
-        // Check connection
-        if (mysqli_connect_errno())
-        {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
-
-        mysqli_close($con);
-
-        return $result;
-    }
-
-    function getDeclinedBookings(){
-        $con = getConn();
-        // Check connection
-        if (mysqli_connect_errno())
-        {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
+        $result = mysqli_query($con,"SELECT * FROM bookings ");
 
         mysqli_close($con);
 
@@ -185,7 +155,7 @@ require_once("getConnection.php");
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
+        // sql query to get LEI.
         $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI WHERE location = ".$LEI[2]);
 
         mysqli_close($con);
@@ -194,16 +164,17 @@ require_once("getConnection.php");
 
         return $row;
     }
-    // temp function
-    function getEI(){
+    
+     //Function for getting Contact info.
+     function getContact(){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT location, lei, datetime FROM LEI");
+        // sql query to get contact names.
+        $result = mysqli_query($con,"SELECT rid, pnumber FROM Contact");
 
         mysqli_close($con);
 
@@ -211,9 +182,9 @@ require_once("getConnection.php");
 
         return $row;
     }
-    //Function for getting account data
-     //Function for getting LEI info.
-     function getAccountData($LEI){
+
+    // Function used to get Region ID based on inputs
+    function getRegionID($rname, $country, $provstate){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
@@ -221,11 +192,10 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT fname, lname, email, pword, id, rID FROM useraccounts ");
+        $result = mysqli_query($con,"SELECT rID FROM regions WHERE rname = '$rname' AND country = '$country' AND provstate = '$provstate'");
 
         mysqli_close($con);
-
-        $row = mysqli_fetch_array($result);
-
-        return $row;
+        
+        $id = mysqli_fetch_array($result);
+        return $id;
     }

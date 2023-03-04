@@ -60,7 +60,7 @@
 </body>
 
 
-<footer class="bg-gradient-to-b from-Lorange2 to-Lorange3 bottom-0 left-0 right-0 z-40 p-3 h-24">
+<footer class="bg-gradient-to-b from-Lorange2/95 to-Lorange3 bottom-0 left-0 right-0 z-40 p-3 h-30 ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <span class="self-center text-xl font-sans whitespace-nowrap" style="color:#f6ad55">Glohaven Emergency Management Solutions</span>

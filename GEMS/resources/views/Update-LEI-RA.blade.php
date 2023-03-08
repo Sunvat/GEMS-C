@@ -5,7 +5,7 @@ $loc = $_GET["location"];
 
 if( isset($_GET['submit']) )
 {
-    require dirname(__DIR__, 3).'/database/updateFuncs.php';
+    require_once dirname(__DIR__, 3).'/database/updateFuncs.php';
 
     $newUpdate = array(htmlentities($_GET['location']), htmlentities($_GET['Update']), htmlentities($_GET['datetime']), htmlentities($loc));
 
@@ -24,7 +24,7 @@ if( isset($_GET['submit']) )
   </div> 
 </div>
 <?php
-  require dirname(__DIR__, 3).'/database/selectFuncs.php';
+  require_once dirname(__DIR__, 3).'/database/selectFuncs.php';
 
   $LEI = getLEI();
 

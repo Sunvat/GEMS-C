@@ -64,8 +64,8 @@
     
     ?>
     <div class=" w-fit mx-auto px-52 py-14" id = "container">
-        <form class="flex-items-center" method="get" class="mx-auto" action="" >
-                
+        <form class="flex-items-center" method="get" class="mx-auto" action="Create-Account" >
+                @csrf
                 <label name ="fname" for="fname" class="mx-2 font-bold text-white">First Name:<a class="text-red-500"> *</a></label>
                 <br>
                 <input id="fname" name ="fname" type="text" required placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">

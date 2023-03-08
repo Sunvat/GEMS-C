@@ -174,7 +174,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get contact names.
-        $result = mysqli_query($con,"SELECT rid, pnumber FROM Contact");
+        $result = mysqli_query($con,"SELECT rid, PNumber FROM contact");
 
         mysqli_close($con);
 
@@ -198,4 +198,19 @@ require_once("getConnection.php");
         
         $id = mysqli_fetch_array($result);
         return $id;
+    }
+
+    function getRegionbyID($rID){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT rname FROM regions WHERE rID = '$rID'");
+
+        mysqli_close($con);
+
+        return $result;
     }

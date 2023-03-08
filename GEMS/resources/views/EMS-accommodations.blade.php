@@ -114,6 +114,13 @@ echo "<td class = \"border border-slate-500 p-2\">
 echo "</tr>";
 }
 echo "</table>
+</div><br>
+
+<div class=\"container flex flex-col justify-center items-center\">
+  <h3>Don't see what you want?</h3><p>Submit a wishlist request and get notified when something open up!</p>
+  <a href=\"/EMS-wishlist?rID=$rID\">
+    <button type=\"button\" class=\"focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:focus:ring-Glohaven-Hovered\">Wislist Request</button>
+  </a>
 </div>";
 
 ?>

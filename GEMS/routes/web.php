@@ -103,6 +103,16 @@ Route::get('/RA-Bookings', function () {
     return view('RA-Bookings');
 })->name('RA-Bookings');
 
+//Goes to EMS facing wishlist page.
+Route::get('/EMS-wishlist', function () {
+    return view('EMS-wishlist');
+})->name('EMS-wishlist');
+
+//Goes to EMS facing wishlist page.
+Route::get('/EMS-Wish-Submitted', function () {
+    return view('EMS-Wish-Submitted');
+})->name('EMS-Wish-Submitted');
+
 //Goes to page to confirm booking page.
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');

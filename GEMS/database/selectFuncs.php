@@ -108,8 +108,23 @@ require_once("getConnection.php");
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
+        // sql query to get booking entries.
         $result = mysqli_query($con,"SELECT * FROM bookings ");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getAllWish(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get booking entries names.
+        $result = mysqli_query($con,"SELECT * FROM wishlist");
 
         mysqli_close($con);
 

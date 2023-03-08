@@ -15,7 +15,7 @@
 <?php
 if( isset($_GET['submit']) )
 {
-    require dirname(__DIR__, 3).'/database/updateFuncs.php';
+    require_once dirname(__DIR__, 3).'/database/updateFuncs.php';
 
     $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['address']), htmlentities($_GET['maxCap']), htmlentities($_GET['popChange']), htmlentities($_GET['desc']),
     htmlentities($_GET['image']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']),
@@ -29,7 +29,7 @@ if( isset($_GET['submit']) )
 ?>
 
 <?php
-require dirname(__DIR__, 3).'/database/selectFuncs.php';
+require_once dirname(__DIR__, 3).'/database/selectFuncs.php';
 
 //Create an array for pre-checked boxes in the form
 $boolCheck = ["unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked"];

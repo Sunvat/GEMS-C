@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS `bookings` (
 
 CREATE TABLE IF NOT EXISTS `wishlist` (
   `wishID`int AUTO_INCREMENT,
+  `rID` int NOT NULL,
   `evacPhoneNumber` varchar(17) NOT NULL,
   `evacPrimaryName` varchar(50) NOT Null,
   `NumPeople` int NOT NULL,
@@ -94,7 +95,8 @@ CREATE TABLE IF NOT EXISTS `wishlist` (
   `Med` boolean DEFAULT False,
   `Bed` boolean DEFAULT False,
   `DateTime` DateTIME,
-	PRIMARY KEY (wishID)
+	PRIMARY KEY (wishID),
+  FOREIGN KEY (rID) REFERENCES regions(rID)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

@@ -66,6 +66,21 @@ require_once("getConnection.php");
         mysqli_close($conn);
     }
 
+    function InsertWishlist($newBooking){
+        //get connecttion
+        $conn = getConn();
+        //sql query inserting into region table
+        $date = date('Y-m-d H:i:s', time());
+        $sql = "INSERT INTO wishlist(rID, bookerName, bookerDepartment, bookerID, bookerPhoneNumber, NumPeople, evacPrimaryName, evacPhoneNumber, WCA, Pets, Med, Bed, DateTime)
+        Values ('$newBooking[0]', '$newBooking[1]', '$newBooking[2]', '$newBooking[3]', '$newBooking[4]', '$newBooking[5]', '$newBooking[6]', '$newBooking[7]', $newBooking[8], $newBooking[9], $newBooking[10], $newBooking[11], '$date')";
+        //check if insert worked
+        if ($conn->query($sql) === FALSE) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        //close connection
+        mysqli_close($conn);
+    }
+
     function InsertAccountInfo($newAccount){
         // get connection
         $conn = getConn();

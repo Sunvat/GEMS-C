@@ -103,6 +103,16 @@ Route::get('/RA-Bookings', function () {
     return view('RA-Bookings');
 })->name('RA-Bookings');
 
+//Goes to EMS facing wishlist page.
+Route::get('/EMS-wishlist', function () {
+    return view('EMS-wishlist');
+})->name('EMS-wishlist');
+
+//Goes to EMS facing wishlist page.
+Route::get('/EMS-Wish-Submitted', function () {
+    return view('EMS-Wish-Submitted');
+})->name('EMS-Wish-Submitted');
+
 //Goes to page to confirm booking page.
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');
@@ -164,6 +174,10 @@ Route::get('/RA-LEI-Create-Info', function () {
 Route::get('/RA-declineBooking', function () {
     return view('RA-declineBooking');
 })->name('RA-declineBooking');
+
+Route::get('/RA-declineWish', function () {
+    return view('RA-declineWish');
+})->name('RA-declineWish');
 
 Route::get('/RA-ApproveBooking', function () {
     return view('RA-ApproveBooking');

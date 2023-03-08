@@ -15,7 +15,7 @@
 <?php
 if( isset($_GET['submit']) )
 {
-    require dirname(__DIR__, 3).'/database/updateFuncs.php';
+    require_once dirname(__DIR__, 3).'/database/updateFuncs.php';
 
     $updateAccommodation = array(htmlentities($_GET['locName']), htmlentities($_GET['address']), htmlentities($_GET['maxCap']), htmlentities($_GET['popChange']), htmlentities($_GET['desc']),
     htmlentities($_GET['image']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']),
@@ -29,7 +29,7 @@ if( isset($_GET['submit']) )
 ?>
 
 <?php
-require dirname(__DIR__, 3).'/database/selectFuncs.php';
+require_once dirname(__DIR__, 3).'/database/selectFuncs.php';
 
 //Create an array for pre-checked boxes in the form
 $boolCheck = ["unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked"];
@@ -74,13 +74,13 @@ echo "<div class=\"container py-10 px-10 mx-0 min-w-full grid place-items-center
   <input type=\"hidden\" id=\"water\" name=\"water\" value=\"False\" />
 
   <label for=\"locName\">Location Name:</label><br>
-  <input type=\"text\" id=\"locName\" name=\"locName\" value=\"" . $row['aname'] . "\"><br>
+  <input type=\"text\" id=\"locName\" name=\"locName\" value=\"" . $row['aname'] . "\" required><br>
   <label for=\"locName\">Address:</label><br>
-  <input type=\"text\" id=\"address\" name=\"address\" value=\"" . $row['address'] . "\"><br>
+  <input type=\"text\" id=\"address\" name=\"address\" value=\"" . $row['address'] . "\" required><br>
   <label for=\"maxCap\">Maximum Capacity:</label><br>
-  <input type=\"text\" id=\"maxCap\" name=\"maxCap\" value=\"" . $row['maxCap'] . "\"><br>
+  <input type=\"text\" id=\"maxCap\" name=\"maxCap\" value=\"" . $row['maxCap'] . "\" required><br>
   <label for=\"popChange\">Net Change in Occupancy:</label><br>
-  <input type=\"text\" id=\"popChange\" name=\"popChange\" value=\"0\"><br>
+  <input type=\"text\" id=\"popChange\" name=\"popChange\" value=\"0\" required><br>
   <label for=\"desc\">Description:</label><br>
   <input type=\"text\" id=\"desc\" name=\"desc\" value=\"" . $row['descr'] . "\"><br>
   <label for=\"desc\">Image URL:</label><br>

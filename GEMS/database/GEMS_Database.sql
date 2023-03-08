@@ -95,7 +95,6 @@ CREATE TABLE IF NOT EXISTS `wishlist` (
   `Med` boolean DEFAULT False,
   `Bed` boolean DEFAULT False,
   `DateTime` DateTIME,
-  `Confirmed` boolean DEFAULT False,
 	PRIMARY KEY (wishID),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 	

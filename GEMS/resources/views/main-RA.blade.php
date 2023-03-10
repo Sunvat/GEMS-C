@@ -1,6 +1,8 @@
 @extends('Layouts.RA-default')
 
 @section('main')
+<!-- This page is the Main page for the Reservation Agents of Glohaven-->
+<!-- Only RA will have acces and should be redirected when logging in-->
 <body>
   <br>
   <br>
@@ -23,7 +25,8 @@
    </div>
    <div class = "flex flex-row justify-center items-center" style = "margin-right: -100px">
       <?php
-
+      //displaying LEI Content
+      //same function/code from EMS-LEI page
       require dirname(__DIR__, 3).'/database/selectFuncs.php';
       $LEI = getLEIandID();
 
@@ -44,20 +47,6 @@
        echo "</table>";
        ?>
     </div>
-  <?php
-  //this code will be used to make the lei content on main page.
-  echo "<div>";
-  echo  "<table class = \"\">";
-  echo  "  <th class = \"\">";
-  echo  "   <tr class = \"\">";
-  echo  "      <td class = \"\">";
-
-  echo  "     </td>";
-  echo  "   </tr>";
-  echo  "  </th>";
-  echo "</table>";
-  echo "</div>";
-?>
 </body>
 
 @endsection

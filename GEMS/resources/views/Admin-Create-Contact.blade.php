@@ -20,22 +20,6 @@
 
       </form>
     </div>
-  
-    <div>
-      <h1>Create New Contact</h1>
-    </div>
-
-    <div>
-      <form action="">
-
-        <label for=""></label>
-        <input type="text">
-
-        <label for=""></label>
-        <input type="text">
-        
-      </form>
-    </div>
 
 </div>
 

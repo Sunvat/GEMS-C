@@ -1,40 +1,40 @@
 @extends('Layouts.RA-default')
 
 @section('main')
-<body>
+    <body>
 
     <?php
 if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
 
-    $newBooking = array(htmlentities($_GET['accID']), htmlentities($_GET['rID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']));
-    InsertBooking($newBooking);
-    header('Location: /Booking-Submitted');
+    $newWish = array(htmlentities($_GET['rID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['beds']));
+    InsertWishlist($newWish);
+    header('Location: /EMS-Wish-Submitted');
     die();
 }
 
 ?>
-        
-        <br>
-        <br>
         <body >
         <div class="w-96  mx-auto">
             <form action="" method="get" class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
-                    <legend class="mb-5 text-xl font-bold text-white">Booking Request Form</legend>
+                    <legend class="mb-5 text-xl font-bold text-white">Booking Wishlist Form</legend>
+                    <input type="hidden" id="wca" name="wca" value="false" />
+                    <input type="hidden" id="pets" name="pets" value="false" />
+                    <input type="hidden" id="med" name="med" value="false" />
+                    <input type="hidden" id="beds" name="beds" value="false" />
                     <?php
-                        $accID = $_GET["accID"];
                         $rID = $_GET["rID"];
-                        echo "<input type=\"hidden\" value=\"$accID\" id=\"accID\" name=\"accID\">";
                         echo "<input type=\"hidden\" value=\"$rID\" id=\"rID\" name=\"rID\">";
                      ?>
-                     <input type="hidden" id="ems_division" name="ems_division" value="Glohaven">
-                     
-                     <label for="cname" class=" text-white">Your Name (PLACEHOLDER UNTIL ACCOUNTS ARE READY):</label>
+                     <label for="cname" class=" text-white">Your Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block w-full" placeholder="John Doe" required>
                      <br>
-                     <label for="callerID"class=" text-white">Glohaven Employee ID:</label>
+                     <label for="ems_division"class=" text-white">Your Department:</label>
+                     <input type="text" id="ems_division" name="ems_division" class = "border solid 5px; mb-2; display block w-full" placeholder="<CITY> Fire Department" required>
+                     <br>
+                     <label for="callerID"class=" text-white">Department Employee ID:</label>
                      <input type="text" id="callerID" name="callerID" class = "border solid 5px; mb-2; display block w-full" placeholder="CFD-12345" required>
                      <br>
                      <label for="callerContactNumber:"class=" text-white">Your Contact Number:</label>
@@ -49,6 +49,14 @@ if( isset($_GET['submit']) )
                      <label for="numOfEvacs"class=" text-white">Evacuee Group Size:</label>
                      <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block w-full" placeholder="5" required>
                      <br>
+                     <label for="wca" class="text-white">Wheelchair Access Required</label>
+                     <input type="checkbox" id="wca" name="wca" value="true"><br>
+                     <label for="pets" class="text-white">Have Pets</label>
+                     <input type="checkbox" id="pets" name="pets" value="true"><br>
+                     <label for="med" class="text-white">Medical Assistance Required</label>
+                     <input type="checkbox" id="med"  name="med" value="true"><br>
+                     <label for="beds" class="text-white">Beds Preferred</label>
+                     <input type="checkbox" id="beds" name="beds" value="true"><br><br>
                      <div class="md:w-2/3">
                         <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white"></input>
                      </div>
@@ -58,4 +66,6 @@ if( isset($_GET['submit']) )
         </div>
         
     </body>
+
+
 @endsection

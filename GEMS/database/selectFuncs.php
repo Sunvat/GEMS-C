@@ -174,11 +174,11 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get contact names.
-        $result = mysqli_query($con,"SELECT rid, PNumber FROM contact");
+        $result = mysqli_query($con,"SELECT rID, PNumber FROM contact");
 
         mysqli_close($con);
 
-        $row = mysqli_fetch_array($result);
+        $row = $result;
 
         return $row;
     }

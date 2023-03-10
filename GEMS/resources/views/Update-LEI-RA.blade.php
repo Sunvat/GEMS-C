@@ -26,7 +26,8 @@ if( isset($_GET['submit']) )
 <?php
   require_once dirname(__DIR__, 3).'/database/selectFuncs.php';
 
-  $LEI = getLEI();
+  $LEI = getLEIandID();
+  $LEI = mysqli_fetch_array($LEI);
 
   echo "<div class=\"flex flex-col justify-center items-center container py-10 px-10 mx-0 min-w-full\" id = \"container\">";
   echo "<form action=\"\" method=\"get\" id=\"updateForm\">";
@@ -38,7 +39,8 @@ if( isset($_GET['submit']) )
   echo "</div>";
 
   echo "<div class = \"flex flex-col justify-center items-center\">";
-  echo "<h1>Previous Text:" .$LEI["lei"]. "</h1>";
+  echo "<h1>Previous Text:</h1>";
+  echo "<h1>" .$LEI["lei"]. "</h1>";
   echo "</div>";
 
   echo "<div class=\"flex flex-col justify-center items-center container py-10 px-10 mx-0 min-w-full\" id = \"container\">";

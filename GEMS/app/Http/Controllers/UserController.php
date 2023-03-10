@@ -42,19 +42,30 @@ class UserController extends Controller{
        mysqli_close($con);
 
        $row = mysqli_fetch_array($result);
-       return $row['id'];
      //works till here
     // check if workID and id AND password, pword are matching then redirect to RA-main.
-       $dbid = $row['id'];
-       $dbpass = $row['pword'];
-       //if ids are the same
-       if($dbid == $inid){
-        return $row['id'];
+       if(empty($row['id'])){
+        echo "<h2> ID is invalid please try again.</h2>";
+        return redirect("/Login")->withErrors("ID is invalid please try again");
        }
        else{
+        $dbid = $row['id'];
+        $dbpass = $row['pword'];
+        if($dbid == $inid && $dbpass==$inpass){
+            header("Location: /main-RA");
+           exit();
+          }
+          else{
+        }
+        //if passwords match
+         echo "<h2>Login failed check your ID and password and try again.</h2>";
+       return redirect("/Login")->withErrors("Login failed check your ID and password ");
+         exit();
        }
-       //if passwords match
-        return "falied";
+      
+       //if ids are the same
+      
+      
     }
 
 

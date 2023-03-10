@@ -69,14 +69,17 @@ require_once("getConnection.php");
                 $SQL_Query .=  " AND Med=true";
             if (strtolower($filter[3])=="true")
                 $SQL_Query .=  " AND Bed=true";
-            if (strtolower($filter[4])=="true")
-                $SQL_Query .=  " AND HighGround=true";
-            if (strtolower($filter[5])=="true")
-                $SQL_Query .=  " AND Food=true";
-            if (strtolower($filter[6])=="true")
-                $SQL_Query .=  " AND Water=true";
-            if (strtolower($filter[7])=="false")
-                $SQL_Query .=  " AND isFull=false";
+            //Some calls of this function do not use the below, this try catch will handle that case
+            try{
+                if (strtolower($filter[4])=="true")
+                    $SQL_Query .=  " AND HighGround=true";
+                if (strtolower($filter[5])=="true")
+                    $SQL_Query .=  " AND Food=true";
+                if (strtolower($filter[6])=="true")
+                    $SQL_Query .=  " AND Water=true";
+                if (strtolower($filter[7])=="false")
+                    $SQL_Query .=  " AND isFull=false";
+            }catch(Exception $e){}
                 
             $result = mysqli_query($con,$SQL_Query);
         }
@@ -108,8 +111,84 @@ require_once("getConnection.php");
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
+        // sql query to get booking entries.
         $result = mysqli_query($con,"SELECT * FROM bookings ");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getAllWish(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get booking entries names.
+        $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+    
+    function getWish($wID){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get booking entries names.
+        $result = mysqli_query($con,"SELECT * FROM wishlist WHERE wishID = $wID");
+        $row = mysqli_fetch_array($result);
+
+        mysqli_close($con);
+
+        return $row;
+    }
+
+    function getPendingBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getConfirmedBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
+
+        mysqli_close($con);
+
+        return $result;
+    }
+
+    function getDeclinedBookings(){
+        $con = getConn();
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        // sql query to get region names.
+        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
 
         mysqli_close($con);
 

@@ -4,8 +4,6 @@
 <?php
 if( isset($_GET['submit']) )
 {
-    require dirname(__DIR__, 3).'/database/selectFuncs.php';
-
     $rID = htmlentities($_GET['regions']);
 
     header('Location: /RA-Accommodations?rID=' . $rID);

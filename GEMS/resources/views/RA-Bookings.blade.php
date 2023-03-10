@@ -23,6 +23,46 @@
         else {
         }
     }
+
+    //These functions hide the tables
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+    document.getElementById("pending").addEventListener('click', function (event) {
+      var table = document.getElementById("pendingTable");
+      if (table.style.display === "none"){
+        table.style.display = "block";
+      }else{
+        table.style.display = "none";
+      }
+    });
+
+    document.getElementById("confirmed").addEventListener('click', function (event) {
+      var table = document.getElementById("confirmedTable")
+      if (table.style.display === "none"){
+        table.style.display = "block";
+      }else{
+        table.style.display = "none";
+      }
+    });
+
+    document.getElementById("declined").addEventListener('click', function (event) {
+      var table = document.getElementById("declinedTable")
+      if (table.style.display === "none"){
+        table.style.display = "block";
+      }else{
+        table.style.display = "none";
+      }
+    });
+
+    document.getElementById("wishList").addEventListener('click', function (event) {
+      var table = document.getElementById("wishTable")
+      if (table.style.display === "none"){
+        table.style.display = "block";
+      }else{
+        table.style.display = "none";
+      }
+    });
+  });
 </script>
 
 <?php
@@ -53,10 +93,10 @@ $result = getPendingBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
+    <h3 id=\"pending\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
 </div><br>
 
-<table class = \"table-fixed border mx-10 border-none\">
+<table id=\"pendingTable\" class = \"table-fixed border mx-10 border-none\">
     <tr class = \"bordor-slate-500 p-2\">
       <th class = \"border\">Booking ID</th>
       <th class = \"border\">Primary Evacuee Name</th>
@@ -104,10 +144,10 @@ $result = getConfirmedBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
+    <h3 id=\"confirmed\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
 </div><br>
 
-<table class = \"table-fixed border mx-10 border-none\">
+<table id=\"confirmedTable\" class = \"table-fixed border mx-10 border-none\">
     <tr class = \"bordor-slate-500 p-2\">
       <th class = \"border\">Booking ID</th>
       <th class = \"border\">Primary Evacuee Name</th>
@@ -144,10 +184,10 @@ $result = getDeclinedBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
+    <h3 id=\"declined\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
 </div><br>
 
-<table class = \"table-fixed border mx-10 border-none\">
+<table id=\"declinedTable\" class = \"table-fixed border mx-10 border-none\">
     <tr class = \"bordor-slate-500 p-2\">
       <th class = \"border\">Booking ID</th>
       <th class = \"border\">Primary Evacuee Name</th>
@@ -183,10 +223,10 @@ $result = getAllWish();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
+    <h3 id=\"wishList\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
 </div><br>
 
-<table class = \"table-fixed border mx-10 border-none\">
+<table id=\"wishTable\" class = \"table-fixed border mx-10 border-none\">
     <tr class = \"bordor-slate-500 p-2\">
       <th class = \"border\">Wish ID</th>
       <th class = \"border\">Primary Evacuee Name</th>

@@ -9,9 +9,7 @@
         //This is a very roundabout way of deleting things. Look into AJAX.
         if (r == true) {
           //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
-          window.location.href = "/DeleteLEI?rID="+ID+"&datetime="+datetime+"&lei="+lei;
-        } else {
-         
+          window.location.href = "/RA-DeleteLEI?rID="+rID+"&datetime="+datetime+"&lei="+lei;
         }
    }
    </script>
@@ -49,7 +47,7 @@
          echo "<th class = \"border p-2 border-slate-500\">
                <div class=\"inline-flex rounded-md shadow-sm group bg-slate-300 rounded-full hover:bg-slate-600 m-2\" role=\"group\">
                   <button type=\"button\" name = \"Update\" id=\"Update\" onclick=\"location.href='/Update-LEI-RA?location=". $row[1]." ';\" class=\"text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition\">Update</button>
-                  <button type=\"button\" onclick=\"deletePopup(".$row[0].", ".$row[3].", ".$row[2].")\" class=\"text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition\">Delete</button>
+                  <button type=\"button\" onclick=\"deletePopup('".$row[0]."', '".$row[3]."', '".$row[2]."')\" class=\"text-lg mx-2 text-slate-800 hover:text-Glohaven-Hovered transition\">Delete</button>
                </div></td>";
          echo "</tr>";
       }

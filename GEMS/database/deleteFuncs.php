@@ -70,7 +70,7 @@ require_once('getConnection.php');
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        mysqli_query($con,"DELETE FROM LEI WHERE rid = ". $RID . " AND lei = ". $LEI ." AND datetime = ".Datetime);
+        mysqli_query($con,"DELETE FROM LEI WHERE rid = ". $RID . " AND lei = '". $LEI ."' AND datetime = '".$DATETIME."'");
 
         mysqli_close($con);
     }

@@ -1,6 +1,19 @@
 @extends('Layouts.RA-default')
 
 @section('main')
+<script>
+  function time(){
+    var currentdate = new Date(); 
+    var date = currentdate.getFullYear() + "-"
+            + currentdate.getMonth() + "-" 
+            + currentdate.getDate() + " "  
+            + currentdate.getHours() + ":"  
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+
+            document.getElementById("DateTime").value = date;
+  }
+</script>
 <?php
 $rID = $_GET["rID"];
 ?>
@@ -18,7 +31,7 @@ if( isset($_GET['submit']) )
 }
 ?>
 <div class="container py-10 px-150 mx-0 min-w-full grid place-items-center" id = "container">
-<form action="" method="get" id="updateForm">
+<form action="" method="get" id="updateForm" onsubmit = "time()">
 
   <?php
     echo "<input type=\"hidden\" id = \"rID\" name = \"rID\" value = \"$rID\">";
@@ -29,10 +42,10 @@ if( isset($_GET['submit']) )
 
   <label for="Update" class="mx-2 font-bold text-slate-700">Update:</label><br>
   <textarea id = "Update" name = "Update" form = "updateForm" cols = 25 rows=5></textarea><br>
-  <?php
-    $date = date('Y-m-d H:i:s', time());
-   echo "<input type=\"hidden\" id=\"DateTime\" name=\"DateTime\" value=$date class=\"rounded p-2\"><br>";
-  ?>
+  
+   
+  <input type="hidden" id="DateTime" name="DateTime" value= date class="rounded p-2"><br>
+  
  <br>
  <div class="md:flex md:items-center">
     <div class="md:w-1/3">

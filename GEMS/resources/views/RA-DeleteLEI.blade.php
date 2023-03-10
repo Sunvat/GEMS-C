@@ -11,7 +11,7 @@
   // deletes lei and returns back to main page.
   require dirname(__DIR__, 3).'/database/deleteFuncs.php';
 
-  delLEI($_GET["rID"], $_GET("LEI"), $_get("Datetime"));
+  delLEI($_GET["rID"], $_GET["lei"], $_GET["datetime"]);
 
   header("Location: /RA-LEI");
   exit();

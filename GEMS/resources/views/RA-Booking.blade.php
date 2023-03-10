@@ -32,22 +32,22 @@ if( isset($_GET['submit']) )
                      <input type="hidden" id="ems_division" name="ems_division" value="Glohaven">
                      
                      <label for="cname" class=" text-white">Your Name (PLACEHOLDER UNTIL ACCOUNTS ARE READY):</label>
-                     <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block w-full" placeholder="John Doe">
+                     <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block w-full" placeholder="John Doe" required>
                      <br>
                      <label for="callerID"class=" text-white">Glohaven Employee ID:</label>
-                     <input type="text" id="callerID" name="callerID" class = "border solid 5px; mb-2; display block w-full" placeholder="CFD-12345">
+                     <input type="text" id="callerID" name="callerID" class = "border solid 5px; mb-2; display block w-full" placeholder="CFD-12345" required>
                      <br>
                      <label for="callerContactNumber:"class=" text-white">Your Contact Number:</label>
-                     <input type="text" id="callerContactNumber" name="callerContactNumber" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567">
+                     <input type="text" id="callerContactNumber" name="callerContactNumber" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567" required>
                      <br>
                      <label for="primEvacName"class=" text-white">Primary Evacuee Name:</label>
-                     <input type="text" id="primEvacName" name="primEvacName" class = "border solid 5px  mb-2 display block w-full" placeholder="Samantha Smith">
+                     <input type="text" id="primEvacName" name="primEvacName" class = "border solid 5px  mb-2 display block w-full" placeholder="Samantha Smith" required>
                      <br>
                      <label for="primEvacContactNum"class=" text-white">Primary Evacuee Contact Number:</label>
-                     <input type="text" id="primEvacContactNum" name="primEvacContactNum" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567">
+                     <input type="text" id="primEvacContactNum" name="primEvacContactNum" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567" required>
                      <br>
                      <label for="numOfEvacs"class=" text-white">Evacuee Group Size:</label>
-                     <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block w-full" placeholder="5">
+                     <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block w-full" placeholder="5" required>
                      <br>
                      <div class="md:w-2/3">
                         <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white"></input>

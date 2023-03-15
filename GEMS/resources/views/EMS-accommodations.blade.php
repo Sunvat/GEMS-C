@@ -86,7 +86,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
           <label for=\"full\" class=\"font-medium text-black\">Include Full</label>
           <input type=\"checkbox\" id=\"full\" name=\"full\" value=\"true\" checked=\"true\"><br><br>
           <div class=\"flex flex-col jusify-center items-center\">
-          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
+          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
           </div>
           </fieldset></form></div>
         </th>

@@ -104,7 +104,7 @@
                 <br>
                 <input id="id" name="id" type="text" placeholder="I.D Number" required class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <input type="text" class="invisible" id="admin" name="admin" for="admin">
+                <input type="hidden" id="admin" name="admin" value="0">
                 <?php
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
 

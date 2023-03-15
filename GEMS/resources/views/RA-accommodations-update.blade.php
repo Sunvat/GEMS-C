@@ -74,31 +74,31 @@ echo "<div class=\"container py-10 px-10 mx-0 min-w-full grid place-items-center
   <input type=\"hidden\" id=\"water\" name=\"water\" value=\"False\" />
 
   <label for=\"locName\">Location Name:</label><br>
-  <input type=\"text\" id=\"locName\" name=\"locName\" value=\"" . $row['aname'] . "\" required><br>
+  <input type=\"text\" id=\"locName\" name=\"locName\" class=\"border-2\" value=\"" . $row['aname'] . "\" required><br>
   <label for=\"locName\">Address:</label><br>
-  <input type=\"text\" id=\"address\" name=\"address\" value=\"" . $row['address'] . "\" required><br>
+  <input type=\"text\" id=\"address\" name=\"address\" class=\"border-2\" value=\"" . $row['address'] . "\" required><br>
   <label for=\"maxCap\">Maximum Capacity:</label><br>
-  <input type=\"number\" id=\"maxCap\" name=\"maxCap\" value=\"" . $row['maxCap'] . "\" required><br>
+  <input type=\"number\" id=\"maxCap\" name=\"maxCap\" class=\"border-2\" value=\"" . $row['maxCap'] . "\" required><br>
   <label for=\"popChange\">Net Change in Occupancy:</label><br>
-  <input type=\"number\" id=\"popChange\" name=\"popChange\" value=\"0\" required><br>
+  <input type=\"number\" id=\"popChange\" name=\"popChange\" class=\"border-2\" value=\"0\" required><br>
   <label for=\"desc\">Description:</label><br>
-  <input type=\"text\" id=\"desc\" name=\"desc\" value=\"" . $row['descr'] . "\"><br>
+  <input type=\"text\" id=\"desc\" name=\"desc\" class=\"border-2\" value=\"" . $row['descr'] . "\"><br>
   <label for=\"desc\">Image URL:</label><br>
-  <input type=\"text\" id=\"image\" name=\"image\" value=\"" . $row['image'] . "\"><br>
+  <input type=\"text\" id=\"image\" name=\"image\" class=\"border-2\" value=\"" . $row['image'] . "\"><br>
   <label for=\"wca\">Wheelchair Access</label>
-  <input type=\"checkbox\" id=\"wca\" name=\"wca\" value=\"True\" ". $boolCheck[0] ."><br>
+  <input type=\"checkbox\" id=\"wca\" name=\"wca\" class=\"border-2\" value=\"True\" ". $boolCheck[0] ."><br>
   <label for=\"pets\">Allows Pets</label>
-  <input type=\"checkbox\" id=\"pets\" name=\"pets\" value=\"true\" ". $boolCheck[1] ."><br>
+  <input type=\"checkbox\" id=\"pets\" name=\"pets\" class=\"border-2\" value=\"true\" ". $boolCheck[1] ."><br>
   <label for=\"med\">Medecine Available</label>
-  <input type=\"checkbox\" id=\"med\"  name=\"med\" value=\"true\" ". $boolCheck[2] ."><br>
+  <input type=\"checkbox\" id=\"med\"  name=\"med\" class=\"border-2\" value=\"true\" ". $boolCheck[2] ."><br>
   <label for=\"beds\">Beds Available</label>
-  <input type=\"checkbox\" id=\"beds\" name=\"beds\" value=\"true\" ". $boolCheck[3] ."><br>
+  <input type=\"checkbox\" id=\"beds\" name=\"beds\" class=\"border-2\" value=\"true\" ". $boolCheck[3] ."><br>
   <label for=\"high\">On High Ground</label>
-  <input type=\"checkbox\" id=\"high\" name=\"high\" value=\"true\" ". $boolCheck[4] ."><br>
+  <input type=\"checkbox\" id=\"high\" name=\"high\" class=\"border-2\" value=\"true\" ". $boolCheck[4] ."><br>
   <label for=\"food\">Food Provided</label>
-  <input type=\"checkbox\" id=\"food\" name=\"food\" value=\"true\" ". $boolCheck[5] ."><br>
+  <input type=\"checkbox\" id=\"food\" name=\"food\" class=\"border-2\" value=\"true\" ". $boolCheck[5] ."><br>
   <label for=\"water\">Water Provided</label>
-  <input type=\"checkbox\" id=\"water\" name=\"water\" value=\"true\" ". $boolCheck[6] ."><br><br>
+  <input type=\"checkbox\" id=\"water\" name=\"water\" class=\"border-2\" value=\"true\" ". $boolCheck[6] ."><br><br>
   <div class=\"md:flex md:items-center\">
     <div class=\"md:w-1/3\"></div>
     <div class=\"md:w-2/3\">

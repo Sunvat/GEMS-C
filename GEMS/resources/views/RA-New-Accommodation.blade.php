@@ -39,13 +39,13 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
     <input type=\"hidden\" id=\"water\" name=\"water\" value=\"False\" />
     
     <label for=\"locName\" class=\"block mb-2 text-large font-medium text-black jusify-center\">Accommodation Name:</label>
-    <input type=\"text\" id=\"locName\" name=\"locName\" placeholder=\"e.g UBC Campus\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\" required><br>
+    <input type=\"text\" id=\"locName\" name=\"locName\" placeholder=\"e.g UBC Campus\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \" required><br>
     <label for=\"address\" class=\"block mb-2 text-large font-medium text-black\">Address:</label>
-    <input type=\"text\" id=\"address\" name=\"address\" placeholder=\"e.g 755 Academy Way, Kelowna, BC\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\" required><br>
+    <input type=\"text\" id=\"address\" name=\"address\" placeholder=\"e.g 755 Academy Way, Kelowna, BC\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \" required><br>
     <label for=\"maxCap\" class=\"block mb-2 text-large font-medium text-black\">Total Capacity:</label>
-    <input type=\"number\" id=\"maxCap\" name=\"maxCap\" placeholder=\"e.g 500\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\" required><br>";
+    <input type=\"number\" id=\"maxCap\" name=\"maxCap\" placeholder=\"e.g 500\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \" required><br>";
     echo "<label for=\"regions\" class=\"block mb-2 text-large font-medium text-black\">Region</label>";
-    echo "<select id=\"regions\" name=\"regions\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\" required>";
+    echo "<select id=\"regions\" name=\"regions\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \" required>";
   
     while($row = mysqli_fetch_array($result)){
       echo "<option value =" . $row['rID'] . ">" . $row['rname'] . "</option>";
@@ -53,9 +53,9 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
     echo"</select><br>
     <label for=\"desc\" class=\"font-medium text-black\">Description:</label><br>
-    <textarea id=\"desc\" name=\"desc\" placeholder=\"Your description goes here.\" rows=\"4\" cols=\"50\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\"></textarea><br>
+    <textarea id=\"desc\" name=\"desc\" placeholder=\"Your description goes here.\" rows=\"4\" cols=\"50\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \"></textarea><br>
     <label for=\"image\" class=\"font-medium text-black\">Image URL:</label><br>
-    <input type=\"text\" id=\"image\" name=\"image\" placeholder=\"URL Here\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\"><br>
+    <input type=\"text\" id=\"image\" name=\"image\" placeholder=\"URL Here\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  \"><br>
     <label for=\"wca\" class=\"font-medium text-black\">Wheelchair Access</label>
     <input type=\"checkbox\" id=\"wca\" name=\"wca\" value=\"True\"><br>
     <label for=\"pets\" class=\"font-medium text-black\">Allows Pets</label>

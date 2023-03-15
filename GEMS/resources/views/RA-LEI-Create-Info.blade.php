@@ -38,15 +38,14 @@ if( isset($_GET['submit']) )
   ?>
 
   <label for="Location" class="mx-2 font-bold text-slate-700">Location Name:</label><br>
-  <input type="text" id="Location" name="Location" placeholder="Kelowna" class="rounded p-2"><br>
+  <input type="text" id="Location" name="Location" placeholder="Kelowna" class="rounded p-2 border"><br>
 
   <label for="Update" class="mx-2 font-bold text-slate-700">Update:</label><br>
-  <textarea id = "Update" name = "Update" form = "updateForm" cols = 25 rows=5></textarea><br>
+  <textarea id = "Update" name = "Update" form = "updateForm" cols = 25 rows=5 class = "border"></textarea><br>
   
    
   <input type="hidden" id="DateTime" name="DateTime" value= date class="rounded p-2"><br>
   
- <br>
  <div class="md:flex md:items-center">
     <div class="md:w-1/3">
     </div>

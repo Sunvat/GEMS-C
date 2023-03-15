@@ -1,5 +1,6 @@
 @extends('Layouts.default')
 @section('main')
+<!--Page used to comfirm a booking request.-->
 <body>
 
 <br>

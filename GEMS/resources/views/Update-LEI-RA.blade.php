@@ -33,18 +33,14 @@ if( isset($_GET['submit']) )
   echo "<form action=\"\" method=\"get\" id=\"updateForm\">";
 
   echo "<label for=\"rname\" class=\"mx-2 font-bold\">Location:</label><br>";
-  echo "<input type=\"text\" id=\"location\" name=\"location\" value=" . $loc . " \"class=\"rounded\"><br>";
-
+  echo "<input type=\"text\" id=\"location\" name=\"location\" value=" . $loc . " \" class = \"rounded bg-slate-200\"><br>";
+  
   echo "<label for=\"country\" class=\"mx-2 font-bold\">Information/Update:</label><br>";
-  echo "</div>";
-
-  echo "<div class = \"flex flex-col justify-center items-center\">";
+ 
   echo "<h1>Previous Text:</h1>";
   echo "<h1>" .$LEI["lei"]. "</h1>";
-  echo "</div>";
-
-  echo "<div class=\"flex flex-col justify-center items-center container py-10 px-10 mx-0 min-w-full\" id = \"container\">";
-  echo " <textarea id = \"Update\" name = \"Update\" form = \"updateForm\" cols = 25 rows=5></textarea><br>";
+ 
+  echo " <textarea id = \"Update\" name = \"Update\" form = \"updateForm\" cols = 25 rows=5 class = \"bg-slate-200\"></textarea><br>";
 
   echo "<label for=\"provState\" class=\"mx-2 font-bold\">Datetime:</label><br>";
   echo "<input type=\"text\" id=\"datetime\" name=\"datetime\" value = ". $LEI["datetime"]. " \"class=\"rounded p-2\"><br>";
@@ -61,7 +57,7 @@ if( isset($_GET['submit']) )
   echo "</div>";
   echo "</div>";
   echo "</form>";
-  echo "</div>";
+  
 ?>
 </body>
 

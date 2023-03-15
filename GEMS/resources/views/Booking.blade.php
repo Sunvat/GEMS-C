@@ -1,9 +1,10 @@
 @extends('Layouts.default')
 
 @section('main')
+<!-- Page used to create and inert a booking request into the database-->
     <body>
-
     <?php
+    //When Submitted the page will get the inputs from form and use InsertBooking to send to database.
 if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
@@ -13,9 +14,7 @@ if( isset($_GET['submit']) )
     header('Location: /Booking-Submitted');
     die();
 }
-
 ?>
-        
         <br>
         <br>
         <body >

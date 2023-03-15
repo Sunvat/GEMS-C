@@ -219,7 +219,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT rID, location, lei, datetime FROM LEI ");
+        $result = mysqli_query($con,"SELECT rID, location, lei, datetime FROM LEI ORDER BY datetime DESC");
 
         mysqli_close($con);
 

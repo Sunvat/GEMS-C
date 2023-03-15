@@ -1,16 +1,20 @@
 @extends('Layouts.RA-default')
 @section('main')
+<!--This page will be used to create regions -->
 <?php
+//when submit is clicked get region infor and insert into database.
+//also get contact info and submit into database.
 if( isset($_GET['submit']) )
 {
     require dirname(__DIR__, 3).'/database/insertFuncs.php';
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
-    $newRegion = array(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
-    InsertRegion($newRegion);
 
-    $id = getRegionID(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
+    $newRegion = array(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState']));
+    InsertRegion($newRegion); // region infor to database
+
+    $id = getRegionID(htmlentities($_GET['rname']), htmlentities($_GET['country']), htmlentities($_GET['provState'])); //ID needed to for contact insertion
     
-    InsertContact($id, htmlentities($_GET['pNumber']));
+    InsertContact($id, htmlentities($_GET['pNumber']));// get contact and insert into database
 
     header('Location: /RA_region');
     die();
@@ -32,6 +36,7 @@ Logged in as RA.
 </div>
 
 <div class="container py-10 px-10 mx-0 min-w-full grid place-items-center" id = "container">
+  <!--Form used to input region info and contact number -->
 <form action="" method="get" id="updateForm">
 
   <label for="rname" class="mx-2 font-bold text-slate-700">Region Name:</label><br>

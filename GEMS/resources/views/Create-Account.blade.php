@@ -57,8 +57,8 @@
     $newAccount = array(htmlentities($_GET['fname']),htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['id']),htmlentities($_GET['rID']),htmlentities($_GET['admin']));
 
     InsertAccountInfo($newAccount);
-    header('Location: /Create-Account');
-    die();
+    header('Location: /Login');
+    exit();
     }
     }
     

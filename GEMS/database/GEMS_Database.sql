@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `accommodations` (
   `Food` boolean DEFAULT False,
   `Water` boolean DEFAULT False,
   PRIMARY KEY (accID),
-  FOREIGN KEY (rID) REFERENCES regions(rID)
+  FOREIGN KEY (rID) REFERENCES regions(rID) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `regions` (
@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `bookerID` varchar(50) NOT Null,
   `status` varchar(9) DEFAULT 'PENDING',
   PRIMARY KEY (bookingID),
-  FOREIGN KEY (accID) REFERENCES accommodations(accID),
-  FOREIGN KEY (rID) REFERENCES regions(rID)
+  FOREIGN KEY (accID) REFERENCES accommodations(accID) ON DELETE CASCADE,
+  FOREIGN KEY (rID) REFERENCES regions(rID) ON DELETE CASCADE
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `wishlist` (
   `Bed` boolean DEFAULT False,
   `DateTime` DateTIME,
 	PRIMARY KEY (wishID),
-  FOREIGN KEY (rID) REFERENCES regions(rID)
+  FOREIGN KEY (rID) REFERENCES regions(rID) ON DELETE CASCADE
 	
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -105,13 +105,13 @@ CREATE TABLE IF NOT EXISTS `LEI` (
   `location` varchar(50) NOT NULL,
   `LEI` varchar(300) NOT Null,
   `datetime` DATETIME,
-  FOREIGN KEY (rID) REFERENCES regions(rID)
+  FOREIGN KEY (rID) REFERENCES regions(rID) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `Contact` (
   `rID` INT NOT NULL,
   `PNumber` varchar(50) NOT NULL,
-  FOREIGN KEY (rID) REFERENCES regions(rID)
+  FOREIGN KEY (rID) REFERENCES regions(rID) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.

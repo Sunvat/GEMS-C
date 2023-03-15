@@ -70,7 +70,7 @@ if( isset($_GET['submit']) )
 
     $rID = htmlentities($_GET['regions']);
 
-    header('Location: /Accommodations?rID=' . $rID);
+    header('Location: /RA-Accommodations?rID=' . $rID);
     die();
 }
 ?>

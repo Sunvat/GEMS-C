@@ -93,7 +93,7 @@ $result = getPendingBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"pending\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
+    <h3 id=\"pending\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
 </div><br>
 
 <table id=\"pendingTable\" class = \"table-fixed border mx-10 border-none\">
@@ -126,11 +126,11 @@ echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"approve(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white\">Approve</button>
+        <button type=\"button\" onclick=\"approve(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-black\">Approve</button>
       </div></td>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"decline(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Decline</button>
+  <button type=\"button\" onclick=\"decline(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Decline</button>
 </div></td>";
 echo "</tr>";
 }
@@ -144,7 +144,7 @@ $result = getConfirmedBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"confirmed\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
+    <h3 id=\"confirmed\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
 </div><br>
 
 <table id=\"confirmedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -184,7 +184,7 @@ $result = getDeclinedBookings();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"declined\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
+    <h3 id=\"declined\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
 </div><br>
 
 <table id=\"declinedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -223,7 +223,7 @@ $result = getAllWish();
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"wishList\" class = \"p-2 text-4xl text-white bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
+    <h3 id=\"wishList\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
 </div><br>
 
 <table id=\"wishTable\" class = \"table-fixed border mx-10 border-none\">
@@ -295,11 +295,11 @@ echo "<select id=\"chooseAcc\" name=\"chooseAcc\" >";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\">
-        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\"></input>
+        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\"></input>
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].")\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-white\">Delete</button>
+  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Delete</button>
 </div></td>";
 echo "</tr>";
 }

@@ -53,7 +53,7 @@ if( isset($_GET['submit']) )
   echo "</div>";
 
   echo "<div class=\"md:w-2/3\">";
-  echo "<input type=\"submit\" name=\"submit\" value=\"submit\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\"></input>";
+  echo "<input type=\"submit\" name=\"submit\" value=\"submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\"></input>";
   echo "</div>";
   echo "</div>";
   echo "</form>";

@@ -1,8 +1,8 @@
 @extends('Layouts.default')
 @section('main')
 <body>
-    <h1 class="font-semibold text-2xl flex flex-col justify-center items-center pb-5 text-white">Log in:</h1>
-    <p class=" font-semibold text-xl flex flex-col justify-center items-center pb-5 text-white">Welcome back, please enter your detials</p>
+    <h1 class="font-semibold text-2xl flex flex-col justify-center items-center pb-5 ">Log in:</h1>
+    <p class=" font-semibold text-xl flex flex-col justify-center items-center pb-5 ">Welcome back, please enter your detials</p>
     <div class="flex flex-col justify-center items-center rounded-md  drop-shadow-2xl">
      @if (session('status'))
         <div class="success">

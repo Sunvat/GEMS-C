@@ -21,36 +21,36 @@ if( isset($_GET['submit']) )
         <div class="w-96  mx-auto">
             <form action="" method="get" class="pb-1">
                  <fieldset class="border 5px px-5 py-5">
-                    <legend class="mb-5 text-xl font-bold text-white">Booking Request Form</legend>
+                    <legend class="mb-5 text-xl font-bold text-black">Booking Request Form</legend>
                     <?php
                         $accID = $_GET["accID"];
                         $rID = $_GET["rID"];
                         echo "<input type=\"hidden\" value=\"$accID\" id=\"accID\" name=\"accID\">";
                         echo "<input type=\"hidden\" value=\"$rID\" id=\"rID\" name=\"rID\">";
                      ?>
-                     <label for="cname" class=" text-white">Your Name:</label>
+                     <label for="cname" class=" text-black">Your Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block w-full" placeholder="John Doe" required>
                      <br>
-                     <label for="ems_division"class=" text-white">Your Department:</label>
+                     <label for="ems_division"class=" text-black">Your Department:</label>
                      <input type="text" id="ems_division" name="ems_division" class = "border solid 5px; mb-2; display block w-full" placeholder="<CITY> Fire Department" required>
                      <br>
-                     <label for="callerID"class=" text-white">Department Employee ID:</label>
+                     <label for="callerID"class=" text-black">Department Employee ID:</label>
                      <input type="text" id="callerID" name="callerID" class = "border solid 5px; mb-2; display block w-full" placeholder="CFD-12345" required>
                      <br>
-                     <label for="callerContactNumber:"class=" text-white">Your Contact Number:</label>
+                     <label for="callerContactNumber:"class=" text-black">Your Contact Number:</label>
                      <input type="text" id="callerContactNumber" name="callerContactNumber" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567" required>
                      <br>
-                     <label for="primEvacName"class=" text-white">Primary Evacuee Name:</label>
+                     <label for="primEvacName"class=" text-black">Primary Evacuee Name:</label>
                      <input type="text" id="primEvacName" name="primEvacName" class = "border solid 5px  mb-2 display block w-full" placeholder="Samantha Smith" required>
                      <br>
-                     <label for="primEvacContactNum"class=" text-white">Primary Evacuee Contact Number:</label>
+                     <label for="primEvacContactNum"class=" text-black">Primary Evacuee Contact Number:</label>
                      <input type="text" id="primEvacContactNum" name="primEvacContactNum" class = "border solid 5px; mb-2; display block w-full" placeholder="+1 (123) 123-4567" required>
                      <br>
-                     <label for="numOfEvacs"class=" text-white">Evacuee Group Size:</label>
+                     <label for="numOfEvacs"class=" text-black">Evacuee Group Size:</label>
                      <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block w-full" placeholder="5" required>
                      <br>
                      <div class="md:w-2/3">
-                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-white dark:hover:text-white dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-white"></input>
+                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-black"></input>
                      </div>
                  </fieldset>
                 </form>

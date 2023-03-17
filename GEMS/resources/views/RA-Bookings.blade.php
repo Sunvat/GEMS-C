@@ -286,7 +286,8 @@ $innerResult = getFilteredAcc(1, $filter);
 echo "<td class = \"border p-2\">
       <form action=\"\" method=\"get\" id=\"regForm\">
       <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />";
-echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>";
+echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
+<option value=\"\" disabled selected>Select your option</option>";
   
   while($innerRow = mysqli_fetch_array($innerResult)){
     echo "<option value =" . $innerRow['accID'] . ">" . $innerRow['aname'] . "</option>";

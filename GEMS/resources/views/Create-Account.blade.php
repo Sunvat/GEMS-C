@@ -68,11 +68,10 @@
         <form class="flex-items-center" method="get" class="mx-auto" action="Create-Account" >
                 @csrf
                 <label name ="fname" for="fname" class="mx-2 font-bold text-black">First Name:<a class="text-red-500"> *</a></label>
-                <br>
+                
                 <input id="fname" name ="fname" type="text" required placeholder="John" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
-                <br>
                 <label name ="lname" for="lname"class="mx-2 font-bold text-black">Last Name:<a class="text-red-500"> *</a></label>
-                <br>
+
                 <input id="lname" name ="lname" type="text" required placeholder="Doe" class="mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
                 <label name ="email" for="email"class="mx-2  font-bold text-black">E-mail:<a class="text-red-500"> *</a></label>

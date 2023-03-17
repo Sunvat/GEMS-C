@@ -6,7 +6,7 @@
 <br>
 <br>
 <br>
-<div class ="flex flex-auto justify-center items-center text-white">
+<div class ="flex flex-auto justify-center items-center text-black">
 <p>Your booking request has been submitted. Please review and confirm this booking request on the requests page.</p>
 </div>
 

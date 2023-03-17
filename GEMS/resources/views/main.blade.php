@@ -19,7 +19,7 @@
                 </div>
 <br>
 
-<div class = "flex justify-center items-center" style = "margin-right: -100px">
+<div class = "flex justify-center items-center ml-28 w-96" style = "">
 <?php
 //Latest EMergency Infor can be found here
 require dirname(__DIR__, 3).'/database/selectFuncs.php';

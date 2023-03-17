@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `useraccounts` (
   `pword` varchar(50) NOT NULL,
   `id` int AUTO_INCREMENT,
   `rID` int NOT NULL,
-  `admin` boolean NOT NULL,
+  `admin` boolean DEFAULT 0,
   PRIMARY KEY (id),
   FOREIGN KEY (rID) REFERENCES regions(rID)
 

@@ -21,9 +21,6 @@ if( isset($_GET['submit']) )
 }
 ?>
 <body>
-<b>
-This page should only be available to RAs
-</b>
 <br>
 <b>
 Logged in as RA.

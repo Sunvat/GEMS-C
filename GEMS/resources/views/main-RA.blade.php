@@ -14,7 +14,7 @@
                     <br><br><p class="text-xl max-w-md text-black">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
                 </div>
 
-                <div>
+                <div class="ml-12">
                 <div class = "flex flex-col justify-center items-center" style = "margin-right: -125px ">
                 <span class = "flex flex-row justify-center items-center">
                         <h1>
@@ -28,7 +28,7 @@
         </button>
                 </div>
 
-<div class = "flex justify-center items-center" style = "margin-right: -100px">
+<div class = "flex justify-center items-center ml-20 w-96" style = "margin-right: -100px">
 <?php
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
   $LEI = getLEIandID();

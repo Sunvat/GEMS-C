@@ -12,9 +12,8 @@
    <div class="h-full px-3 py-4 overflow-y-auto bg-white/10 border">
    <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <figure>
-            <img src = "{{ asset('/images/glohavenlogo.png') }}" class=""/>
+            <img src = "{{ asset('/images/GEMS.jpg') }}" class="w-40"/>
             </figure>
-            <span class="self-center text-3xl font-serif whitespace-nowrap px-2 " style="color:#f6ad55">G.E.M.S</span>
         </a>
       <ul class="space-y-2">
         <br>

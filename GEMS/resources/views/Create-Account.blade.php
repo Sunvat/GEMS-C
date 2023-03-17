@@ -54,16 +54,17 @@
         }
     else {
 
-    $newAccount = array(htmlentities($_GET['fname']),htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['id']),htmlentities($_GET['rID']));
+    $newAccount = array(htmlentities($_GET['fname']),htmlentities($_GET['lname']),htmlentities($_GET['email']),htmlentities($_GET['pword']),htmlentities($_GET['id']),htmlentities($_GET['rID']),htmlentities($_GET['admin']));
 
     InsertAccountInfo($newAccount);
-    header('Location: /Create-Account');
-    die();
+    header('Location: /Login');
+    exit();
     }
     }
     
     ?>
     <div class=" w-fit mx-auto px-52 py-14" id = "container">
+    <p class="mb-6 font-bold text-black"><a class="font-bold text-red-500">*</a> Are Required fields</p>
         <form class="flex-items-center" method="get" class="mx-auto" action="Create-Account" >
                 @csrf
                 <label name ="fname" for="fname" class="mx-2 font-bold text-black">First Name:<a class="text-red-500"> *</a></label>
@@ -103,12 +104,13 @@
                 <br>
                 <input id="id" name="id" type="text" placeholder="I.D Number" required class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
+                <input type="hidden" id="admin" name="admin" value="0">
                 <?php
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
     $result = getRegionAndID();
 
-    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-gray-900 dark:text-grey\">Select a region to browse available accommodations in that region:</label>";
+    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-bold text-gray-900 dark:text-grey\">Select a region to browse available accommodations in that region:</label>";
     
     echo "<select name = \"rID\" id=\"rID\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 \">";
 
@@ -124,11 +126,10 @@
                 <br>
                 <input type="text" placeholder="Confirmation Code" class=" mx-2 mb-4 py-2 px-2 border-2 rounded">
                 <br>
-                <div class = "flex flex-col justify-center items-center group bg-Lgreen border-2 border-Dgreen rounded-full hover:bg-gold w-25 ">
-                <input onclick="" type='submit' name='submit' value='submit'></input>
-                 </div>
+               
+                <input class="font-bold flex flex-col justify-center items-center group bg-Lgreen border-2 border-Dgreen rounded-full hover:bg-gold w-25  px-6 mx-14" onclick="" type='submit' name='submit' value='Submit'></input>
         </form>
-        <p class="mt-10 font-bold text-black"><a class="font-bold text-red-500">*</a> Are Required fields</p>
+
     </div>
  </div>
 

@@ -11,7 +11,7 @@
                     <br>
                     <p class="font-normal text-black text-left max-w-md">Welcome to the Glohaven Emergency Management System. <br> We provide an accommodation booking service that allows you to find temporary accommodation in times of emergency. 
                     <br><br>GEMS is a website which allows the first responders to come in to manage evacuations, learn more about emergencies and use the resources available to them efficiently. This project allows the members of the emergency services to look for accommodations in the affected areas by selecting their specific region, and then reserving/ booking accommodations for the evacuees.</p>
-                    <br><br><p class="text-xl max-w-md text-black">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
+                    <br><br><p class="text-xl max-w-md text-black font-bold">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
                 </div>
 
                 <div class="ml-12">
@@ -24,7 +24,7 @@
                    <h1 class="text-2xl text-black italic font-size:25px ">Latest Emergency Updates/Information</h1>
         <button class = "py-4">
           
-          <a href="{{route('RA-LEI')}}" class = "py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-Dgreen hover:bg-gold hover:text-Dgreen">Add or Edit Emergency Updates</a>
+          <a href="{{route('RA-LEI')}}" class = "py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-full border border-Dgreen hover:bg-gold hover:text-Dgreen">Add or Edit Emergency Updates</a>
         </button>
                 </div>
 
@@ -91,7 +91,7 @@ if( isset($_GET['submit']) )
     }
     echo"</select> <br>";
     echo "<div class=\"flex flex-col jusify-center items-center\">
-    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
+    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-full border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
     </div></div></form>";
 ?>
 </div>

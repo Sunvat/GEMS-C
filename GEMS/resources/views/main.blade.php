@@ -8,9 +8,10 @@
 
                 <div class = "flex flex-col justify-center items-center " style = "margin-right: -400px ">
                     <h2 class="font-bold text-4xl" style="color:#f6ad55">Our Mission</h2>
-                    <p class="font-normal text-black mt-6  text-left max-w-md">Welcome to the Glohaven Emergency Management System. <br> We provide an accommodation booking service that allows you to find temporary accommodation in times of emergency. 
+                    <p class="font-normal text-black mt-2  text-left max-w-md">Welcome to the Glohaven Emergency Management System. <br> We provide an accommodation booking service that allows you to find temporary accommodation in times of emergency. 
                     <br><br>GEMS is a website which allows the first responders to come in to manage evacuations, learn more about emergencies and use the resources available to them efficiently. This project allows the members of the emergency services to look for accommodations in the affected areas by selecting their specific region, and then reserving/ booking accommodations for the evacuees.</p>
-                    <br><br><p class="text-xl max-w-md text-gray-600">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
+                    <br>
+                    <p class="font-bold text-xl max-w-md text-black ">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
                 </div>
 
                 <div>
@@ -78,14 +79,14 @@ if( isset($_GET['submit']) )
     $result = getRegionAndID();
 
     echo "<form action=\"\" method=\"get\" id=\"regForm\">";
-    echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
+    echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
     //create rowss
     while($row = mysqli_fetch_array($result)){
       echo "<option value =" . $row['rID'] . ">" . $row['rname'] . "</option>";
     }
     echo"</select> <br>";
     echo "<div class=\"flex flex-col jusify-center items-center\">
-    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
+    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 mb-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
     </div></div></form>";
 ?>
 </div>

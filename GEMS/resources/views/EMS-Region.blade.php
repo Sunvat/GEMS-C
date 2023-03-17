@@ -18,8 +18,8 @@ if( isset($_GET['submit']) )
 
 <br>
 <div class = "flex flex-col justify-center items-center">
-  <div class = "my-14 p-1 bg-gold rounded-md">
-    <h1 class = "bg-Dgreen text-3xl text-white p-2">Select Region</h1>
+  <div class = "my-2 p-1 bg-black rounded-full">
+    <h1 class = "bg-Dgreen text-3xl text-white font-bold p-2">Select Region</h1>
   </div> 
 </div>
 
@@ -42,7 +42,7 @@ if( isset($_GET['submit']) )
     }
     echo"</select> <br><br>";
     echo "<div class=\"flex flex-col jusify-center items-center\">
-    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-white bg-Lgreen rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
+    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-white bg-Lgreen rounded-full border-2 border-Dgreen hover:bg-gold hover:text-Dgreen \"></input>
     </div></div></form>";
 ?>
 </div>

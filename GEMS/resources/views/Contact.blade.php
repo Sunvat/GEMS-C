@@ -13,8 +13,8 @@
     
     echo "<table class = \"table-fixed border mx-24\">
         <tr class = \"border border-slate-500\">
-        <th class = \"border border-slate-500\">Region</th>
-        <th class = \"bordor border-slate-500\">Contact</th>
+        <th class = \"border border-slate-500 bg-orange-400 text-white\">Region</th>
+        <th class = \"bordor border-slate-500 bg-orange-400 text-white\">Contact</th>
         </tr>";
     // Convert sql_resualt to string and display
        while($row = $contact->fetch_assoc()){

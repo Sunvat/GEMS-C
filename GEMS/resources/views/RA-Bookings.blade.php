@@ -286,7 +286,8 @@ $innerResult = getFilteredAcc(1, $filter);
 echo "<td class = \"border p-2\">
       <form action=\"\" method=\"get\" id=\"regForm\">
       <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />";
-echo "<select id=\"chooseAcc\" name=\"chooseAcc\" >";
+echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
+<option value=\"\" disabled selected>Select your option</option>";
   
   while($innerRow = mysqli_fetch_array($innerResult)){
     echo "<option value =" . $innerRow['accID'] . ">" . $innerRow['aname'] . "</option>";
@@ -295,7 +296,7 @@ echo "<select id=\"chooseAcc\" name=\"chooseAcc\" >";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\">
-        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\"></input>
+        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\"></input>
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">

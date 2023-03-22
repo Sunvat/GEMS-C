@@ -28,7 +28,7 @@ require_once("getConnection.php");
 
         //Return accommodations regardless of region
         if ($Reg == 0){
-            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations;");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations ORDER BY aname;");
         }
         //Return test accommodation
         else if ($Reg == -1){
@@ -36,7 +36,7 @@ require_once("getConnection.php");
         }
         //Return specified region
         else{
-            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations WHERE rID='$Reg';");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations WHERE rID='$Reg' ORDER BY aname;");
         }
         
         mysqli_close($con);
@@ -54,7 +54,7 @@ require_once("getConnection.php");
 
         //Return accommodations regardless of region
         if ($Reg <= 0){
-            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations;");
+            $result = mysqli_query($con,"SELECT accID, aname, address, image, isFull, maxCap-curOc AS openSpace FROM accommodations ORDER BY aname;");
         }
         //Return specified region
         else{
@@ -81,6 +81,7 @@ require_once("getConnection.php");
                     $SQL_Query .=  " AND isFull=false";
             }catch(Exception $e){}
                 
+            $SQL_Query .= " ORDER BY aname";
             $result = mysqli_query($con,$SQL_Query);
         }
         
@@ -97,7 +98,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT rname FROM regions ");
+        $result = mysqli_query($con,"SELECT rname FROM regions ORDER BY rname");
 
         mysqli_close($con);
 
@@ -119,15 +120,21 @@ require_once("getConnection.php");
         return $result;
     }
 
-    function getAllWish(){
+    function getAllWish($rID = 0){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get booking entries names.
-        $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID");
+        // sql query to get wishlist entries.
+        // rID = 0 is the default to return all rows regardless of region
+        if ($rID == 0){
+            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID");
+        }
+        else{
+            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID WHERE wishlist.rID = $rID");
+        }
 
         mysqli_close($con);
 
@@ -141,7 +148,7 @@ require_once("getConnection.php");
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get booking entries names.
+        // sql query to get a wishlist entry.
         $result = mysqli_query($con,"SELECT * FROM wishlist WHERE wishID = $wID");
         $row = mysqli_fetch_array($result);
 
@@ -150,46 +157,61 @@ require_once("getConnection.php");
         return $row;
     }
 
-    function getPendingBookings(){
+    function getPendingBookings($rID = 0){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
+
+        // rID = 0 is the default to return all rows regardless of region
+        if ($rID == 0){
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
+        }
+        else{
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING' AND bookings.rID = $rID");
+        }
 
         mysqli_close($con);
 
         return $result;
     }
 
-    function getConfirmedBookings(){
+    function getConfirmedBookings($rID = 0){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
-
+        // rID = 0 is the default to return all rows regardless of region
+        if ($rID == 0){
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
+        }
+        else{
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED' AND bookings.rID = $rID");
+        }
         mysqli_close($con);
 
         return $result;
     }
 
-    function getDeclinedBookings(){
+    function getDeclinedBookings($rID = 0){
         $con = getConn();
         // Check connection
         if (mysqli_connect_errno())
         {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        // sql query to get region names.
-        $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
-
+        // sql query to get declined booking requests.
+        // rID = 0 is the default to return all rows regardless of region
+        if ($rID == 0){
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
+        }
+        else{
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED' AND bookings.rID = $rID");
+        }
         mysqli_close($con);
 
         return $result;
@@ -203,7 +225,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get region names.
-        $result = mysqli_query($con,"SELECT rID, rname FROM regions ");
+        $result = mysqli_query($con,"SELECT rID, rname FROM regions ORDER BY rname");
 
         mysqli_close($con);
 

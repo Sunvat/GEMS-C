@@ -33,16 +33,16 @@
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
   $LEI = getLEIandID();
 
-  echo '<table class=\"min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700\">
-  <thead class="bg-gray-100 dark:bg-blak/90">
+  echo '<table class=\"min-w-full divide-y table-fixed divide-gray-700\">
+  <thead class="bg-blak/90">
                     <tr>
-                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-black">
+                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
                             Location
                         </th>
-                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-black">
+                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
                             Date/Time
                         </th>
-                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-black">
+                        <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
                             Update
                         </th>
                         
@@ -50,8 +50,8 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
                 </thead>';
 
   while($row = mysqli_fetch_array($LEI)){
-     echo "<tbody class=\"bg-white divide-y divide-gray-200 dark:bg-gray-800/50 dark:divide-gray-700\">";
-     echo "<tr class=\"hover:bg-gray-100 dark:hover:bg-gray-700\">";
+     echo "<tbody class=\"divide-y bg-gray-800/50 divide-gray-700\">";
+     echo "<tr class=\"hover:bg-gray-700\">";
      echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[1]."</th>";
      echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[3]."</th>";
      echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[2]."</th>";

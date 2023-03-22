@@ -4,30 +4,22 @@
 <!--main page for EMS USERS whne first going to the site this page is where you will land -->
 <body class>
 
-<div class = "grid grid-cols-2">
+<div class = "flex flex-col justify-center items-center">
+  <div>
+    <div class = "flex flex-col justify-center items-center">
+        <h1 class="text-2xl text-Lorange italic font-size:25px ">Latest Emergency Updates/Information</h1>
+    </div>
+    <br>
 
-                <div class = "flex flex-col justify-center items-center " style = "margin-right: -400px ">
-                    <h2 class="font-bold text-4xl" style="color:#f6ad55">Our Mission</h2>
-                    <p class="font-normal text-black mt-6  text-left max-w-md">Welcome to the Glohaven Emergency Management System. <br> We provide an accommodation booking service that allows you to find temporary accommodation in times of emergency. 
-                    <br><br>GEMS is a website which allows the first responders to come in to manage evacuations, learn more about emergencies and use the resources available to them efficiently. This project allows the members of the emergency services to look for accommodations in the affected areas by selecting their specific region, and then reserving/ booking accommodations for the evacuees.</p>
-                    <br><br><p class="text-xl max-w-md text-gray-600">Please choose a region within which you are trying to find accommodation to check availabilities:</b></p>
-                </div>
+    <div class = "flex justify-center items-center ml-28 w-96" style = "">
+      <?php
+      //Latest EMergency Infor can be found here
+      require dirname(__DIR__, 3).'/database/selectFuncs.php';
+      $LEI = getLEIandID(); //Get LEI information from database
 
-                <div>
-                <div class = "flex flex-col justify-center items-center" style = "margin-right: -125px ">
-                   <h1 class="text-2xl text-Lorange italic font-size:25px ">Latest Emergency Updates/Information</h1>
-                </div>
-<br>
-
-<div class = "flex justify-center items-center ml-28 w-96" style = "">
-<?php
-//Latest EMergency Infor can be found here
-require dirname(__DIR__, 3).'/database/selectFuncs.php';
-  $LEI = getLEIandID(); //Get LEI information from database
-
-  //make things look good... Hopfully.
-  echo '<table class=\"min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700\">
-  <thead class="bg-gray-100 dark:bg-blak/90">
+      //make things look good... Hopfully.
+      echo '<table class=\"min-w-full divide-y divide-gray-200 dark:divide-gray-700\">
+              <thead class="bg-gray-100 dark:bg-blak/90">
                     <tr>
                         <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
                             Location
@@ -40,59 +32,56 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
                         </th>
                         
                     </tr>
-                </thead>';
+                  </thead>';
 
-  //Display information form database into rows
-  while($row = mysqli_fetch_array($LEI)){
-     echo "<tbody class=\"bg-white divide-y bg-gray-800/50 divide-gray-700\">";
-     echo "<tr class=\"hover:bg-gray-700\">";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[1]."</th>";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[3]."</th>";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[2]."</th>";
-     echo "</tr>";
-     echo "</tbody>";
-  }
-  
-  echo "</table>";
-  ?>
-   </div>
+      //Display information form database into rows
+      while($row = mysqli_fetch_array($LEI)){
+        echo "<tbody class=\"bg-white bg-gray-800/50 divide-gray-700\">";
+        echo "<tr class=\"hover:bg-gray-700\">";
+        echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[1]."</th>";
+        echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[3]."</th>";
+        echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[2]."</th>";
+        echo "</tr>";
+        echo "</tbody>";
+      }
+      echo "</table>";
+      ?>
+    </div>
   </div>
-  </div>
-<?php
-if( isset($_GET['submit']) )
-{
+
+  <?php
+  if( isset($_GET['submit']) ){
 
     $rID = htmlentities($_GET['regions']);
 
     header('Location: /Accommodations?rID=' . $rID);
     die();
-}
-?>
-<div style = "margin-right: 325px">
+  }
+  ?>
+  
+    <div>
+      <form id="ChooseRegion">
+        <br>
+        <?php
+        //get region info from database
+        $result = getRegionAndID();
 
-<div class = "flex flex-col items-center">
-  <form id="ChooseRegion">
-    <br>
-    <?php
-    //get region info from database
-    $result = getRegionAndID();
+        echo "<form action=\"\" method=\"get\" id=\"regForm\">";
 
-    echo "<form action=\"\" method=\"get\" id=\"regForm\">";
+        echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5\">";
 
-    echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5\">";
-
-    //create rowss
-    while($row = mysqli_fetch_array($result)){
-      echo "<option value =" . $row['rID'] . ">" . $row['rname'] . "</option>";
-    }
-    echo"</select> <br>";
-    echo "<div class=\"flex flex-col jusify-center items-center\">
-    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
-    </div></div></form>";
-?>
+        //create rowss
+        while($row = mysqli_fetch_array($result)){
+          echo "<option value =" . $row['rID'] . ">" . $row['rname'] . "</option>";
+        }
+        echo"</select> <br>";
+        echo "<div class=\"flex flex-col jusify-center items-center\">
+        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
+        </div></div></form>";
+        ?>
+    </div>
+  
 </div>
-  </div>
-
 
 </body>
 

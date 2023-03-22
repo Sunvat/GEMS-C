@@ -27,8 +27,7 @@
          <li>
             <a href="{{route('Regions')}}" class="flex items-center p-2 text-base font-normal text-black rounded-lg hover:bg-black hover:text-white">
                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Make Booking</span>
-               <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium rounded-full bg-gray-700 text-gray-300">Regions</span>
+               <span class="flex-1 ml-3 whitespace-nowrap">Regions</span>
             </a>
          </li>
          <li>

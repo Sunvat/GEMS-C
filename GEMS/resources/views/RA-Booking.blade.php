@@ -10,7 +10,7 @@ if( isset($_GET['submit']) )
 
     $newBooking = array(htmlentities($_GET['accID']), htmlentities($_GET['rID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']));
     InsertBooking($newBooking);
-    header('Location: /Booking-Submitted');
+    header('Location: /RA_Booking-Submitted');
     die();
 }
 

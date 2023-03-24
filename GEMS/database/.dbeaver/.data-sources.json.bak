@@ -1,0 +1,32 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-187114b9b4e-dffcd44ca269416": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "gems",
+			"save-password": true,
+			"show-system-objects": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "gems",
+				"url": "jdbc:mariadb://localhost:3306/gems",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

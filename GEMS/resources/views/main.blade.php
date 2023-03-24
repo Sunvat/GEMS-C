@@ -18,8 +18,8 @@
       $LEI = getLEIandID(); //Get LEI information from database
 
       //make things look good... Hopfully.
-      echo '<table class=\"min-w-full divide-y divide-gray-200 dark:divide-gray-700\">
-              <thead class="bg-gray-100 dark:bg-blak/90">
+      echo '<table class=\"min-w-full divide-y divide-gray-700\">
+              <thead class="bg-blak/90">
                     <tr>
                         <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
                             Location

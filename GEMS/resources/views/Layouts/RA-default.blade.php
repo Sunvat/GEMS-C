@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glohaven Emergency Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/glohavenlogo.png') }}">
     @vite('resources/css/app.css')
 </head>
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">
-<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-75 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-75 h-full w-2/12 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-white-10 border">
    <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <figure>
             <img src = "{{ asset('/images/glohavenlogo.png') }}" class=""/>
             </figure>
-            <span class="self-center text-3xl font-serif whitespace-nowrap px-2 " style="color:#f6ad55">G.E.M.S</span>
+            <span class="self-center text-3xl font-serif px-2 " style="color:#f6ad55">G.E.M.S</span>
         </a>
       <ul class="space-y-2">
         <br>

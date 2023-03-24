@@ -33,7 +33,7 @@
 require dirname(__DIR__, 3).'/database/selectFuncs.php';
   $LEI = getLEIandID();
 
-  echo '<table class=\"min-w-full divide-y table-fixed divide-gray-700\">
+  echo '<table class=\"min-w-full divide-y table-fixed divide-gray-400\">
   <thead class="bg-blak/90">
                     <tr>
                         <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
@@ -50,11 +50,11 @@ require dirname(__DIR__, 3).'/database/selectFuncs.php';
                 </thead>';
 
   while($row = mysqli_fetch_array($LEI)){
-     echo "<tbody class=\"divide-y bg-gray-800/50 divide-gray-700\">";
-     echo "<tr class=\"hover:bg-gray-700\">";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[1]."</th>";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[3]."</th>";
-     echo "<th class = \" font-medium border p-2 border-slate-700 \">".$row[2]."</th>";
+     echo "<tbody class=\"divide-y bg-gray-500/50 divide-gray-400\">";
+     echo "<tr>";
+     echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
+     echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
+     echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
      echo "</tr>";
      echo "</tbody>";
   }

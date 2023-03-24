@@ -1,5 +1,18 @@
 @extends('Layouts.RA-default')
 @section('main')
+<script>
+  function time(){
+    var currentdate = new Date(); 
+    var date = currentdate.getFullYear() + "-"
+            + currentdate.getMonth() + "-" 
+            + currentdate.getDate() + " "  
+            + currentdate.getHours() + ":"  
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+
+            document.getElementById("DateTime").value = date;
+  }
+</script>
 <?php
 $loc = $_GET["location"];
 
@@ -43,7 +56,7 @@ if( isset($_GET['submit']) )
   echo " <textarea id = \"Update\" name = \"Update\" form = \"updateForm\" cols = 25 rows=5 class = \"bg-slate-200\"></textarea><br>";
 
   echo "<label for=\"provState\" class=\"mx-2 font-bold\">Datetime:</label><br>";
-  echo "<input type=\"text\" id=\"datetime\" name=\"datetime\" value = ". $LEI["datetime"]. " \"class=\"rounded p-2\"><br>";
+  echo "<input type=\"hidden\" id=\"DateTime\" name=\"datetime\" class=\"rounded p-2\"><br>";
     
   echo "<br>";
 

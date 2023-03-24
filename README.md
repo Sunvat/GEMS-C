@@ -110,19 +110,38 @@ These are to be used with a terminal currently open to the GEMS folder.
 |insertAcc($newAccommodation)|Insert a new accommodation into the database. $newAccommodation must be an array containing the accommodation name, region name, country, street address, and the maximum capacity in that order. Does not return anything|database/insertFuncs.php|
 |insertTestAcc()|Inserts mock data into a mock table in the database. Used to ensure the database can be connected to, as well as insert syntax is correct for the used version of SQL. Accommodation will be deleted when running all unit tests.|database/insertFuncs.php|
 |InsertRegion()|Insert function that inserts region information into the "regions" table in the database. This is called upon when a user creates a new region that is to be added to the list.|database/insertFuncs.php|
-|InsertBooking()|Insert function which inserts new booking information that is entered by the reservation agents into the "bookings" table in the databse.|database/insertFuncs.php|
-|InsertAccountInfo()| Function that inserts account information into "useraccounts" table in the database. The values from the form which is filled during creating an account at the webiste.|database/insertFuncs.php|
+|InsertBooking()|Insert function which inserts new booking information into the "bookings" table in the database.|database/insertFuncs.php|
+|InsertWishlist()|Insert function which inserts new wishlist information into the "bookings" table in the database.|database/insertFuncs.php|
+|InsertAccountInfo()| Function that inserts account information into "useraccounts" table in the database.|database/insertFuncs.php|
 |InsertLEI()|Insert function which inserts infromation into the "LEI" table in the database. The information about laltest emergency are input in the website and is added to the databse through this function.|database/insertFuncs.php|
+|InsertContact()| Function that inserts RA contact information into "contacts" table in the database.|database/insertFuncs.php|
 |updateAccDet($accommodation)|Updates an accommodation in the database. $accommodation must be an array containing, in order, the accommodation name, the street address, region name, country, maximum capacity, the change in number of occupants (can be positive or negative), the description, the image URL, if there's wheelchair access (boolean), if pets are allows (boolean), if there is medical attention available (boolean), if there are beds (boolean), if it is located on high ground (boolean), if food is available (boolean), if water is available (boolean), and the accommodation ID. The site has been set up to add unchanged values to the array automatically. Does not return anything|database/updateFuncs.php|
+|confirmDenyBooking($answer, $bID)|Updates a booking request in the database. $answer is either 1 or 0, with 1 being a confirmation and 0 declining the request. $bID is the ID of the booking. A confirmation will change the booking's status to "CONFIRMED" and modify the current occupancy of the accommodation. Does not return anything|database/updateFuncs.php|
+|confirmWish($wish)|Updates a wishlist request in the database. $wish is an array that contains all the information about the wishlist request, and should be in the order of wish ID and the accommodation ID. The wish will be moved into the approved booking section. Does not return anything|database/updateFuncs.php|
 |updateRegion($region)|Updates a region in the database. **TBD**. The site has been set up to add unchanged values to the array automatically. Does not return anything|database/updateFuncs.php|
 |updateLEI($LEI)|Updates an emergency update in the database. $LEI must be an array containing, in order, the location, the information about the emergency, the date, the affected country, and the region ID. The site has been set up to add unchanged values to the array automatically. Does not return anything|database/updateFuncs.php|
 |getAccDet($ID)|Gets the details of a single accommodation, and processes the SQL data returned by the database. $ID is an int that corresponds to the ID of the desired accommodation. Returns the details as a usable array.|database/selectFuncs.php|
 |getAllAcc($Reg)|Gets the basic details of all accommodations in the database. $Reg is an int that corresponds to the ID of the desired region. If $Reg is set to 0 or left blank, it will return accommodations of all regions. If $Reg is set to -1, it will connect to the table in the database used for testing, and return any mock data stored within. Returns SQL data that must be processed into rows using mysqli_fetch_array($result).|database/selectFuncs.php|
+|getFilteredAcc($Reg, $filter)|Gets the basic details of all accommodations in the database that meet the criteria of the filter. $Reg is an int that corresponds to the ID of the desired region. If $Reg is set to 0 or left blank, it will return accommodations of all regions. If $Reg is set to -1, it will connect to the table in the database used for testing, and return any mock data stored within. Returns SQL data that must be processed into rows using mysqli_fetch_array($result).|database/selectFuncs.php|
 |getRegion()|Returns all region names from the database.|database/selectFuncs.php|
 |getRegionAndID()|Returns all region names and IDs from the database|database/selectFuncs.php|
 |getAllBookings()|Returns all bookings in the database.|database/selectFuncs.php|
+|getAllWish($rID)|Returns all wishlist items of the specified region in the database.|database/selectFuncs.php|
+|getWish($wID)|Returns a single wishlist request, specified by the ID.|database/selectFuncs.php|
+|getPendingBookings($rID)|Returns all bookings marked "PENDING" within a region specified by the ID.|database/selectFuncs.php|
+|getConfirmedBookings($rID)|Returns all bookings marked "CONFIRMED" within a region specified by the ID.|database/selectFuncs.php|
+|getDeclinedBookings($rID)|Returns all bookings marked "DENIED" within a region specified by the ID.|database/selectFuncs.php|
+|getRegionandID()|Returns all regions and their ID.|database/selectFuncs.php|
 |getLEIandID()|Returns the region id, location, update information, and time of emergency updates from the database.|database/selectFuncs.php|
+|getRowLEI($LEI)|Returns a single LEI update from the database.|database/selectFuncs.php|
+|getContact()|Returns the region id and phone number of all contacts in the database.|database/selectFuncs.php|
+|getRegionID($rname, $country, $provstate)|Returns the region id based on the specified location.|database/selectFuncs.php|
+|getRegionByID($rname, $country, $provstate)|Returns the region name based on the specified ID.|database/selectFuncs.php|
 |delAcc($ID)|Deletes a single accommodation from the database. $ID is an int that corresponds to the ID of the accommodation to be deleted. Does not return anything.|database/selectFuncs.php|
+|delBooking($bookingID)|Deletes a single booking from the database. $bookingID is an int that corresponds to the ID of the booking to be deleted. Does not return anything.|database/selectFuncs.php|
+|delWish($wishID)|Deletes a single wish from the database. $wishID is an int that corresponds to the ID of the wish to be deleted. Does not return anything.|database/selectFuncs.php|
+|delAccTest()|Deletes a test accommodation from the database. Is run during unit tests.|database/selectFuncs.php|
+|delLEI($rID, $LEI, $DATETIME)|Deletes a single LEI from the database. $LEI is an int that corresponds to the ID of the accommodation to be deleted. Does not return anything.|database/selectFuncs.php|
 
 ## SQL Triggers
 |Name|Usage|File Location|

@@ -78,7 +78,7 @@ if( isset($_GET['submit']) )
 
     confirmWish($wish);
 
-    header("Location: /RA-Bookings?rID=".$rID);
+    header("Location: /RA-Bookings?rID=".$_GET['rID']);
     exit();
 }
 ?>
@@ -294,7 +294,8 @@ echo "<td class = \"border p-2\">" . $boolCheck[3] . "</td>";
 $innerResult = getFilteredAcc($rID, $filter);
 echo "<td class = \"border p-2\">
       <form action=\"\" method=\"get\" id=\"regForm\">
-      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />";
+      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />
+      <input type=\"hidden\" id=\"rID\" name=\"rID\" value=\"". $row['rID'] ."\" />";
 echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
 <option value=\"\" disabled selected>Select your option</option>";
   

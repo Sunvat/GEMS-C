@@ -10,7 +10,7 @@ if( isset($_GET['submit']) )
 
     $newWish = array(htmlentities($_GET['rID']), htmlentities($_GET['cname']), htmlentities($_GET['ems_division']), htmlentities($_GET['callerID']), htmlentities($_GET['callerContactNumber']), htmlentities($_GET['numOfEvacs']), htmlentities($_GET['primEvacName']), htmlentities($_GET['primEvacContactNum']), htmlentities($_GET['wca']), htmlentities($_GET['pets']), htmlentities($_GET['med']), htmlentities($_GET['beds']));
     InsertWishlist($newWish);
-    header('Location: /EMS-Wish-Submitted');
+    header('Location: /RA-Wish-Submitted');
     die();
 }
 

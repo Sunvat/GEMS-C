@@ -8,9 +8,11 @@
 
 <body>
 <?php
+  //Decline request then return
   require dirname(__DIR__, 3).'/database/updateFuncs.php';
   confirmDenyBooking(0, $_GET["bookingID"]);
-  header("Location: /RA-Bookings");
+  $rID = $_GET["rID"];
+  header("Location: /RA-Bookings?rID=".$rID);
   exit();
 ?>
 

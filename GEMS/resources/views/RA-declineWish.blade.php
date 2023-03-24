@@ -8,9 +8,11 @@
 
 <body>
 <?php
+  //Delete wish and return
   require dirname(__DIR__, 3).'/database/deleteFuncs.php';
   delWish($_GET["wishID"]);
-  header("Location: /RA-Bookings");
+  $rID = $_GET["rID"];
+  header("Location: /RA-Bookings?rID=".$rID);
   exit();
 ?>
 

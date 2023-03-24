@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glohaven Emergency Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/glohavenlogo.png') }}">
     <link rel="icon" src="https://github.com/Sunvat/GEMS-C/blob/main/GEMS/resources/images/gemslogo.jpg">
     @vite('resources/css/app.css')
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">

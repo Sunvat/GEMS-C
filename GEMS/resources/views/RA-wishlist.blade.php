@@ -58,7 +58,7 @@ if( isset($_GET['submit']) )
                      <label for="beds" class="text-black">Beds Preferred</label>
                      <input type="checkbox" id="beds" name="beds" value="true"><br><br>
                      <div class="md:w-2/3">
-                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-black"></input>
+                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange"></input>
                      </div>
                  </fieldset>
                 </form>

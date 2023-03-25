@@ -18,9 +18,9 @@
 
     $result = getRegionAndID();
 
-    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-gray-900 dark:text-grey\">Select a region to browse available accommodations in that region:</label>";
+    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-grey \">Select a region to browse available accommodations in that region:</label>";
     echo "<form action = \"\" method = \"get\">";
-    echo "<select name = \"dropdown\" id=\"dropdown\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
+    echo "<select name = \"dropdown\" id=\"dropdown\" class=\"bg-gray-700 border border-gray-600 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\">";
 
     while($row = mysqli_fetch_array($result)){
       echo "<option value =" . htmlspecialchars($row['rID'], ENT_QUOTES, 'UTF-8') . ">" . htmlspecialchars($row['rID'], ENT_QUOTES, 'UTF-8') .": ". htmlspecialchars($row['rname'], ENT_QUOTES, 'UTF-8') . "</option>";

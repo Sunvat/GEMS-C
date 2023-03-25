@@ -78,7 +78,7 @@ if( isset($_GET['submit']) )
 
     confirmWish($wish);
 
-    header("Location: /RA-Bookings?rID=".$rID);
+    header("Location: /RA-Bookings?rID=".$_GET['rID']);
     exit();
 }
 ?>
@@ -133,11 +133,11 @@ echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"approve(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-black\">Approve</button>
+        <button type=\"button\" onclick=\"approve(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Approve</button>
       </div></td>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"decline(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Decline</button>
+  <button type=\"button\" onclick=\"decline(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Decline</button>
 </div></td>";
 echo "</tr>";
 }
@@ -294,7 +294,8 @@ echo "<td class = \"border p-2\">" . $boolCheck[3] . "</td>";
 $innerResult = getFilteredAcc($rID, $filter);
 echo "<td class = \"border p-2\">
       <form action=\"\" method=\"get\" id=\"regForm\">
-      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />";
+      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />
+      <input type=\"hidden\" id=\"rID\" name=\"rID\" value=\"". $row['rID'] ."\" />";
 echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
 <option value=\"\" disabled selected>Select your option</option>";
   
@@ -309,7 +310,7 @@ echo "<div class=\"inline-flex rounded-md shadow-sm\">
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Delete</button>
+  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Delete</button>
 </div></td>";
 echo "</tr>";
 }

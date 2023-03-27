@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glohaven Emergency Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/glohavenlogo.png') }}">
     @vite('resources/css/app.css')
 </head>
 <body class = "float-none flex flex-col min-h-screen bg-orange bg-cover">
-<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-75 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="default-sidebar" class=" fixed top-0 left-0 z-0 w-75 h-full w-2/12 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-white-10 border">
    <a href="{{route('Home')}}" class="flex items-center mb-4 sm:mb-0">
             <figure>
             <img src = "{{ asset('/images/glohavenlogo.png') }}" class=""/>
             </figure>
-            <span class="self-center text-3xl font-serif whitespace-nowrap px-2 " style="color:#f6ad55">G.E.M.S</span>
+            <span class="self-center text-3xl font-serif px-2 " style="color:#f6ad55">G.E.M.S</span>
         </a>
       <ul class="space-y-2">
         <br>
@@ -33,9 +34,9 @@
             </a>
          </li>
          <li>
-            <a href="{{route('RA-Bookings')}}" class="flex items-center p-2 text-base font-normal text-black rounded-lg hover:bg-black hover:text-white">
+            <a href="{{route('Bookings-Regions')}}" class="flex items-center p-2 text-base font-normal text-black rounded-lg hover:bg-black hover:text-white">
                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Booking Waitlist</span>
+               <span class="flex-1 ml-3 whitespace-nowrap">Bookings</span>
             </a>
          </li>
          <li>

@@ -113,6 +113,16 @@ Route::get('/EMS-Wish-Submitted', function () {
     return view('EMS-Wish-Submitted');
 })->name('EMS-Wish-Submitted');
 
+//Goes to RA facing wishlist page.
+Route::get('/RA-wishlist', function () {
+    return view('RA-wishlist');
+})->name('RA-wishlist');
+
+//Goes to RA facing wishlist page.
+Route::get('/RA-Wish-Submitted', function () {
+    return view('RA-Wish-Submitted');
+})->name('RA-Wish-Submitted');
+
 //Goes to page to confirm booking page.
 Route::get('/Booking-Submitted', function () {
     return view('Booking-Submitted');
@@ -122,6 +132,11 @@ Route::get('/Booking-Submitted', function () {
 Route::get('/RA_Booking-Submitted', function () {
     return view('RA_Booking-Submitted');
 })->name('RA_Booking-Submitted');
+
+//Region select for bookings
+Route::get('/Bookings-Regions', function () {
+    return view('RA_bookings_region');
+})->name('Bookings-Regions');
 
 //Goes to Admin page to create accounts
 Route::view("Registered","/Create-Account");
@@ -155,11 +170,6 @@ Route::get('/RA-LEI-Create-Region', function () {
 Route::get('/WaitingList', function () {
     return view('WaitingList');
 })->name('WaitingList');
-
-//goes to Confriming/deny public requests.
-Route::get('/Bookings', function () {
-    return view('Bookings');
-})->name('Bookings');
 
 //Goes to RA Delete Accomodation
 Route::get('/DeleteAcc', function () {

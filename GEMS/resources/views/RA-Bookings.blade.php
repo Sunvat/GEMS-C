@@ -4,23 +4,27 @@
   <header>
 
   <script>
-    function decline(bookingID) {
+    //Helper page to decline bookings
+    function decline(bookingID, rID) {
       //Redirects to a page that runs the PHP confirmDeclineBooking function on the accommodation with the ID.
-      window.location.href = "/RA-declineBooking?bookingID="+bookingID;
+      window.location.href = "/RA-declineBooking?bookingID="+bookingID+"&rID="+rID;
 }
 
-    function approve(bookingID) {
+    //Helper page to approve bookings
+    function approve(bookingID, rID) {
       //Redirects to a page that runs the PHP confirmDeclineBooking function on the accommodation with the ID.
-      window.location.href = "/RA-ApproveBooking?bookingID="+bookingID;
+      window.location.href = "/RA-ApproveBooking?bookingID="+bookingID+"&rID="+rID;
 }
-    function declineWish(ID) {
+    //Helper page to decline wishes
+    function declineWish(wID, rID) {
         var r = confirm("Are you sure you want to delete this request?");
         //This is a very roundabout way of deleting things. Look into AJAX.
         if (r == true) {
           //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
-          window.location.href = "/RA-declineWish?wishID="+ID;
+          window.location.href = "/RA-declineWish?wishID="+wID+"&rID="+rID;
         }
         else {
+          //Do nothing
         }
     }
 
@@ -66,6 +70,7 @@
 </script>
 
 <?php
+//When the submit button is clicked, move the wish into bookings
 if( isset($_GET['submit']) )
 {
     require_once dirname(__DIR__, 3).'/database/updateFuncs.php';
@@ -73,7 +78,7 @@ if( isset($_GET['submit']) )
 
     confirmWish($wish);
 
-    header("Location: /RA-Bookings");
+    header("Location: /RA-Bookings?rID=".$_GET['rID']);
     exit();
 }
 ?>
@@ -86,14 +91,16 @@ if( isset($_GET['submit']) )
 
 <?php
 require_once dirname(__DIR__, 3).'/database/selectFuncs.php';
+$rID = $_GET["rID"];
 
-//SHOULD USE AN rID ONCE ACCOUNTS ARE SET UP
-$result = getPendingBookings();
+//SHOULD USE AN rID FROM USER ONCE ACCOUNTS ARE SET UP
+//Get pending bookings
+$result = getPendingBookings($rID);
 
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"pending\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
+    <h3 id=\"pending\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
 </div><br>
 
 <table id=\"pendingTable\" class = \"table-fixed border mx-10 border-none\">
@@ -126,11 +133,11 @@ echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"approve(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:ring-blue-500 dark:focus:text-black\">Approve</button>
+        <button type=\"button\" onclick=\"approve(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Approve</button>
       </div></td>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"decline(".$row['bookingID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Decline</button>
+  <button type=\"button\" onclick=\"decline(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Decline</button>
 </div></td>";
 echo "</tr>";
 }
@@ -139,12 +146,12 @@ echo "</table>
 
 
 //Confirmed Table
-$result = getConfirmedBookings();
+$result = getConfirmedBookings($rID);
 
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"confirmed\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
+    <h3 id=\"confirmed\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
 </div><br>
 
 <table id=\"confirmedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -178,13 +185,13 @@ echo "</tr>";
 echo "</table>
 </div><br>";
 
-//Confirmed Table
-$result = getDeclinedBookings();
+//Declined Table
+$result = getDeclinedBookings($rID);
 
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"declined\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
+    <h3 id=\"declined\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
 </div><br>
 
 <table id=\"declinedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -218,12 +225,12 @@ echo "</tr>";
 echo "</table>
 </div><br>";
 
-
-$result = getAllWish();
+//Get wishlist items
+$result = getAllWish($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"wishList\" class = \"p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
+    <h3 id=\"wishList\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
 </div><br>
 
 <table id=\"wishTable\" class = \"table-fixed border mx-10 border-none\">
@@ -257,6 +264,7 @@ echo "<td class = \"border p-2\">" . $row['bookerName'] . "</td>";
 echo "<td class = \"border p-2\">" . $row['bookerID'] . "</td>";
 echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
 
+// Check details of wish
 $boolCheck = ["No", "No", "No", "No"];
 $filter = ["false", "false", "false", "false"];
 
@@ -282,10 +290,12 @@ echo "<td class = \"border p-2\">" . $boolCheck[1] . "</td>";
 echo "<td class = \"border p-2\">" . $boolCheck[2] . "</td>";
 echo "<td class = \"border p-2\">" . $boolCheck[3] . "</td>";
 
-$innerResult = getFilteredAcc(1, $filter);
+// Get locations that suit the wish
+$innerResult = getFilteredAcc($rID, $filter);
 echo "<td class = \"border p-2\">
       <form action=\"\" method=\"get\" id=\"regForm\">
-      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />";
+      <input type=\"hidden\" id=\"wID\" name=\"wID\" value=\"". $row['wishID'] ."\" />
+      <input type=\"hidden\" id=\"rID\" name=\"rID\" value=\"". $row['rID'] ."\" />";
 echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
 <option value=\"\" disabled selected>Select your option</option>";
   
@@ -300,7 +310,7 @@ echo "<div class=\"inline-flex rounded-md shadow-sm\">
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange dark:bg-Glohaven-Orange dark:border-Glohaven-Hovered dark:text-black dark:hover:text-black dark:hover:bg-Glohaven-Hovered dark:focus:Glohaven-Orange dark:focus:text-black\">Delete</button>
+  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Delete</button>
 </div></td>";
 echo "</tr>";
 }

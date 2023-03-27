@@ -79,7 +79,7 @@ if( isset($_GET['submit']) )
     $result = getRegionAndID();
 
     echo "<form action=\"\" method=\"get\" id=\"regForm\">";
-    echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\">";
+    echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5\">";
     //create rowss
     while($row = mysqli_fetch_array($result)){
       echo "<option value =" . $row['rID'] . ">" . $row['rname'] . "</option>";

@@ -13,7 +13,7 @@ if( isset($_GET['submit']) )
 
 <br><br>
 <div class = "flex flex-col justify-center items-center">
-    <h1 class = " p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1>
+    <h1 class = "text-2xl p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1>
 </div>
 
 <div class = "flex flex-col jusify-center items-center">

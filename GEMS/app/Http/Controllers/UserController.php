@@ -22,6 +22,7 @@ class UserController extends Controller{
 
     function Login(Request $req){
         //input id and password
+        session_start();
         $inid = $req-> input('workID');
         $inpass = $req -> input('password');
         if( $req->validate([
@@ -52,6 +53,7 @@ class UserController extends Controller{
         $dbid = $row['id'];
         $dbpass = $row['pword'];
         if($dbid == $inid && $dbpass==$inpass){
+            $_SESSION ['loggedin'] = true;
             header("Location: /main-RA");
            exit();
           }

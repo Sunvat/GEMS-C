@@ -224,5 +224,7 @@ Route::post('Login',[UserController::class,'Login']);
 
 
 //Route::post("authenticate",[UserController::class,"auth"]);
-
+Route::get('/logout', function () {
+    return view('logout');
+})->name('logout');
 ?>

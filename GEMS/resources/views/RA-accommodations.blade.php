@@ -7,18 +7,18 @@
 
 <div class="flex flex-col justify-center items-center">
   <div class = "flex flex-row justify-center items-center">
-        <button type="button" class= "focus:outline-none text-black bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2">
+        <button type="button" class= "py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange">
         <a href="{{route('New-Accommodation-RA')}}">New Accommodation</a>
         </button>
 
-        <button type="button" class= "focus:outline-none text-black bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2">
+        <button type="button" class= "py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange">
         <a href="{{route('RA-Bookings')}}">Waiting List</a>
         </button>
   </div>
 </div>
 
 <div id = "searchBar" class = "flex flex-col justify-center items-center center">
-  <input type="text" onkeyup="searchAccount()" id="search" name="search" placeholder="Search..." class="bg-gray-700 border border-gray-600 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"><br>
+  <input type="text" onkeyup="searchAccount()" id="search" name="search" placeholder="Search..." class="border border-gray-600 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"><br>
   <script>
     //Bad practice, but laravel will not let us simply include a js file in HTML
     function searchAccount(){
@@ -103,7 +103,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
           <label for=\"full\" class=\"font-medium text-black\">Include Full</label>
           <input type=\"checkbox\" id=\"full\" name=\"full\" value=\"true\" checked=\"true\"><br><br>
           <div class=\"flex flex-col jusify-center items-center\">
-          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
+          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
           </div>
           </fieldset></form></div>
         </th>
@@ -121,11 +121,11 @@ echo "<div class = \"flex flex-col justify-center items-center\">
   }
   echo "<td class = \"border border-slate-500 p-2 border-r-0\">";
   echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-          <button type=\"button\" onclick=\"location.href='/view-accommodationRA?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">View/Update</button>
+          <button type=\"button\" onclick=\"location.href='/view-accommodationRA?ID=". $row['accID'] ."';\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">View/Update</button>
         </div></td>";
   echo "<td class = \"border border-slate-500 p-2 border-l-0\">
   <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/RA-Booking?accID=". $row['accID'] . "&rID=$rID ';\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Book Now</button>
+  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/RA-Booking?accID=". $row['accID'] . "&rID=$rID ';\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Book Now</button>
   </div></td>";
   echo "</tr>";
   }
@@ -136,7 +136,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
 <div class="container flex flex-col justify-center items-center">
   <h3>Don't see what you want?</h3><p>Submit a wishlist request and get notified when something open up!</p>
   <?php echo "<a href=\"/RA-wishlist?rID=$rID\">";?>
-    <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2">Wislist Request</button>
+    <button type="button" class="py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange">Wislist Request</button>
   </a>
 </div>
 

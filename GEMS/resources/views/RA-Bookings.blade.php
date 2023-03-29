@@ -100,7 +100,7 @@ $result = getPendingBookings($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"pending\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Pending Bookings</h3>
+    <h3 id=\"pending\" class = \"py-2 px-4 m-2 text-2xl font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Pending Bookings</h3>
 </div><br>
 
 <table id=\"pendingTable\" class = \"table-fixed border mx-10 border-none\">
@@ -151,7 +151,7 @@ $result = getConfirmedBookings($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"confirmed\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Approved Bookings</h3>
+    <h3 id=\"confirmed\" class = \"py-2 px-4 m-2 text-2xl font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Approved Bookings</h3>
 </div><br>
 
 <table id=\"confirmedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -191,7 +191,7 @@ $result = getDeclinedBookings($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"declined\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Declined Bookings</h3>
+    <h3 id=\"declined\" class = \"py-2 px-4 m-2 text-2xl font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Declined Bookings</h3>
 </div><br>
 
 <table id=\"declinedTable\" class = \"table-fixed border mx-10 border-none\">
@@ -230,7 +230,7 @@ $result = getAllWish($rID);
 
 echo "<div class = \"flex flex-col justify-center items-center ml-96\">
 <div class = \"flex flex-col justify-center items-center\">
-    <h3 id=\"wishList\" class = \"p-2 text-2xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\">Wishlists</h3>
+    <h3 id=\"wishList\" class = \"py-2 px-4 m-2 text-2xl font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Wishlists</h3>
 </div><br>
 
 <table id=\"wishTable\" class = \"table-fixed border mx-10 border-none\">
@@ -306,11 +306,11 @@ echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\">
-        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\"></input>
+        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Delete</button>
+  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Delete</button>
 </div></td>";
 echo "</tr>";
 }

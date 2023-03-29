@@ -102,7 +102,7 @@ echo "<div class=\"container py-10 px-10 mx-0 min-w-full grid place-items-center
   <div class=\"md:flex md:items-center\">
     <div class=\"md:w-1/3\"></div>
     <div class=\"md:w-2/3\">
-    <input type=\"submit\" name=\"submit\" value=\"submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\"></input>
+    <input type=\"submit\" name=\"submit\" value=\"submit\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
   </div></div>
 </form></div>"
 

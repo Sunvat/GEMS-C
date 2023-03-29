@@ -13,7 +13,7 @@ if( isset($_GET['submit']) )
 
 <br><br>
 <div class = "flex flex-col justify-center items-center">
-    <h1 class = "p-2 text-4xl text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen">Select Region</h1>
+    <h1 class = " p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1>
 </div>
 
 <div class = "flex flex-col jusify-center items-center">
@@ -34,14 +34,14 @@ if( isset($_GET['submit']) )
     }
     echo"</select><br>";
     echo "<div class=\"flex flex-col jusify-center items-center\">
-    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
+    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
     </div></div>";
 ?>
 
     <br>
 
   <div class = "flex flex-col jusify-center items-center">
-    <button type="submit" value="Submit" class="mt-8 py-2 px-2 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen hover:text-black ">
+    <button type="submit" value="Submit" class="py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange">
       <a href="{{route('RA_region_create')}}">Create Region</a>
     </button>
   </div>

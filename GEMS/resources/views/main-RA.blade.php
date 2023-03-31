@@ -4,10 +4,6 @@
 
 <body class>
     <div class = "flex flex-col justify-center items-center">
-      <div class = "flex flex-col justify-center items-center ml-60">
-        <h1 class="font-normal text-black text-left ">Welcome to the Glohaven Emergency Management System.</h1>
-      </div>
-
       <div class="ml-12">
         <div class = "flex flex-col justify-center items-center" style = "margin-right: -125px ">
           <h1 class="text-2xl text-black italic font-size:25px ">Latest Emergency Updates/Information</h1>

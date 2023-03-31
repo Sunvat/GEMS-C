@@ -121,11 +121,11 @@ echo "<div class = \"flex flex-col justify-center items-center\">
   }
   echo "<td class = \"border border-slate-500 p-2 border-r-0\">";
   echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-          <button type=\"button\" onclick=\"location.href='/view-accommodationRA?ID=". $row['accID'] ."';\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">View/Update</button>
+          <button type=\"button\" onclick=\"location.href='/view-accommodationRA?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">View/Update</button>
         </div></td>";
   echo "<td class = \"border border-slate-500 p-2 border-l-0\">
   <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/RA-Booking?accID=". $row['accID'] . "&rID=$rID ';\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Book Now</button>
+  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/RA-Booking?accID=". $row['accID'] . "&rID=$rID ';\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Book Now</button>
   </div></td>";
   echo "</tr>";
   }

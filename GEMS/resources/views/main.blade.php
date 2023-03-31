@@ -2,8 +2,7 @@
 
 @section('main')
 <!--main page for EMS USERS whne first going to the site this page is where you will land -->
-<body class>
-
+<body>
 <div class = "flex flex-col justify-center items-center">
   <?php
   if( isset($_GET['submit']) ){
@@ -15,10 +14,10 @@
   }
   ?>
   <div class = "ml-24">
-  <div class = " mr-24 ml-36 w-36 rounded flex flex-col justify-center items-center bg-blak/90">
-    <h1>Select Region</h1>
-  </div>
-  <form id="ChooseRegion">
+    <div class = " mr-24 ml-36 w-36 rounded flex flex-col justify-center items-center bg-blak/90">
+      <h1>Select Region</h1>
+    </div>
+    <form id="ChooseRegion">
     <br>
     <?php
     //get region info from database
@@ -36,20 +35,20 @@
           </form>";
     echo "</div>";
     ?>
-</div>
-<br>
-<div>
-<div class = "flex flex-col justify-center items-center">
-    <h1 class="text-2xl text-Lorange italic font-size:25px ">Latest Emergency Updates/Information</h1>
-</div>
-<br>
-<div class = "flex justify-center items-center ml-52 w-9/12" style = "">
-  <?php
-  //Latest EMergency Infor can be found here
-  $LEI = getLEIandID(); //Get LEI information from database
-  //make things look good... Hopfully.
+  </div>
+  <br>
+  <div>
+    <div class = "flex flex-col justify-center items-center">
+      <h1 class="text-2xl text-Lorange italic font-size:25px ">Latest Emergency Updates/Information</h1>
+    </div>
+    <br>
+    <div class = "flex justify-center items-center ml-52 w-9/12" style = "">
+    <?php
+    //Latest EMergency Infor can be found here
+    $LEI = getLEIandID(); //Get LEI information from database
+    //make things look good... Hopfully.
 
-  echo '<table class=\"min-w-full divide-y divide-gray-200\">
+    echo '<table class=\"min-w-full divide-y divide-gray-200\">
 
           <thead class="bg-blak/90">
                 <tr>
@@ -66,17 +65,17 @@
                 </tr>
               </thead>';
 
-  //Display information form database into rows
-  while($row = mysqli_fetch_array($LEI)){
+    //Display information form database into rows
+    while($row = mysqli_fetch_array($LEI)){
     echo "<tbody class=\"bg-white bg-gray-500/50 divide-gray-400\">";
-    echo "<tr>";
-    echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
-    echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
-    echo "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
-    echo "</tr>";
+    echo   "<tr>";
+    echo    "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
+    echo    "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
+    echo    "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
+    echo  "</tr>";
     echo "</tbody>";
-  }
-  echo "</table>";
+    }
+    echo "</table>";
   ?>
 </div>
 </div>

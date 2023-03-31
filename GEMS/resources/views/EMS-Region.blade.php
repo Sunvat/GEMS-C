@@ -5,21 +5,18 @@
 <!-- The users for this page will be EMS-->.
 <?php
 // when submit is clicked it will go to the accomodations page with the region ID
-if( isset($_GET['submit']) )
-{
+  if( isset($_GET['submit']) ){
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
 
     $rID = htmlentities($_GET['regions']);
 
     header('Location: /Accommodations?rID=' . $rID);
     die();
-}
+  }
 ?>
 <div class = "flex flex-col justify-center items-center">
-
   <div class = "m-4 bg-slate-400 rounded-md">
     <h1 class = "text-2xl p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1> 
-
   </div>
 </div>
 

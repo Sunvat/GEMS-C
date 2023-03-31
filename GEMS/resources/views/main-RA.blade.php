@@ -32,15 +32,15 @@
                         
                     </tr>
                 </thead>';
-        while($row = mysqli_fetch_array($LEI)){
-        echo "<tbody class=\"divide-y bg-gray-500/50 divide-gray-400\">";
-        echo    "<tr>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
-        echo    "</tr>";
-        echo "</tbody>";
-        }
+          while($row = mysqli_fetch_array($LEI)){
+          echo "<tbody class=\"divide-y bg-gray-500/50 divide-gray-400\">";
+          echo    "<tr>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
+          echo    "</tr>";
+          echo "</tbody>";
+          }
   
          echo "</table>";
         ?>

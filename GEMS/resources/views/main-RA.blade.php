@@ -16,12 +16,12 @@
             </button>
         </div>
 
-        <div class = "flex justify-center items-center ml-20 w-96" style = "margin-right: -100px">
+        <div class = "flex justify-center items-center ml-20" style = "margin-right: -100px">
         <?php
         require dirname(__DIR__, 3).'/database/selectFuncs.php';
         $LEI = getLEIandID();
 
-        echo '<table class=\"min-w-full divide-y table-fixed divide-gray-400\">
+        echo '<table class=\"min-w-full divide-y divide-gray-400\">
                 <thead class="bg-blak/90">
                     <tr>
                         <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
@@ -57,7 +57,7 @@
       die();
       }
       ?>
-      <div class = "flex flex-col items-center">
+      <div class = "flex flex-col items-center ml-48">
           <form id="ChooseRegion">
           <br>
           <?php

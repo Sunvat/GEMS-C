@@ -189,6 +189,10 @@ Route::get('/RA-declineWish', function () {
     return view('RA-declineWish');
 })->name('RA-declineWish');
 
+Route::get('/RA-endStay', function () {
+    return view('RA-endStay');
+})->name('RA-endStay');
+
 Route::get('/RA-ApproveBooking', function () {
     return view('RA-ApproveBooking');
 })->name('RA-ApproveBooking');

@@ -28,6 +28,18 @@
         }
     }
 
+    function endStay(accID, bID, rID) {
+        var r = confirm("Are you sure this group's stay is over?");
+        //This is a very roundabout way of deleting things. Look into AJAX.
+        if (r == true) {
+          //Redirects to a page that runs the PHP delete function on the accommodation with the ID.
+          window.location.href = "/RA-endStay?accID="+accID+"&bID="+bID+"&rID="+rID;
+        }
+        else {
+          //Do nothing
+        }
+    }
+
     //These functions hide the tables
   window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
@@ -179,7 +191,11 @@ echo "<td class = \"border p-2\">"   . $row['aname'] . "</td>";
 echo "<td class = \"border p-2\">"   . $row['rname'] . "</td>";
 echo "<td class = \"border p-2\">" . $row['bookerName'] . "</td>";
 echo "<td class = \"border p-2\">" . $row['bookerID'] . "</td>";
-echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
+echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>
+<td class = \"border-none\">
+<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
+  <button type=\"button\" onclick=\"endStay(".$row['accID'].",".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">End Stay</button>
+</div></td>";
 echo "</tr>";
 }
 echo "</table>

@@ -16,8 +16,10 @@ if( isset($_GET['submit']) )
 }
 ?>
 <div class = "flex flex-col justify-center items-center">
+
   <div class = "m-4 bg-slate-400 rounded-md">
     <h1 class = "text-2xl p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1> 
+
   </div>
 </div>
 

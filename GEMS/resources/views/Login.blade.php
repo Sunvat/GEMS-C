@@ -35,8 +35,8 @@
         @error('password')
                 <div class="danger font-bold text-red-500">{{ $message }}</div>
             @enderror
-        <button type="submit" class="mt-5 border-1 border-white rounded-md px-5 bg-red-500 transition ease-in-out delay-150 bg-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300">Log In</button>
-        
+        <button type="submit" class="mt-5 border-1 border-2 border-slate-300 rounded-full px-5 bg-emrald-400 transition ease-in-out delay-150 bg-green-400 hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300">Log In</button>
+      
     </form>
     </div>
 </body>

@@ -64,12 +64,16 @@ require_once("deleteFuncs.php");
 
         mysqli_begin_transaction($con);
         try{
+            // Change Status
             mysqli_query($con,"UPDATE bookings SET status = 'RESOLVED' WHERE bookingID = $bID;");
+            //Get the group size
             $result = mysqli_query($con,"SELECT NumPeople FROM bookings WHERE bookingID = $bID;");
             $row = mysqli_fetch_array($result);
+            //Remove group
             $result = mysqli_query($con,"UPDATE accommodations SET curOc = curOc-". $row["NumPeople"] ." WHERE accID = ". $accID .";");
             mysqli_commit($con);
         } catch (mysqli_sql_exception $exception) {
+            //If it fails, undo
             mysqli_rollback($con);
             log($exception);
             $result = $exception;

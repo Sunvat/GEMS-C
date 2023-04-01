@@ -3,6 +3,9 @@
 @section('main')
 <br>
 <div class = "flex flex-col justify-center items-center">
+<div class = "bg-blak text-lg" >
+        <h1>Contact Information for Regional Reservation Agent</h1>
+    </div>
     <br>
     <div>
     <?php

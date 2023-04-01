@@ -13,7 +13,7 @@ if( isset($_GET['submit']) )
 
 <br><br>
 <div class = "flex flex-col justify-center items-center">
-    <h1 class = "w-36 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1>
+    <h1 class = "text-2xl p-1 w-40 rounded flex flex-col justify-center items-center bg-blak/90">Select Region</h1>
 </div>
 
 <div class = "flex flex-col jusify-center items-center">
@@ -26,7 +26,7 @@ if( isset($_GET['submit']) )
     $result = getRegionAndID();
 
     echo "<form action=\"\" method=\"get\" id=\"regForm\">";
-    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-Lgreen\">Select a region to view local booking requests:</label>";
+    echo "<label for=\"chooseRegion\" class=\"block mb-2 text-large font-medium text-lg\">Select a region to view local booking requests:</label>";
     echo "<select id=\"regions\" name=\"regions\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\">";
   
     while($row = mysqli_fetch_array($result)){

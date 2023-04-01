@@ -4,9 +4,10 @@
 <!-- page used to display contact information to Users(EMS)-->
 <br>
 <div class = "flex flex-col justify-center items-center">  
-    <div class = "bg-blak">
-        <h1>Contact Information</h1>
+    <div class = "bg-blak text-lg" >
+        <h1>Contact Information for Regional Reservation Agent</h1>
     </div>
+    <br>
     <?php
 
     require dirname(__DIR__, 3).'/database/selectFuncs.php';

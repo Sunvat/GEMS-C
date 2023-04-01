@@ -11,7 +11,7 @@
               <a href="{{route('RA-LEI')}}" class = "py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-Dgreen hover:bg-gold hover:text-Dgreen">Add or Edit Emergency Updates</a>
             </button>
         </div>
-
+        
         <div class = "flex justify-center items-center ml-20" style = "margin-right: -100px">
         <?php
         require dirname(__DIR__, 3).'/database/selectFuncs.php';
@@ -45,6 +45,11 @@
          echo "</table>";
         ?>
         </div>
+        <br>
+        <br>
+        <div class = "mr-8 ml-36 w-100 rounded flex flex-row flex-col justify-center items-center text-lg">
+      <h1>Select a Region to View/Update/Book Accommodations</h1>
+    </div>
       </div>
       <?php
       if(isset($_GET['submit'])){
@@ -53,7 +58,7 @@
       die();
       }
       ?>
-      <div class = "flex flex-col items-center ml-48">
+      <div class = "flex flex-col items-center ml-48 mr-8 ">
           <form id="ChooseRegion">
           <br>
           <?php

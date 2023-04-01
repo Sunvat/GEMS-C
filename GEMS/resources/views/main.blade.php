@@ -14,8 +14,8 @@
   }
   ?>
   <div class = "ml-24">
-    <div class = " mr-24 ml-36 w-36 rounded flex flex-col justify-center items-center bg-blak/90">
-      <h1>Select Region</h1>
+    <div class = " mr-24 ml-36 w-100 rounded flex flex-col justify-center items-center text-lg bg-blak/90">
+      <h1>Select a Region to Begin Searching for Accommodations</h1>
     </div>
     <form id="ChooseRegion">
     <br>
@@ -23,7 +23,7 @@
     //get region info from database
     require dirname(__DIR__, 3).'/database/selectFuncs.php';
     $result = getRegionAndID();
-    echo "<div class = \" flex flex-row \">";
+    echo "<div class = \" flex flex-row justify-center items-center\">";
     echo "<form action=\"\" method=\"get\" id=\"regForm\">";
     echo "<select id=\"regions\" name=\"regions\"  class=\" w-80 ml-12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5\">";
     //create rowss
@@ -37,9 +37,10 @@
     ?>
   </div>
   <br>
+  <br>
   <div>
-    <div class = "flex flex-col justify-center items-center">
-      <h1 class="text-2xl text-Lorange italic font-size:25px ">Latest Emergency Updates/Information</h1>
+    <div class = " ml-36 w-100 rounded flex flex-col justify-center items-center text-lg">
+      <h1 class="text-2xl text-Lorange italic font-size:25px">Latest Emergency Updates/Information</h1>
     </div>
     <br>
     <div class = "flex justify-center items-center ml-52 w-9/12" style = "">

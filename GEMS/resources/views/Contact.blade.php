@@ -4,7 +4,6 @@
 <!-- page used to display contact information to Users(EMS)-->
 <br>
 <div class = "flex flex-col justify-center items-center">  
-    
     <div class = "bg-blak">
         <h1>Contact Information</h1>
     </div>
@@ -28,13 +27,12 @@
         $Reg = mysqli_fetch_array($region);
 
         echo "<tr class = bg-slate-300>";
-        echo "<th class = \"border p-2 border-slate-500\">".$Reg[0]."</th>";
-        echo "<th class = \"border p-2 border-slate-500\">".$row['PNumber']."</th>";
+        echo    "<th class = \"border p-2 border-slate-500\">".$Reg[0]."</th>";
+        echo    "<th class = \"border p-2 border-slate-500\">".$row['PNumber']."</th>";
         echo "</tr>";
     }
     echo "</table>";
 
     ?>
-    
 </div>
 @endsection

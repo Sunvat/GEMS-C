@@ -4,10 +4,6 @@
 
 <body class>
     <div class = "flex flex-col justify-center items-center">
-      <div class = "flex flex-col justify-center items-center ml-60">
-        <h1 class="font-normal text-black text-left ">Welcome to the Glohaven Emergency Management System.</h1>
-      </div>
-
       <div class="ml-12">
         <div class = "flex flex-col justify-center items-center" style = "margin-right: -125px ">
           <h1 class="text-2xl text-black italic font-size:25px ">Latest Emergency Updates/Information</h1>
@@ -16,12 +12,12 @@
             </button>
         </div>
 
-        <div class = "flex justify-center items-center ml-20 w-96" style = "margin-right: -100px">
+        <div class = "flex justify-center items-center ml-20" style = "margin-right: -100px">
         <?php
         require dirname(__DIR__, 3).'/database/selectFuncs.php';
         $LEI = getLEIandID();
 
-        echo '<table class=\"min-w-full divide-y table-fixed divide-gray-400\">
+        echo '<table class=\"min-w-full divide-y divide-gray-400\">
                 <thead class="bg-blak/90">
                     <tr>
                         <th class="py-3 px-6 text-xs font-medium tracking-wider text-left uppercase text-black">
@@ -36,15 +32,15 @@
                         
                     </tr>
                 </thead>';
-        while($row = mysqli_fetch_array($LEI)){
-        echo "<tbody class=\"divide-y bg-gray-500/50 divide-gray-400\">";
-        echo    "<tr>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
-        echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
-        echo    "</tr>";
-        echo "</tbody>";
-        }
+          while($row = mysqli_fetch_array($LEI)){
+          echo "<tbody class=\"divide-y bg-gray-500/50 divide-gray-400\">";
+          echo    "<tr>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[1]."</th>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[3]."</th>";
+          echo      "<th class = \" font-medium border p-2 border-slate-400 \">".$row[2]."</th>";
+          echo    "</tr>";
+          echo "</tbody>";
+          }
   
          echo "</table>";
         ?>
@@ -57,7 +53,7 @@
       die();
       }
       ?>
-      <div class = "flex flex-col items-center">
+      <div class = "flex flex-col items-center ml-48">
           <form id="ChooseRegion">
           <br>
           <?php

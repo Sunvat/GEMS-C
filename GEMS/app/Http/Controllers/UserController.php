@@ -52,7 +52,9 @@ class UserController extends Controller{
        else{
         $dbid = $row['id'];
         $dbpass = $row['pword'];
-        if($dbid == $inid && $dbpass==$inpass){
+        //we hash the input password to check if it is the same as the password in the database.
+        $hashinpass = md5($inpass);
+        if($dbid == $inid && $dbpass==$hashinpass){
             $_SESSION ['loggedin'] = true;
             header("Location: /main-RA");
            exit();
@@ -61,7 +63,8 @@ class UserController extends Controller{
         }
         //if passwords match
          echo "<h2>Login failed check your ID and password and try again.</h2>";
-       return redirect("/Login")->withErrors("Login failed check your ID and password ");
+       return redirect("/Login")->withErrors("Login failed check your ID and password " );
+       
          exit();
        }
       

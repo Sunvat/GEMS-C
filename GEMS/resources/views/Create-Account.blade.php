@@ -11,7 +11,9 @@
       if (isset($_GET['submit'])) {
         $paword = htmlentities($_GET['pword']);
         $conpass = htmlentities($_GET['confrim_pword']);
-        
+        //hashed pasword
+        $hashpassword = md5($paword);
+        //
         if (strcmp($paword, $conpass) != 0) {
             echo "<br>";
             echo "<br>";

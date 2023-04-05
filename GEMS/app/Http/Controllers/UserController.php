@@ -37,8 +37,10 @@ class UserController extends Controller{
        {
            echo "Failed to connect to MySQL: " . mysqli_connect_error();
        }
-       // sql query to get usernamemand password.
-       $result = mysqli_query($con,"SELECT pword, id FROM useraccounts WHERE id = '$inid' ");
+       //we hash the input password to check if it is the same as the password in the database.
+       $hashinpass = md5($inpass);
+       // sql query to get username.
+       $result = mysqli_query($con,"SELECT id FROM useraccounts WHERE id = '$inid' AND pword = '$hashinpass'");
        //sql query to get the admin boolean value
        $result2 = mysqli_query($con,"SELECT admin FROM useraccounts WHERE id = '$inid' ");
        mysqli_close($con);
@@ -60,10 +62,9 @@ class UserController extends Controller{
        }
        else{
         $dbid = $row['id'];
-        $dbpass = $row['pword'];
-        //we hash the input password to check if it is the same as the password in the database.
-        $hashinpass = md5($inpass);
-        if($dbid == $inid && $dbpass==$hashinpass){
+        
+        //Verify data
+        if($dbid == $inid){
             $_SESSION ['loggedin'] = true;
             $_SESSION['adminsession'] = $adminsesh;
             header("Location: /main-RA");

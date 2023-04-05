@@ -37,12 +37,21 @@ class UserController extends Controller{
        {
            echo "Failed to connect to MySQL: " . mysqli_connect_error();
        }
-       // sql query to get region names.
+       // sql query to get usernamemand password.
        $result = mysqli_query($con,"SELECT pword, id FROM useraccounts WHERE id = '$inid' ");
-       
+       //sql query to get the admin boolean value
+       $result2 = mysqli_query($con,"SELECT admin FROM useraccounts WHERE id = '$inid' ");
        mysqli_close($con);
 
        $row = mysqli_fetch_array($result);
+       $row2 = mysqli_fetch_array($result2);
+       $adminsesh = false;
+       if($row2['admin'] == 1){
+        $adminsesh = true;
+       }
+       else{
+        $adminsesh =false;
+       }
      //works till here
     // check if workID and id AND password, pword are matching then redirect to RA-main.
        if(empty($row['id'])){
@@ -56,6 +65,7 @@ class UserController extends Controller{
         $hashinpass = md5($inpass);
         if($dbid == $inid && $dbpass==$hashinpass){
             $_SESSION ['loggedin'] = true;
+            $_SESSION['adminsession'] = $adminsesh;
             header("Location: /main-RA");
            exit();
           }

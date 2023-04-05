@@ -3,7 +3,7 @@
 <br><br>
 
 <div id = "searchBar" class = "flex flex-col justify-center items-center center">
-  <input type="text" onkeyup="searchAccount()" id="search" name="search" placeholder="Search..." class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"><br>
+  <input type="text" onkeyup="searchAccount()" id="search" name="search" placeholder="Search..." class=" border border-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"><br>
   <script>
     //Bad practice, but laravel will not let us simply include a js file in HTML
     function searchAccount(){
@@ -37,11 +37,39 @@ catch(exception){
 }
 $rID = $_GET["rID"];
 
+//Used to fill filter values
+$boolCheck = ["unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "unchecked", "checked"];
+
 if (!$filtered){
   $result = getAllAcc($rID);
 }
 else {
   $result = getFilteredAcc($rID, $filter);
+
+  if ($filter[0] == "true"){
+    $boolCheck[0] = "checked";
+  }
+  if ($filter[1] == "true"){
+    $boolCheck[1] = "checked";
+  }
+  if ($filter[2] == "true"){
+    $boolCheck[2] = "checked";
+  }
+  if ($filter[3] == "true"){
+    $boolCheck[3] = "checked";
+  }
+  if ($filter[4] == "true"){
+    $boolCheck[4] = "checked";
+  }
+  if ($filter[5] == "true"){
+    $boolCheck[5] = "checked";
+  }
+  if ($filter[6] == "true"){
+    $boolCheck[6] = "checked";
+  }
+  if ($filter[7] == "false"){
+    $boolCheck[7] = "unchecked";
+  }
 }
 
 echo "<div class = \"flex flex-col justify-center items-center\">
@@ -70,21 +98,21 @@ echo "<div class = \"flex flex-col justify-center items-center\">
           <input type=\"hidden\" id=\"filtered\" name=\"filtered\" value=\"true\" />
 
           <label for=\"wca\" class=\"font-medium text-black\">Wheelchair Access</label>
-          <input type=\"checkbox\" id=\"wca\" name=\"wca\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"wca\" name=\"wca\" value=\"true\" ". $boolCheck[0] ."><br>
           <label for=\"pets\" class=\"font-medium text-black\">Allows Pets</label>
-          <input type=\"checkbox\" id=\"pets\" name=\"pets\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"pets\" name=\"pets\" value=\"true\" ". $boolCheck[1] ."><br>
           <label for=\"med\" class=\"font-medium text-black\">Medicine Available</label>
-          <input type=\"checkbox\" id=\"med\"  name=\"med\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"med\"  name=\"med\" value=\"true\" ". $boolCheck[2] ."><br>
           <label for=\"beds\" class=\"font-medium text-black\">Beds Available</label>
-          <input type=\"checkbox\" id=\"beds\" name=\"beds\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"beds\" name=\"beds\" value=\"true\" ". $boolCheck[3] ."><br>
           <label for=\"high\" class=\"font-medium text-black\">On High Ground</label>
-          <input type=\"checkbox\" id=\"high\" name=\"high\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"high\" name=\"high\" value=\"true\" ". $boolCheck[4] ."><br>
           <label for=\"food\" class=\"font-medium text-black\">Food Provided</label>
-          <input type=\"checkbox\" id=\"food\" name=\"food\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"food\" name=\"food\" value=\"true\" ". $boolCheck[5] ."><br>
           <label for=\"water\" class=\"font-medium text-black\">Water Provided</label>
-          <input type=\"checkbox\" id=\"water\" name=\"water\" value=\"true\"><br>
+          <input type=\"checkbox\" id=\"water\" name=\"water\" value=\"true\" ". $boolCheck[6] ."><br>
           <label for=\"full\" class=\"font-medium text-black\">Include Full</label>
-          <input type=\"checkbox\" id=\"full\" name=\"full\" value=\"true\" checked=\"true\"><br><br>
+          <input type=\"checkbox\" id=\"full\" name=\"full\" value=\"true\" ". $boolCheck[7] ."><br><br>
           <div class=\"flex flex-col jusify-center items-center\">
           <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
           </div>

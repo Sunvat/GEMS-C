@@ -175,7 +175,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Accommodation Name</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
     </tr>";
 
@@ -219,7 +219,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Accommodation Name</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
     </tr>";
 
@@ -257,7 +257,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Number of People</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
       <th class = \"border\">Wheelchair</th>
       <th class = \"border\">Pets</th>

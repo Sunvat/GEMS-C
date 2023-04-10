@@ -50,7 +50,7 @@ if( isset($_GET['submit']) )
                      <input type="number" id="numOfEvacs" name="numOfEvacs" class = "border solid 5px; mb-2; display block w-full" placeholder="5" required>
                      <br>
                      <div class="md:w-2/3">
-                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange "></input>
+                        <input type="submit" name="submit" value="submit" class="py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange"></input>
                      </div>
                  </fieldset>
                 </form>

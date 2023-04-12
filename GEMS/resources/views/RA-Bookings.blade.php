@@ -124,7 +124,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Accommodation Name</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
       <th></th>
     </tr>";
@@ -145,11 +145,11 @@ echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>";
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"approve(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Approve</button>
+        <button type=\"button\" onclick=\"approve(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Approve</button>
       </div></td>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"decline(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-black focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Decline</button>
+  <button type=\"button\" onclick=\"decline(".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Decline</button>
 </div></td>";
 echo "</tr>";
 }
@@ -175,7 +175,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Accommodation Name</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
     </tr>";
 
@@ -194,7 +194,7 @@ echo "<td class = \"border p-2\">" . $row['bookerID'] . "</td>";
 echo "<td class = \"border p-2\">" . $row['bookerPhoneNumber'] . "</td>
 <td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"endStay(".$row['accID'].",".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">End Stay</button>
+  <button type=\"button\" onclick=\"endStay(".$row['accID'].",".$row['bookingID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">End Stay</button>
 </div></td>";
 echo "</tr>";
 }
@@ -219,7 +219,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Accommodation Name</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
     </tr>";
 
@@ -257,7 +257,7 @@ echo "<div class = \"flex flex-col justify-center items-center ml-96\">
       <th class = \"border\">Number of People</th>
       <th class = \"border\">Region</th>
       <th class = \"border\">Caller Name</th>
-      <th class = \"border\">Caller E.M.S Number</th> 
+      <th class = \"border\">Caller ID Number</th> 
       <th class = \"border\">Caller Contact Number</th>
       <th class = \"border\">Wheelchair</th>
       <th class = \"border\">Pets</th>
@@ -322,11 +322,11 @@ echo "<select id=\"chooseAcc\" name=\"chooseAcc\" required>
 
 echo "<td class = \"border-none\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\">
-        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
+        <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
       </div></td></form>";
 echo "<td class = \"border-none\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 m-2 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Delete</button>
+  <button type=\"button\" onclick=\"declineWish(".$row['wishID'].",".$rID.")\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Delete</button>
 </div></td>";
 echo "</tr>";
 }

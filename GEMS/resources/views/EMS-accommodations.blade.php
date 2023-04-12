@@ -114,7 +114,7 @@ echo "<div class = \"flex flex-col justify-center items-center\">
           <label for=\"full\" class=\"font-medium text-black\">Include Full</label>
           <input type=\"checkbox\" id=\"full\" name=\"full\" value=\"true\" ". $boolCheck[7] ."><br><br>
           <div class=\"flex flex-col jusify-center items-center\">
-          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-Dgreen rounded-lg border-2 border-gold hover:bg-Lgreen\"></input>
+          <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\"></input>
           </div>
           </fieldset></form></div>
         </th>
@@ -133,11 +133,11 @@ if ($row['isFull'] == true) {
 }
 echo "<td class = \"border border-slate-500 p-2\">";
 echo "<div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-        <button type=\"button\" onclick=\"location.href='/view-accommodation?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">View</button>
+        <button type=\"button\" onclick=\"location.href='/view-accommodation?ID=". $row['accID'] ."';\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">View</button>
       </div></td>";
 echo "<td class = \"border border-slate-500 p-2\">
 <div class=\"inline-flex rounded-md shadow-sm\" role=\"group\">
-  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/Booking?accID=". $row['accID'] . "&rID=$rID';\" class=\"py-2 px-4 text-sm font-medium text-white bg-Glohaven-Orange rounded-lg border border-Glohaven-Orange hover:bg-Glohaven-Hovered hover:text-white focus:z-10 focus:ring-2 focus:ring-Glohaven-Orange focus:text-Glohaven-Orange\">Book Now</button>
+  <button type=\"button\" name = \"bookNow\" id=\"bookNow\" onclick=\"location.href='/Booking?accID=". $row['accID'] . "&rID=$rID';\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Book Now</button>
 </div></td>";
 echo "</tr>";
 }
@@ -147,7 +147,7 @@ echo "</table>
 <div class=\"container flex flex-col justify-center items-center\">
   <h3>Don't see what you want?</h3><p>Submit a wishlist request and get notified when something open up!</p>
   <a href=\"/EMS-wishlist?rID=$rID\">
-    <button type=\"button\" class=\"focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2\">Wislist Request</button>
+    <button type=\"button\" class=\"py-2 px-4 text-sm font-medium text-black bg-blak/40 rounded-lg border border-2 border-Dgreen hover:bg-gold hover:text-Dgreen ing-Glohaven-Orange\">Wislist Request</button>
   </a>
 </div>";
 
@@ -155,16 +155,6 @@ echo "</table>
 
 </br></br>
 
-<!-- Below if statement will check if user is RA -->
 
-  <?php if (false) : ?>
-    <div class="container flex flex-col justify-center items-center">
-      <a href="/New">
-      <button type="button" class="focus:outline-none text-white bg-Glohaven-Orange hover:bg-Glohaven-Hovered focus:ring-4 focus:ring-Glohave-Orange font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2">New Accommodation</button>
-      </a>
-    </div>
-  <?php endif; ?>
-
-</br>
 
 @endsection

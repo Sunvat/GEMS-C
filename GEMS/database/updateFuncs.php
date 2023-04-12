@@ -138,7 +138,7 @@ require_once("deleteFuncs.php");
         LEI = '$LEI[1]',
         datetime = '$LEI[2]'
     
-        WHERE location = '$LEI[3]'");
+        WHERE location = '$LEI[0]'");
         //close connection
         mysqli_close($con);
         // return query

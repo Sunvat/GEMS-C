@@ -20,12 +20,12 @@ if( isset($_GET['submit']) )
 {
     require_once dirname(__DIR__, 3).'/database/updateFuncs.php';
 
-    $newUpdate = array(htmlentities($_GET['location']), htmlentities($_GET['Update']), htmlentities($_GET['datetime']), htmlentities($loc));
+    $newUpdate = array(htmlentities($_GET['location']), htmlentities($_GET['Update']), htmlentities($_GET['DateTime']));
 
     updateLEI($newUpdate);
     header('Location: /RA-LEI');
     die();
-}
+} 
 ?>
 
 <body>
@@ -43,7 +43,7 @@ if( isset($_GET['submit']) )
   $LEI = mysqli_fetch_array($LEI);
 
   echo "<div class=\"flex flex-col justify-center items-center container py-10 px-10 mx-0 min-w-full\" id = \"container\">";
-  echo "<form action=\"\" method=\"get\" id=\"updateForm\">";
+  echo "<form action=\"\" method=\"get\" id=\"updateForm\" onsubmit = \"time()\">";
 
   echo "<label for=\"rname\" class=\"mx-2 font-bold\">Location:</label><br>";
   echo "<input type=\"text\" id=\"location\" name=\"location\" value=" . $loc . " \" class = \"rounded bg-slate-200\"><br>";
@@ -55,8 +55,7 @@ if( isset($_GET['submit']) )
  
   echo " <textarea id = \"Update\" name = \"Update\" form = \"updateForm\" cols = 25 rows=5 class = \"bg-slate-200\"></textarea><br>";
 
-  echo "<label for=\"provState\" class=\"mx-2 font-bold\">Datetime:</label><br>";
-  echo "<input type=\"hidden\" id=\"DateTime\" name=\"datetime\" class=\"rounded p-2\"><br>";
+  echo "<input type=\"hidden\" id=\"DateTime\" name=\"DateTime\" class=\"rounded p-2\" value = date ><br>";
     
   echo "<br>";
 

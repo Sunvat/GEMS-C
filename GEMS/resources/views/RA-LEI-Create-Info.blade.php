@@ -13,7 +13,7 @@
 
             document.getElementById("DateTime").value = date;
   }
-</script>
+</script> 
 <?php
 $rID = $_GET["rID"];
 ?>

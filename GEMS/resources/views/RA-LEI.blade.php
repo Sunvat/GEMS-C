@@ -17,11 +17,11 @@
 <body>
    <br>
    <div class = "flex flex-col justify-center items-center">
-      <h1 class = "font-bold text-3xl text-Chared">
+      <h1 class = "font-bold text-3xl text-Chared ml-20 m-4">
          Latest Emergency Information
       </h1>
-      <br>
-      <div>
+     
+      <div class = "ml-20 mb-4">
         <button class = "group bg-slate-300 rounded-full hover:bg-slate-600 m-2">
             <a href="{{route('RA-LEI-Create-Region')}}" class="text-lg mx-2 text-slate-800 group-hover:text-Glohaven-Hovered transition">Create New Update</a>
         </button>

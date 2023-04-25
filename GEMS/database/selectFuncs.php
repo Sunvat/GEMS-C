@@ -113,7 +113,7 @@ require_once("getConnection.php");
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         // sql query to get booking entries.
-        $result = mysqli_query($con,"SELECT * FROM bookings ");
+        $result = mysqli_query($con,"SELECT * FROM bookings ORDER BY bookingID ASC");
 
         mysqli_close($con);
 
@@ -130,10 +130,10 @@ require_once("getConnection.php");
         // sql query to get wishlist entries.
         // rID = 0 is the default to return all rows regardless of region
         if ($rID == 0){
-            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID");
+            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID ORDER BY wishID ASC");
         }
         else{
-            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID WHERE wishlist.rID = $rID");
+            $result = mysqli_query($con,"SELECT * FROM wishlist INNER JOIN regions ON wishlist.rID = regions.rID WHERE wishlist.rID = $rID ORDER BY wishID ASC");
         }
 
         mysqli_close($con);
@@ -167,10 +167,10 @@ require_once("getConnection.php");
 
         // rID = 0 is the default to return all rows regardless of region
         if ($rID == 0){
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING'");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING' ORDER BY bookingID ASC");
         }
         else{
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING' AND bookings.rID = $rID");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'PENDING' AND bookings.rID = $rID ORDER BY bookingID ASC");
         }
 
         mysqli_close($con);
@@ -187,10 +187,10 @@ require_once("getConnection.php");
         }
         // rID = 0 is the default to return all rows regardless of region
         if ($rID == 0){
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED'");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED' ORDER BY bookingID ASC");
         }
         else{
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED' AND bookings.rID = $rID");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'CONFIRMED' AND bookings.rID = $rID ORDER BY bookingID ASC");
         }
         mysqli_close($con);
 
@@ -207,10 +207,10 @@ require_once("getConnection.php");
         // sql query to get declined booking requests.
         // rID = 0 is the default to return all rows regardless of region
         if ($rID == 0){
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED'");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED' ORDER BY bookingID ASC");
         }
         else{
-            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED' AND bookings.rID = $rID");
+            $result = mysqli_query($con,"SELECT * FROM bookings INNER JOIN accommodations ON bookings.accID = accommodations.accID INNER JOIN regions ON bookings.rID = regions.rID WHERE bookings.status = 'DENIED' AND bookings.rID = $rID ORDER BY bookingID ASC");
         }
         mysqli_close($con);
 

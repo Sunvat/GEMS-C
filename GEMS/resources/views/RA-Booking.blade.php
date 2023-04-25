@@ -31,7 +31,7 @@ if( isset($_GET['submit']) )
                      ?>
                      <input type="hidden" id="ems_division" name="ems_division" value="Glohaven">
                      
-                     <label for="cname" class=" text-black">Your Name (PLACEHOLDER UNTIL ACCOUNTS ARE READY):</label>
+                     <label for="cname" class=" text-black">Your Name:</label>
                      <input type="text" id="cname" name="cname" class = "border solid 5px  mb-2 display block w-full" placeholder="John Doe" required>
                      <br>
                      <label for="callerID"class=" text-black">Glohaven Employee ID:</label>
